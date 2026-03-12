@@ -239,7 +239,7 @@ def candidate_skill_attribute_ext(resume_sections:Dict[str,List[str]],raw_text:s
 
     candidate_combined_skills = candidate_skills1.union(candidate_skills2)
 
-    return {"candidate skills":list(candidate_combined_skills)}
+    return {"candidate_skills":list(candidate_combined_skills)}
 
 def candidate_experience_extraction(raw_text:str, resume_sections:Dict[str,str])->Dict[str,float|None]:
     normal_res_sec = resume_sections_cleaning(resume_sections)
@@ -249,20 +249,24 @@ def candidate_experience_extraction(raw_text:str, resume_sections:Dict[str,str])
     else:
         resume_exp_text = cleaning_for_raw_text(raw_text)
 
+    # this pattern is used to handle these experience pattern (5 years of experience , years experience: 4 years)
     years_pattern = re.compile(
     r"(?i)(?:(?P<years_front>\d+)\+?\s*\b(?:years?|yrs?|yr)\b(?:\s+of)?\s+\b(?:experience|exps?|exp)\b|"
     r"\b(?:experience|exps?|exp)\b\s+(?P<years_back>\d+)\+?\s*\b(?:years?|yrs?|yr)\b)"
     )
 
-    max_experience = 0 
+    max_experience = 0.0 
+    total_experience = 0.0
     for year in years_pattern.finditer(resume_exp_text):
 
         extracted_experience = year.group('years_front') or year.group('years_back')
-        if extracted_experience and float(extracted_experience) > max_experience:
-            max_experience = float(extracted_experience)
+        if extracted_experience :
+            total_experience += float(extracted_experience)
+            if float(extracted_experience) > max_experience:
+                max_experience = float(extracted_experience)
 
     if max_experience == 0:
-
+        # this pattern is used to handle these experience pattern (5 months of experience , months experience: 8 months)
         months_pattern = re.compile(
         r"(?:(?P<months_front>\d+)\+?\s*\b(?:months?|mos?|mo)\b(?:\s+of)?\s+\b(?:experience|exps?|exp)\b|"
         r"\b(?:experience|exps?|exp)\b\s+(?P<months_back>\d+)\+?\s*\b(?:months?|mos?|mo)\b)",
@@ -271,9 +275,11 @@ def candidate_experience_extraction(raw_text:str, resume_sections:Dict[str,str])
 
         for months in months_pattern.finditer(resume_exp_text):
 
-            extracted_experience = year.group('months_front') or year.group('months_back')
-            if extracted_experience and float(extracted_experience)/12 > max_experience:
-                max_experience = float(extracted_experience)/12
+            extracted_experience = months.group('months_front') or months.group('months_back')
+            if extracted_experience :
+                total_experience += float(extracted_experience)
+                if float(extracted_experience)/12 > max_experience:
+                    max_experience = float(extracted_experience)/12
 
     if max_experience == 0:
 
@@ -297,26 +303,27 @@ def candidate_experience_extraction(raw_text:str, resume_sections:Dict[str,str])
         "november": 11.0, "nov": 11.0, "11": 11.0,
         "december": 12.0, "dec": 12.0, "12": 12.0
         }
-
+        
         for data_range in date_range_pattern.finditer(resume_exp_text):
 
             st_year = data_range.group('start_year').lower().strip()
             ed_year = data_range.group('end_year').lower().strip()
             st_month = month_to_float.get(data_range.group('start_month').lower().strip())
             ed_month = month_to_float.get(data_range.group('end_month').lower().strip())
-            print(st_month , st_year , ed_month, ed_year)
-
 
             year_exp = float(ed_year) - float(st_year)
             month_exp = (abs(st_month - ed_month))/12
-            
 
-            max_experience += (year_exp + month_exp)
+            total_experience += float(year_exp + month_exp)
+            if float(year_exp + month_exp) > max_experience:
+                max_experience = (year_exp + month_exp)
 
     if max_experience:
-        return {"total_experience": float(f"{max_experience:.1f}")}
+        return {"total_experience": float(f"{total_experience:.1f}"),
+                "max_experience": float(f"{max_experience:.1f}")}
     else:
-        return {"max_experience": None}
+        return {"total_experience":None,
+                "max_experience": None}
        
 
 def candidate_degree_level_n_field_extraction(raw_text:str, resume_sections:Dict[str,str])->Dict[str,List[str]]: 
@@ -382,8 +389,8 @@ def candidate_degree_level_n_field_extraction(raw_text:str, resume_sections:Dict
                     m_norm = m.group(1).lower().strip()
                     degree_fields_ext.add(to_canon_d_fields.get(m_norm))
 
-        return {"degree level":list(degree_level_ext),
-                "degree fields":list(degree_fields_ext)}
+        return {"degree_levels":list(degree_level_ext),
+                "degree_fields":list(degree_fields_ext)}
     
     else: 
 
@@ -402,8 +409,8 @@ def candidate_degree_level_n_field_extraction(raw_text:str, resume_sections:Dict
                     m_norm = m.group(1).lower().strip()
                     degree_fields_ext.add(to_canon_d_fields.get(m_norm))
 
-    return {"degree level":list(degree_level_ext),
-            "degree fields":list(degree_fields_ext)}
+    return {"degree_levels":list(degree_level_ext),
+            "degree_fields":list(degree_fields_ext)}
 
 def candidate_location_extraction(raw_text:str):
     indian_states = {
@@ -460,13 +467,13 @@ def candidate_location_extraction(raw_text:str):
 
             pattern = rf"(?:location|state|address|city)\s*(?::|-)?\s*\b{key}\b"
             if re.search(pattern, header_text):
-                return {"current location": indian_states[key]}
+                return {"current_location": indian_states[key]}
         else:
 
             if re.search(rf"\b{re.escape(key)}\b", header_text):
                 return {"current location": indian_states[key]}
                 
-    return {"current location": "unknown"}
+    return {"current_location": "unknown"}
 
 def candidate_work_authorization_extraction(res_text:str):
     normal_raw_res_text = cleaning_for_raw_text(res_text)
@@ -504,9 +511,23 @@ def candidate_work_authorization_extraction(res_text:str):
 
     return {"work_authorization": "unknown"}
 
+def candidate_info_ext_for_eligibility_gate(resume_sections:Dict[str,List[str]], raw_text:str , skill_db:Dict[str,List[str]]):
+    candidate_skills = candidate_skill_attribute_ext(resume_sections, raw_text, skill_db)
+    candidate_experience = candidate_experience_extraction(raw_text , resume_sections)
+    candidate_degree_ext = candidate_degree_level_n_field_extraction(raw_text, resume_sections)
+    candidate_location = candidate_location_extraction(raw_text)
+    candidate_work_authorization = candidate_work_authorization_extraction(raw_text)
+
+    return {"candidate_skills":candidate_skills.get("candidate_skills"),
+            "candidate_total_experience":candidate_experience.get("total_experience"),
+            "candidate_maximum_experience":candidate_experience.get("max_experience"),
+            "candidates_degree_levels":candidate_degree_ext.get("degree_levels"),
+            "candidates_degree_levels":candidate_degree_ext.get("degree_fields"),
+            "candidates_location":candidate_location.get("current_location"),
+            "candidates_work_authorization":candidate_work_authorization.get("work_authorization")}
 
 
-check = candidate_work_authorization_extraction(raw_text)
+check = candidate_info_ext_for_eligibility_gate(res_sec, raw_text, SKILL_DATABASE)
 print(check)
 
 
