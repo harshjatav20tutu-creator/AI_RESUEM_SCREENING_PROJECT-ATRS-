@@ -45,7 +45,8 @@ def jd_sections_ext(text:str)->Dict[str,List[str]]:
 
     }
 
-    t = text.replace("\r\n","\n").replace("\r","\n")
+    t = text.replace("\r\n","\n").replace("\r","\n").replace("/"," ")
+    
 
     alias_key_mapping :Dict[str , str] = {}
     all_alias: List[str] = []

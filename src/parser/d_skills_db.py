@@ -151,3 +151,27 @@ SKILL_FAMILIES = {
     "ui_ux_design": ["figma", "sketch", "adobe xd", "invision", "balsamiq", "axure"],
     "issue_tracking": ["jira", "trello", "asana", "monday.com", "clickup", "linear"]
 }
+
+requirement_map = {
+    "Bachelor of Technology in Computer Science": ["Bachelor of Technology in Computer Science","B.Tech CSE", "B.Tech in CS", "B.Tech CS", "B.Tech. (Computer Science)"],
+
+    "Bachelor of Science in Computer Science": ["Bachelor of Science in Computer Science","B.S. CS", "B.Sc. CS", "BSCS", "Bachelor of Computer Science"],
+
+    "Bachelor of Engineering in Computer Science": ["Bachelor of Engineering in Computer Science","B.E. CSE", "B.E. CS", "B.E. in Computer Science"],
+
+    "Bachelor of Computer Applications": ["Bachelor of Computer Applications","BCA", "B.C.A.", "Bachelor in Computer Applications"],
+
+    "Master of Technology in Computer Science": ["Master of Technology in Computer Science","M.Tech CSE", "M.Tech CS", "M.Tech in Computer Science"],
+
+    "Master of Science in Computer Science": ["Master of Science in Computer Science","M.S. CS", "M.Sc. CS", "MSCS", "Master of Computer Science"],
+
+    "Master of Computer Applications": ["Master of Computer Applications","MCA", "M.C.A.", "Master in Computer Applications"],
+
+    "Doctor of Philosophy in Computer Science": ["Doctor of Philosophy in Computer Science","Ph.D. CS", "PhD in Computer Science", "Ph.D. in CSE"],
+
+    "Bachelor's or Master's degree in Computer Science":[
+    "Bachelor’s Master’s degree in Computer Science","Bachelor's Master's degree in Computer Science","Bachelor's Master's in computer science",
+    "Bachelor’s Master’s in computer science"
+    ]
+
+    }

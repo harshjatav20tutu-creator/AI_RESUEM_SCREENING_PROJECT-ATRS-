@@ -466,7 +466,7 @@ def candidate_location_extraction(raw_text:str):
             if re.search(rf"\b{re.escape(key)}\b", header_text):
                 return {"current location": indian_states[key]}
                 
-    return {"current location": None}
+    return {"current location": "unknown"}
 
 def candidate_work_authorization_extraction(res_text:str):
     normal_raw_res_text = cleaning_for_raw_text(res_text)

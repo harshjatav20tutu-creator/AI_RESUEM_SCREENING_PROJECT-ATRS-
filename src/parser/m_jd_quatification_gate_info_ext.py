@@ -1,6 +1,9 @@
 import re 
 from typing import Dict , List ,Any
 
+def clean_token(token):
+    return token.strip(',./|()')
+
 def section_light_cleaning(text:str)->str:
     text = re.sub(r"[(),/-]"," ",text)
     text = re.sub(r"\s+", " ", text)
@@ -112,76 +115,108 @@ def extraction_experience_for_gate(raw_text:str)->Dict[str,float|None]: # done
 
 
 # not fully tested 
-def extraction_degree_qualification_for_gate(jd_sections:Dict[str,List[str]])->Dict[str,Any]:
+def extraction_degree_qualification_for_gate(jd_sec:Dict[str,List[str]])->Dict[str,Any]:
 
-    requirement_map:Dict[str, List[str]] = {
-    "Bachelor of Technology in Computer Science": ["Bachelor of Technology in Computer Science","B.Tech CSE", "B.Tech in CS", "B.Tech CS", "B.Tech. (Computer Science)"],
-
-    "Bachelor of Science in Computer Science": ["Bachelor of Science in Computer Science","B.S. CS", "B.Sc. CS", "BSCS", "Bachelor of Computer Science"],
-
-    "Bachelor of Engineering in Computer Science": ["Bachelor of Engineering in Computer Science","B.E. CSE", "B.E. CS", "B.E. in Computer Science"],
-
-    "Bachelor of Computer Applications": ["Bachelor of Computer Applications","BCA", "B.C.A.", "Bachelor in Computer Applications"],
-
-    "Master of Technology in Computer Science": ["Master of Technology in Computer Science","M.Tech CSE", "M.Tech CS", "M.Tech in Computer Science"],
-
-    "Master of Science in Computer Science": ["Master of Science in Computer Science","M.S. CS", "M.Sc. CS", "MSCS", "Master of Computer Science"],
-
-    "Master of Computer Applications": ["Master of Computer Applications","MCA", "M.C.A.", "Master in Computer Applications"],
-
-    "Doctor of Philosophy in Computer Science": ["Doctor of Philosophy in Computer Science","Ph.D. CS", "PhD in Computer Science", "Ph.D. in CSE"],
-
-    "Bachelor's or Master's degree in Computer Science":[
-    "Bachelor’s Master’s degree in Computer Science","Bachelor's Master's degree in Computer Science","Bachelor's Master's in computer science",
-    "Bachelor’s Master’s in computer science"
-    ]
-
+    degree_levels = {
+    "bachelor": ["bachelor", "bachelor’s","bachelors", "b.s", "bs", "b.a", "ba", "b.tech", "btech", "b.e", "be", "b.sc", "bsc", "undergrad"],
+    "master": ["master", "masters", "master’s","m.s", "ms", "m.a", "ma", "m.tech", "mtech", "m.e", "me", "m.sc", "msc", "mba", "grad"],
+    "doctorate": ["phd", "ph.d", "doctorate", "doctoral", "d.phil"],
+    "diploma": ["diploma", "associate", "a.s", "a.a", "certification", "cert"]
     }
 
-    normalized_jd_sections = jd_sections_cleaning(jd_sections)
+    degree_fields = {
+    "computer_science": ["computer science", "cs", "compsci", "computer engineering", "software engineering"],
+    "artificial_intelligence": ["artificial intelligence", "ai", "machine learning", "ml", "deep learning", "nlp", "natural language processing"],
+    "data_science": ["data science", "ds", "data analytics", "data engineering", "big data"],
+    "information_technology": ["information technology", "it", "information systems", "mis"]
+    }
 
-    degree_map = {}
-    all_qual_alias = []
-    for canonial , alias in requirement_map.items():
 
-        for a in alias:
-            norm = a.lower().strip()
-            degree_map[norm] = canonial.lower().strip()
-            all_qual_alias.append(norm)
-        
-    all_qual_alias = sorted(set(all_qual_alias), key = len, reverse= True)
+    to_canon_d_level = {}
+    all_degree_level = set()
 
-    patt = "|".join(re.escape(a) for a in all_qual_alias if alias)
+    for canon , alias in degree_levels.items():
+        if alias:
+            for a in alias:
+                a_norm = a.lower().strip()
+                all_degree_level.add(a_norm)
+                to_canon_d_level[a_norm] = canon.lower().strip()
+    
+    norm_all_degree_level = set(sorted(list(all_degree_level), key=len, reverse=True))
+    big_degree_level_patt = "|".join(re.escape(d) for d in norm_all_degree_level if d)
+    degree_level_pattern = re.compile(rf"\b({big_degree_level_patt})\b",re.IGNORECASE)
 
-    pattern = re.compile(rf"\b({patt})\b",re.IGNORECASE)
 
-    qualification_list = set()
-    if normalized_jd_sections.get("essential_requirements"):
+    to_canon_d_fields = {}
+    all_degree_fields = set()
 
-        for m in pattern.finditer(normalized_jd_sections.get("essential_requirements")):
-            if m:
-                degree = m.group(1).lower().strip()
-                qualification_list.add(degree_map.get(degree))
+    for canon , alias in degree_fields.items():
+        if alias:
+            for a in alias:
+                a_norm = a.lower().strip()
+                all_degree_fields.add(a_norm)
+                to_canon_d_fields[a_norm] = canon.lower().strip()
 
-    elif normalized_jd_sections.get("education"):
-        for m in pattern.finditer(normalized_jd_sections.get("education")):
-            if m:
-                degree = m.group(1).lower().strip()
-                qualification_list.add(degree_map.get(degree))
-
-    elif normalized_jd_sections.get("requirements"):
-        for m in pattern.finditer(normalized_jd_sections.get("requirements")):
-            if m:
-                degree = m.group(1).lower().strip()
-                qualification_list.add(degree_map.get(degree))
+    norm_all_degree_fields = set(sorted(list(all_degree_fields), key=len, reverse=True))
+    big_degree_fields_patt = "|".join(re.escape(d) for d in norm_all_degree_fields if d)
+    degree_fields_pattern = re.compile(rf"\b({big_degree_fields_patt})\b",re.IGNORECASE)
 
     degree_required = False
-    if qualification_list:
+    degree_level_ext = set()
+    degree_fields_ext = set()
+
+    if jd_sec.get("essential_requirements"):
+        jd_sections = []
+        for i in jd_sec.get("essential_requirements"):
+            jd_sections.append(clean_token(i.lower().strip()))
+
+        for i , word in enumerate(jd_sections):
+            if word in all_degree_level:
+                degree_level_ext.add(to_canon_d_level.get(word.lower().strip()))
+                window_tokens = jd_sections[i:i+15]
+                window_text = " ".join(window_tokens).lower().strip()
+                for m in degree_fields_pattern.finditer(window_text):
+                    nor_m = m.group(1).lower().strip()
+                    degree_fields_ext.add(to_canon_d_fields.get(nor_m))
+
+    elif jd_sec.get("education"):
+
+        jd_sections = []
+        for i in jd_sec.get("education"):
+            jd_sections.append(clean_token(i.lower().strip()))
+
+        for i , word in enumerate(jd_sections):
+            if word in all_degree_level:
+                degree_level_ext.add(to_canon_d_level.get(word.lower().strip()))
+                window_tokens = jd_sections[i:i+15]
+                window_text = " ".join(window_tokens).lower().strip()
+                for m in degree_fields_pattern.finditer(window_text):
+                    nor_m = m.group(1).lower().strip()
+                    degree_fields_ext.add(to_canon_d_fields.get(nor_m))
+
+    elif jd_sec.get("requirements"):
+
+        jd_sections = []
+        for i in jd_sec.get("requirements"):
+            jd_sections.append(clean_token(i.lower().strip()))
+
+        for i , word in enumerate(jd_sections):
+            if word in all_degree_level:
+                degree_level_ext.add(to_canon_d_level.get(word.lower().strip()))
+                window_tokens = jd_sections[i:i+15]
+                window_text = " ".join(window_tokens).lower().strip()
+                for m in degree_fields_pattern.finditer(window_text):
+                    nor_m = m.group(1).lower().strip()
+                    degree_fields_ext.add(to_canon_d_fields.get(nor_m))
+
+    if degree_level_ext:
         degree_required = True
 
-    return {"degree level allowed":list(qualification_list),
-            "degree required":degree_required}
-    
+    return {"degree required":degree_required,
+            "degree levels":list(degree_level_ext),
+            "degree fields":list(degree_fields_ext)}
+
+
 # using sliding wondow to extract location if we find work mode , slicing surrounding 15 words 
 def extract_work_mode_loc_second_method(raw_jd:str, target_word:set, N:int)->str|None: # done
 
@@ -396,7 +431,8 @@ def qualification_requirements_for_resume(jd_sections, skills_db, raw_jd):
     return {"must have skills":jd_must_skills.get("must have skills",[]),
             "minimum experience in years":mininum_experience.get("mininum experience in years"),
             "degree requirement":degree_requirement.get("degree required"),
-            "degree level allowed":degree_requirement.get("degree level allowed"),
+            "degree levels":degree_requirement.get("degree levels"),
+            "degree fields":degree_requirement.get("degree fields"),
             "work mode":work_mode_n_location.get("work mode"),
             "work location":work_mode_n_location.get("work location"),
             "work authorization":work_authorization_n_sponsorship.get("work authorization"),
