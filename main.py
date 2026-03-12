@@ -11,12 +11,13 @@ from src.parser.j_jd_skill_weight import jd_skill_weight_ext
 from src.parser.j_jd_skill_weight import to_flat_skill_weights
 from src.parser.k_skills_matching_scoring import resume_scoring
 from src.parser.m_jd_quatification_gate_info_ext import qualification_requirements_for_resume
+from src.parser.o_candidate_attribute_ext import candidate_info_ext_for_eligibility_gate
 
 raw_text = column_resume_text_ext('C:/Users/HP/OneDrive/Documents/AI_resume_screening_project/Data/Resumes/resume_01.pdf')
 cleaned_text = clean_text(raw_text)
-sections = extract_sections(cleaned_text)
-skills = get_skills_text(sections)
-res_skl_weight = weight_resume_skills(skills,sections)
+resume_sections = extract_sections(cleaned_text)
+skills = get_skills_text(resume_sections)
+res_skl_weight = weight_resume_skills(skills,resume_sections)
 jd_text = text_extraction_from_files('C:/Users/HP/OneDrive/Documents/AI_resume_screening_project/Data/job_descriptions/a_paste_job_description.txt')
 jd_sections = jd_sections_ext(jd_text)
 jd_skills = jd_extract_skills(jd_text,SKILL_DATABASE)
@@ -24,5 +25,6 @@ jd_skill_weight_debug = jd_skill_weight_ext(SKILL_DATABASE, jd_sections)
 jd_skill_weight = to_flat_skill_weights(jd_skill_weight_debug)
 resume_score = resume_scoring(res_skl_weight,jd_skill_weight,SKILL_DATABASE)
 job_requirements_info_extraction = qualification_requirements_for_resume(jd_sections, SKILL_DATABASE, jd_text)
-print(job_requirements_info_extraction)
+candidate_attribute_ext = candidate_info_ext_for_eligibility_gate(resume_sections, raw_text , SKILL_DATABASE)
+print(candidate_attribute_ext)
 
