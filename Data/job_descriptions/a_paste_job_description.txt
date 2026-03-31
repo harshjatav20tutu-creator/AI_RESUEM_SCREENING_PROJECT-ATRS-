@@ -20,7 +20,7 @@ Required Skills & Qualifications
 
 Bachelor’s/Master’s degree in Computer Science, Data Science, AI/ML, or related fields.
 Strong programming skills in Python (TensorFlow, PyTorch, LangChain, Hugging Face, etc.).
-2+ Experience with Generative AI, LLMs/SLMs, RAG architectures, and vector databases (e.g., Pinecone, FAISS, Weaviate).
+2+ years Experience with Generative AI, LLMs/SLMs, RAG architectures, and vector databases (e.g., Pinecone, FAISS, Weaviate).
 Hands-on knowledge of Agentic AI frameworks (e.g., LangGraph, AutoGen, CrewAI, or similar).
 Familiarity with cloud platforms (AWS, Azure, GCP) and MLOps practices (Docker, Kubernetes, CI/CD).
 Understanding of data security, compliance, and governance frameworks in regulated industries (preferably banking/finance).

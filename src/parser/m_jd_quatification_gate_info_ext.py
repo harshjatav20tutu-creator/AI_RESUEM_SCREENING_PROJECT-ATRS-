@@ -74,7 +74,7 @@ def extraction_must_skills_for_gate(jd_sections:Dict[str,str],skills_db:Dict[str
     return {"must have skills":list(must_skills)}
 
 
-def extraction_experience_for_gate(raw_text:str)->Dict[str,float|None]: # done
+def extraction_experience_for_gate(raw_text:str)->Dict[str,float]: # done
 
     normalizing_raw_text = cleaning_for_raw_text(raw_text)
 
@@ -88,7 +88,7 @@ def extraction_experience_for_gate(raw_text:str)->Dict[str,float|None]: # done
     month_type_match1 = re.search(month_experience_pattern1, normalizing_raw_text, re.IGNORECASE)
     month_type_match2 = re.search(month_experience_pattern2, normalizing_raw_text, re.IGNORECASE)
 
-    minimum_experience = None
+    minimum_experience = 0.0
     if year_type_match1:
         exp = year_type_match1.group(1)
         exp2 = year_type_match1.group(2)
@@ -108,7 +108,7 @@ def extraction_experience_for_gate(raw_text:str)->Dict[str,float|None]: # done
     elif month_type_match2:
         minimum_experience = float(month_type_match2.group(1))/12
 
-    if minimum_experience != None:
+    if minimum_experience != 0.0:
         minimum_experience = float(f"{minimum_experience:.1f}")
 
     return {"mininum experience in years":minimum_experience}
@@ -236,7 +236,7 @@ def extract_work_mode_loc_second_method(raw_jd:str, target_word:set, N:int)->str
 
     return result 
 
-def extraction_workmode_location_for_gate(raw_jd:str)->Dict[str,str|list]: # done
+def extraction_workmode_location_for_gate(raw_jd:str)->Dict[str,str|list]: # flaw in this function
     # header patterns 
     pattern_one = r"(?i)(?:(?:location|job\s*location|office\s*location|base|based\s*in|work\s*model|workplace\s*type|work\s*environment|job\s*type)\s*[:\-]\s*|#LI-)(remote|hybrid|on-?site|wfh)(?:[\s\-(|]+([a-zA-Z\s,]+)[)\n]*)?"
     pattern_two = r"(?i)(?:location|job\s*location|office\s*location|base|based\s*in|work\s*model|workplace\s*type|work\s*environment|job\s*type)\s*[:\-]\s*([a-zA-Z\s,]+?)[\s\-(|]+(remote|hybrid|on-?site|wfh)\b"

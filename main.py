@@ -1,4 +1,5 @@
-from src.parser.a_text_extractor_code import column_resume_text_ext
+# from src.parser.a_text_extractor_code import column_resume_text_ext
+from src.parser.a_text_extractor_code import ResumeParser
 from src.parser.b_text_cleaning import clean_text
 from src.parser.c_text_section_extraction import extract_sections
 from src.parser.d_skills_db import SKILL_DATABASE
@@ -12,8 +13,10 @@ from src.parser.j_jd_skill_weight import to_flat_skill_weights
 from src.parser.k_skills_matching_scoring import resume_scoring
 from src.parser.m_jd_quatification_gate_info_ext import qualification_requirements_for_resume
 from src.parser.o_candidate_attribute_ext import candidate_info_ext_for_eligibility_gate
+# printing two times 
 
-raw_text = column_resume_text_ext('C:/Users/HP/OneDrive/Documents/AI_resume_screening_project/Data/Resumes/resume_01.pdf')
+resume_parser = ResumeParser(r'C:/Users/HP/OneDrive/Documents/AI_resume_screening_project/Data/Resumes/resume_01.pdf')
+raw_text = resume_parser.resume_text_extractor() 
 cleaned_text = clean_text(raw_text)
 resume_sections = extract_sections(cleaned_text)
 skills = get_skills_text(resume_sections)
@@ -26,5 +29,9 @@ jd_skill_weight = to_flat_skill_weights(jd_skill_weight_debug)
 resume_score = resume_scoring(res_skl_weight,jd_skill_weight,SKILL_DATABASE)
 job_requirements_info_extraction = qualification_requirements_for_resume(jd_sections, SKILL_DATABASE, jd_text)
 candidate_attribute_ext = candidate_info_ext_for_eligibility_gate(resume_sections, raw_text , SKILL_DATABASE)
-print(candidate_attribute_ext)
+
+
+print(job_requirements_info_extraction)
+# print(raw_text)
+# fault in resume section extraction 
 

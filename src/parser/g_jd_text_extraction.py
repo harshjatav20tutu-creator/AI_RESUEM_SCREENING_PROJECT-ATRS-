@@ -5,6 +5,7 @@ from docx import Document
 
 
 def extract_text_from_docu(docx_path:str)->str:
+    # it can't handle multiple pages 
     doc = Document(docx_path)
     parts: List[str] = []
 

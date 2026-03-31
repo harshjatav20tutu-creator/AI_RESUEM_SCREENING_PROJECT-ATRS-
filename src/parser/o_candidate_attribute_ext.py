@@ -106,7 +106,7 @@ def candidate_experience_extraction(raw_text:str, resume_sections:Dict[str,str])
             if float(extracted_experience) > max_experience:
                 max_experience = float(extracted_experience)
 
-    if max_experience == 0:
+    if max_experience == 0.0:
         # this pattern is used to handle these experience pattern (5 months of experience , months experience: 8 months)
         months_pattern = re.compile(
         r"(?:(?P<months_front>\d+)\+?\s*\b(?:months?|mos?|mo)\b(?:\s+of)?\s+\b(?:experience|exps?|exp)\b|"
@@ -122,7 +122,7 @@ def candidate_experience_extraction(raw_text:str, resume_sections:Dict[str,str])
                 if float(extracted_experience)/12 > max_experience:
                     max_experience = float(extracted_experience)/12
 
-    if max_experience == 0:
+    if max_experience == 0.0:
 
         date_range_pattern = re.compile(
         r"(?i)\b(?P<start_month>0?[1-9]|1[0-2]|[a-z]{3,9})[\s/\-]+(?P<start_year>\d{4})"
@@ -159,13 +159,9 @@ def candidate_experience_extraction(raw_text:str, resume_sections:Dict[str,str])
             if float(year_exp + month_exp) > max_experience:
                 max_experience = (year_exp + month_exp)
 
-    if max_experience:
-        return {"total_experience": float(f"{total_experience:.1f}"),
-                "max_experience": float(f"{max_experience:.1f}")}
-    else:
-        return {"total_experience":None,
-                "max_experience": None}
-       
+    return {"total_experience": float(f"{total_experience:.1f}"),
+            "max_experience": float(f"{max_experience:.1f}")}
+
 
 def candidate_degree_level_n_field_extraction(raw_text:str, resume_sections:Dict[str,str])->Dict[str,List[str]]: 
 
@@ -253,7 +249,7 @@ def candidate_degree_level_n_field_extraction(raw_text:str, resume_sections:Dict
     return {"degree_levels":list(degree_level_ext),
             "degree_fields":list(degree_fields_ext)}
 
-def candidate_location_extraction(raw_text:str):
+def candidate_location_extraction(raw_text:str)->str:
     indian_states = {
     "andhra pradesh": "Andhra Pradesh", "ap": "Andhra Pradesh",
     "arunachal pradesh": "Arunachal Pradesh", "ar": "Arunachal Pradesh",
@@ -363,6 +359,7 @@ def candidate_info_ext_for_eligibility_gate(resume_sections:Dict[str,List[str]],
             "candidate_total_experience":candidate_experience.get("total_experience"),
             "candidate_maximum_experience":candidate_experience.get("max_experience"),
             "candidates_degree_levels":candidate_degree_ext.get("degree_levels"),
-            "candidates_degree_levels":candidate_degree_ext.get("degree_fields"),
+            "candidates_degree_fields":candidate_degree_ext.get("degree_fields"),
             "candidates_location":candidate_location.get("current_location"),
             "candidates_work_authorization":candidate_work_authorization.get("work_authorization")}
+
