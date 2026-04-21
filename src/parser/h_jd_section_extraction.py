@@ -60,7 +60,7 @@ def jd_sections_ext(text:str)->Dict[str,List[str]]:
     all_alias = sorted(set(all_alias),key=len, reverse=True)
     alias_pattern = "|".join(re.escape(a) for a in all_alias)
 
-    heading_re = re.compile(rf"(?im)(?:^|\n)\s*(?:[-•*]\s*)?(?P<h>{alias_pattern})\s*[:\-]?\s*",flags=re.IGNORECASE)
+    heading_re = re.compile(rf"(?im)(?:^|\n)\s*(?:[-•*]\s*)?(?P<h>{alias_pattern})\s*[:\-]?\s*")
 
     hits: List[tuple[int,int,str]] = []
     for m in heading_re.finditer(t):

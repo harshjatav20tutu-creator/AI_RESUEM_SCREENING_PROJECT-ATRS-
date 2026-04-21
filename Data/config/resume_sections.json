@@ -1,0 +1,122 @@
+{   
+    "section_keywords" :{
+        "summary": [
+            "summary", "professional summary", "profile", "career objective", 
+            "objective", "about me", "executive summary", "professional profile", 
+         "background", "overview", "personal statement", "introduction"
+        ],
+        "education": [
+            "education", "academic background", "academics", "qualification", 
+            "educational qualifications", "schooling", "certifications", 
+            "degrees", "academic profile", "training and education"
+        ],
+        "skills": [
+            "skills", "technical skills", "core skills", "technologies", 
+            "competencies", "tools", "expertise", "core competencies",
+            "technical stack", "specializations", "programming languages", 
+            "proficiency", "hard skills", "soft skills", "strengths"
+        ],
+        "experience": [
+            "experience", "work experience", "employment", "internship", 
+            "professional experience", "work history", "career history", 
+            "background", "professional background", "employment history", 
+            "previous roles", "internships and training","key achievements"
+        ],
+        "projects": [
+            "projects", "personal projects", "academic projects", 
+            "technical projects", "open source", "portfolio", 
+            "notable work", "case studies", "key projects"
+        ],
+        "education_certifications": [
+            "education and certifications", "academic and professional qualifications",
+            "education & certificates", "academic background and training",
+            "education/certifications", "qualifications and awards",
+            "academic achievements and certifications", "degrees and certificates"
+        ],
+        "skills_technologies": [
+            "skills and technologies", "technical skills and core competencies",
+            "skills & tools", "technical stack and expertise",
+            "programming languages and frameworks", "key skills and achievements",
+            "technical expertise and proficiencies", "skills/tools"
+        ],
+        "experience_projects": [
+            "experience and projects", "professional and personal projects",
+            "work history and portfolio", "experience/projects",
+            "employment and academic projects", "relevant experience and projects",
+            "career history and key works", "projects and experience"
+        ],
+        "summary_skills": [
+            "summary and skills", "profile and expertise",
+            "professional summary and core competencies", "about me and skills",
+            "executive summary and technical skills", "background and skills"
+        ],
+        "volunteer_awards": [
+            "volunteering and awards", "extra-curricular activities and achievements",
+            "community involvement and honors", "volunteer experience and recognitions",
+            "awards and volunteer work", "honors and activities"
+        ]
+    },
+    "universal_sections": {
+        "summary": [
+            "professional summary", "technical profile", "executive summary", "career objective","summary",
+            "about me", "professional bio", "technical overview", "core profile", "introduction"
+        ],
+        "education": [
+            "academic background", "educational qualifications", "scholastic history", "degrees", "education",
+            "academic profile", "formal education", "university education", "academic record"
+        ],
+        "experience": [
+            "work experience", "professional experience", "employment history", "career history", "experience",
+            "professional background", "internships", "relevant experience", "technical experience", 
+            "professional trajectory", "industry experience", "employment", "previous roles"
+        ],
+        "skills": [
+            "technical skills", "technical stack", "core competencies", "programming languages", "skills",
+            "technologies", "tools & technologies", "technical expertise", "skills & proficiencies", 
+            "specializations", "hard skills", "frameworks and libraries", "key skills", 
+            "areas of expertise", "it skills", "software proficiencies"
+        ],
+        "projects": [
+            "personal projects", "technical projects", "academic projects", "key projects", "projects",
+            "portfolio", "notable work", "case studies", "capstone projects", "github projects", 
+            "side projects", "implementation highlights", "independent projects"
+        ],
+        "open_source": [
+            "open source contributions", "community contributions", "github contributions", "open_source",
+            "open source work", "contributions to open source"
+        ],
+        "certifications": [
+            "professional certifications", "technical certifications", "licenses & certifications", "certifications",
+            "credentials", "badges and certifications", "accreditations", "training and certificates"
+        ],
+        "awards_honors": [
+            "awards", "honors", "key achievements", "recognitions", "scholarships", "awards_honors",
+            "notable accomplishments", "merit awards", "contest wins"
+        ],
+        "hackathons": [
+            "hackathons", "coding competitions", "programming contests", "datathons", "competitive programming"
+        ],
+        "publications_patents": [
+            "publications", "research papers", "patents", "conference proceedings", "publications_patents",
+            "articles", "white papers", "published works"
+        ],
+        "languages": [
+            "languages known", "linguistic proficiency", "spoken languages", "multilingual skills","languages"
+        ],
+        "volunteer": [
+            "volunteer experience", "volunteering", "community involvement", "non-profit work", "social service","volunteer"
+        ],
+        "education_certifications": [
+            "education and certifications", "academic and professional qualifications", 
+            "education & certificates", "degrees and training"
+        ],
+        "skills_technologies": [
+            "skills and tools", "technical stack and expertise", "skills & technologies", 
+            "languages and frameworks", "technical expertise and proficiencies","skills and technologies"
+        ],
+        "experience_projects": [
+            "experience and projects", "professional and personal projects", "experience & projects",
+            "work history and portfolio", "experience/projects", "career history and key works"
+        ]
+    }
+}
