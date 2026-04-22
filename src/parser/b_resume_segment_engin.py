@@ -184,7 +184,7 @@ class ResumeTextNormalizedandSegmentationEngine:
         sections:Dict[str,str] = {}
 
         if not resume_headings:
-            return ""
+            return sections
         
         resume_sections_headings = sorted(set(resume_headings),key=len, reverse=True)
         nlp_headings_patt = "|".join(re.escape(a.lower().strip()) for a in resume_sections_headings)
@@ -215,9 +215,7 @@ class ResumeTextNormalizedandSegmentationEngine:
         self.normalized_text_and_sections["cleaned_resume_text"] = self._text_light_cleaner(self.raw_resume_text)
 
         resume_sections = self.regex_segmentation_engine()
-        print("regex_ran")
         if len(resume_sections)< 3:
-            print("nlp_ran")
             resume_sections = self.nlp_segmentation_and_storing_extra_headers()
 
         self.normalized_text_and_sections["resume_sections"] = resume_sections

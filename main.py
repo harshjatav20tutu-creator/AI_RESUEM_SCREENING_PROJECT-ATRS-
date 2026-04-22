@@ -1,9 +1,7 @@
-# from src.parser.a_text_extractor_code import column_resume_text_ext
 from src.parser.a_text_extractor_code import ResumeParser
 from src.parser.b_resume_segment_engin import ResumeTextNormalizedandSegmentationEngine
-# from src.parser.b_text_cleaning import clean_text
+#######################################################################################################
 
-from src.parser.c_text_section_extraction import extract_sections
 from src.parser.d_skills_db import SKILL_DATABASE
 from src.parser.e_text_skills_extraction import get_skills_text
 from src.parser.f_resume_skill_weight import weight_resume_skills
@@ -17,8 +15,7 @@ from src.parser.m_jd_quatification_gate_info_ext import qualification_requiremen
 from src.parser.o_candidate_attribute_ext import candidate_info_ext_for_eligibility_gate
 # printing two times 
 
-resume_parser = ResumeParser(r'C:/Users/HP/OneDrive/Documents/AI_resume_screening_project/Data/Resumes/resume_01.pdf')
-raw_resume_text = resume_parser.resume_text_extractor() 
+
 # cleaned_text = clean_text(raw_text)
 # resume_sections = extract_sections(cleaned_text)
 # skills = get_skills_text(resume_sections)
@@ -35,8 +32,11 @@ raw_resume_text = resume_parser.resume_text_extractor()
 def main(resume_path,section_keywords_path,extra_headers_path):
     resume_parser = ResumeParser(resume_path)
     raw_resume_text = resume_parser.resume_text_extractor() 
+    raw_resume_header_text = resume_parser.main_header_extractor()
     resume_segmentation_engin = ResumeTextNormalizedandSegmentationEngine(raw_resume_text,section_keywords_path,extra_headers_path)
     resume_norm_text_n_segments = resume_segmentation_engin.main_resume_segmentation_engin()
+    print(raw_resume_header_text)
+
     
 
 

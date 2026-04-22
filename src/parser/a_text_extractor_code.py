@@ -93,4 +93,74 @@ class ResumeParser:
             return "" # add a feature to add name of file which is failed in parsing 
 
 
+    # header parser 
+    def get_pdf_header_slice(self, slice_percentage=0.20):
 
+        header_text = ""
+        
+        try:
+            with pdfplumber.open(self.file_path) as pdf:
+                if not pdf.pages:
+                    return ""
+                
+                first_page = pdf.pages[0]
+                
+                # Define the bounding box: (x0, top, x1, bottom)
+                # pdfplumber uses points (1/72 inch) starting from top-left (0,0)
+                width = first_page.width
+                height = first_page.height
+                
+                bbox = (0, 0, width, height * slice_percentage)
+                
+                # Crop the page to the header area
+                header_area = first_page.within_bbox(bbox)
+                
+                # Extract text from the cropped area
+                header_text = header_area.extract_text()
+                
+        except Exception as e:
+            print(f"Extraction Error: {e}")
+            return ""
+            
+        return header_text if header_text else ""
+
+    def extract_docx_header(self,line_limit=10):
+
+        combined_header_parts = []
+        
+        try:
+            doc = Document(self.file_path)
+            
+            # 1. Extract from the Formal XML Header parts
+            # Documents can have multiple sections, each with its own header
+            for section in doc.sections:
+                header = section.header
+                if header:
+                    for paragraph in header.paragraphs:
+                        text = paragraph.text.strip()
+                        if text:
+                            combined_header_parts.append(text)
+            
+            # 2. Extract from the top of the Document Body
+            # In case the user didn't use the formal 'Header' feature
+            body_paragraphs = doc.paragraphs[:line_limit]
+            for para in body_paragraphs:
+                text = para.text.strip()
+                if text:
+                    combined_header_parts.append(text)
+                    
+        except Exception as e:
+            # Log error for debugging, but return empty string to keep pipeline moving
+            print(f"DOCX Extraction Error: {e}")
+            return ""
+        
+        # Join with newlines and return
+        return "\n".join(combined_header_parts).strip()
+
+    def main_header_extractor(self):
+        if self.file_path.lower().endswith(".pdf"):
+            return self.get_pdf_header_slice()
+        elif self.file_path.lower().endswith(".docx"):
+            return self.extract_docx_header()
+        else:
+            return ""
