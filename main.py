@@ -35,7 +35,7 @@ def main(resume_path,section_keywords_path,extra_headers_path):
     raw_resume_header_text = resume_parser.main_header_extractor()
     resume_segmentation_engin = ResumeTextNormalizedandSegmentationEngine(raw_resume_text,section_keywords_path,extra_headers_path)
     resume_norm_text_n_segments = resume_segmentation_engin.main_resume_segmentation_engin()
-    print(raw_resume_header_text)
+    print(raw_resume_text)
 
     
 

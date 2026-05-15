@@ -106,13 +106,13 @@
         "volunteer": [
             "volunteer experience", "volunteering", "community involvement", "non-profit work", "social service","volunteer"
         ],
-        "education_certifications": [
-            "education and certifications", "academic and professional qualifications", 
-            "education & certificates", "degrees and training"
-        ],
         "skills_technologies": [
             "skills and tools", "technical stack and expertise", "skills & technologies", 
             "languages and frameworks", "technical expertise and proficiencies","skills and technologies"
+        ],
+        "education_certifications": [
+            "education and certifications", "academic and professional qualifications", 
+            "education & certificates", "degrees and training"
         ],
         "experience_projects": [
             "experience and projects", "professional and personal projects", "experience & projects",
