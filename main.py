@@ -1,5 +1,6 @@
 from src.parser.a_text_extractor_code import ResumeParser
 from src.parser.b_resume_segment_engin import ResumeTextNormalizedandSegmentationEngine
+from src.parser.c_candidate_info_ext import CandidateAttributesExtractionEngine
 #######################################################################################################
 
 from src.parser.d_skills_db import SKILL_DATABASE
@@ -29,17 +30,29 @@ from src.parser.o_candidate_attribute_ext import candidate_info_ext_for_eligibil
 # job_requirements_info_extraction = qualification_requirements_for_resume(jd_sections, SKILL_DATABASE, jd_text)
 # candidate_attribute_ext = candidate_info_ext_for_eligibility_gate(resume_sections, raw_text , SKILL_DATABASE)
 
-def main(resume_path,section_keywords_path,extra_headers_path):
+def main(resume_path = r'C:/Users/HP/OneDrive/Documents/AI_resume_screening_project/Data/Resumes/resume_01.pdf',
+         section_keywords_path = r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\resume_sections.json",
+         extra_headers_path = r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\resume_extra_section.json",
+         sec_prompt_config_path= r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\prompts.json"):
+    
     resume_parser = ResumeParser(resume_path)
     raw_resume_text = resume_parser.resume_text_extractor() 
     raw_resume_header_text = resume_parser.main_header_extractor()
+
     resume_segmentation_engin = ResumeTextNormalizedandSegmentationEngine(raw_resume_text,section_keywords_path,extra_headers_path)
     resume_norm_text_n_segments = resume_segmentation_engin.main_resume_segmentation_engin()
-    print(raw_resume_text)
 
-    
+    ext_candidate_attribute_engine = CandidateAttributesExtractionEngine(raw_resume_header_text,
+                                                                         raw_resume_text,
+                                                                         resume_norm_text_n_segments,
+                                                                         sec_prompt_config_path)
 
 
-main(resume_path = r'C:/Users/HP/OneDrive/Documents/AI_resume_screening_project/Data/Resumes/resume_01.pdf',
-    section_keywords_path = r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\resume_sections.json",
-    extra_headers_path = r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\resume_extra_section.json")
+    print(resume_norm_text_n_segments)
+
+
+main()
+# resume_path = r'C:/Users/HP/OneDrive/Documents/AI_resume_screening_project/Data/Resumes/resume_01.pdf',
+#     section_keywords_path = r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\resume_sections.json",
+#     extra_headers_path = r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\resume_extra_section.json",
+#     sec_prompt_config_path= r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\prompts.json"

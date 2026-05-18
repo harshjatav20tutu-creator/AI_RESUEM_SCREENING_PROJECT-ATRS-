@@ -1,5 +1,4 @@
-SKILL_DATABASE = {
-    # ==================== PROGRAMMING LANGUAGES (20 skills) ====================
+{"skill_database" : {
     "python": ["python", "python3", "python 3", "py"],
     "javascript": ["javascript", "js", "js/ts"],
     "typescript": ["typescript", "ts", "TS"],
@@ -20,8 +19,6 @@ SKILL_DATABASE = {
     "vb_net": ["vb.net", "vbnet", "visual basic"],
     "groovy": ["groovy"],
     "clojure": ["clojure"],
-
-    # ==================== WEB & FRONTEND FRAMEWORKS (25 skills) ====================
     "react": ["react", "reactjs", "react.js", "react js"],
     "react_js": ["react", "reactjs", "react.js", "react js"],
     "next_js": ["next.js", "nextjs", "next", "next.js framework"],
@@ -47,8 +44,6 @@ SKILL_DATABASE = {
     "semantic_ui": ["semantic ui", "semantic"],
     "axios": ["axios"],
     "fetch_api": ["fetch", "fetch api"],
-
-    # ==================== BACKEND/API FRAMEWORKS (30 skills) ====================
     "express": ["express", "expressjs", "express.js"],
     "flask": ["flask", "flask python"],
     "fastapi": ["fastapi", "fast api"],
@@ -80,9 +75,6 @@ SKILL_DATABASE = {
     "fastify": ["fastify"],
     "graphene": ["graphene"],
     "grpc": ["grpc", "g rpc"],
-
-    # ==================== CLOUD PLATFORMS & SERVICES (50 skills) ====================
-    # AWS Services (20)
     "aws": ["aws", "amazon web services", "amazon aws"],
     "aws_lambda": ["lambda", "aws lambda"],
     "aws_ec2": ["ec2", "aws ec2", "elastic compute"],
@@ -103,8 +95,6 @@ SKILL_DATABASE = {
     "aws_kinesis": ["kinesis", "aws kinesis"],
     "aws_ecs": ["ecs", "aws ecs", "elastic container"],
     "aws_secretsmanager": ["secrets manager", "aws secrets"],
-
-    # GCP Services (15)
     "gcp": ["gcp", "google cloud", "google cloud platform"],
     "cloud_functions": ["cloud functions", "gcf"],
     "app_engine": ["app engine", "gae"],
@@ -120,8 +110,6 @@ SKILL_DATABASE = {
     "cloud_sql": ["cloud sql", "cloud-sql"],
     "cloud_iam": ["cloud iam", "iam"],
     "cloud_monitoring": ["cloud monitoring", "stackdriver"],
-
-    # Azure Services (13)
     "azure": ["azure", "microsoft azure"],
     "azure_functions": ["azure functions", "functions"],
     "azure_app_service": ["app service", "azure app service"],
@@ -135,12 +123,8 @@ SKILL_DATABASE = {
     "azure_cognitive_services": ["cognitive services", "azure ai"],
     "azure_logic_apps": ["logic apps", "azure logic"],
     "azure_key_vault": ["key vault", "azure vault"],
-
-    # Multi-Cloud & Others (2)
     "digitalocean": ["digitalocean", "do", "digital ocean"],
     "heroku": ["heroku"],
-
-    # ==================== MOBILE DEVELOPMENT (11 skills) ====================
     "react_native": ["react native", "rn", "react-native"],
     "flutter": ["flutter", "flutter framework"],
     "xamarin": ["xamarin", "xamarin.forms", "xamarin android"],
@@ -152,8 +136,6 @@ SKILL_DATABASE = {
     "pwa": ["pwa", "progressive web app"],
     "expo": ["expo"],
     "capacitor": ["capacitor"],
-
-    # ==================== DATA & ANALYTICS TOOLS (25 skills) ====================
     "apache_spark": ["spark", "apache spark"],
     "apache_airflow": ["airflow", "apache airflow"],
     "dbt": ["dbt", "data build tool"],
@@ -179,8 +161,6 @@ SKILL_DATABASE = {
     "snowflake": ["snowflake"],
     "redshift": ["redshift", "amazon redshift"],
     "databricks": ["databricks"],
-
-    # ==================== AI/ML/LLM TOOLS (22 skills) ====================
     "tensorflow": ["tensorflow", "tf"],
     "pytorch": ["pytorch", "torch", "pytorch tensor"],
     "keras": ["keras"],
@@ -203,8 +183,6 @@ SKILL_DATABASE = {
     "catboost": ["catboost"],
     "spacy": ["spacy"],
     "otel": ["otel", "opentelemetry"],
-
-    # ==================== DEVOPS & INFRASTRUCTURE (28 skills) ====================
     "docker": ["docker", "docker container"],
     "kubernetes": ["kubernetes", "k8s", "k8"],
     "helm": ["helm", "helm kubernetes"],
@@ -233,8 +211,6 @@ SKILL_DATABASE = {
     "elasticsearch": ["elasticsearch", "es", "elastic"],
     "logstash": ["logstash"],
     "kibana": ["kibana"],
-
-    # ==================== MESSAGE QUEUES & STREAMING (15 skills) ====================
     "apache_kafka": ["kafka", "apache kafka"],
     "rabbitmq": ["rabbitmq", "rabbit mq"],
     "azure_service_bus": ["service bus", "azure service bus"],
@@ -250,8 +226,6 @@ SKILL_DATABASE = {
     "kafka_connect": ["kafka connect"],
     "mqtt": ["mqtt"],
     "amqp": ["amqp"],
-
-    # ==================== DATABASES & DATA STORES (20 skills) ====================
     "sql": ["sql", "sql database", "relational sql"],
     "mysql": ["mysql"],
     "postgresql": ["postgresql", "postgres", "psql"],
@@ -264,7 +238,6 @@ SKILL_DATABASE = {
     "neo4j": ["neo4j"],
     "firebase": ["firebase", "firebase firestore"],
     "dynamodb": ["dynamodb"],
-    "elasticsearch": ["elasticsearch", "es"],
     "opensearch": ["opensearch", "elastic opensearch"],
     "solr": ["solr"],
     "memcached": ["memcached"],
@@ -272,8 +245,6 @@ SKILL_DATABASE = {
     "cockroachdb": ["cockroachdb", "cockroach"],
     "tidb": ["tidb"],
     "planetscale": ["planetscale"],
-
-    # ==================== TESTING & QA TOOLS (18 skills) ====================
     "pytest": ["pytest"],
     "unittest": ["unittest"],
     "nose": ["nose"],
@@ -292,8 +263,6 @@ SKILL_DATABASE = {
     "black": ["black", "black formatter"],
     "ruff": ["ruff"],
     "flake8": ["flake8"],
-
-    # ==================== VERSION CONTROL & COLLABORATION (10 skills) ====================
     "git": ["git", "version control"],
     "github": ["github"],
     "gitlab": ["gitlab"],
@@ -304,8 +273,6 @@ SKILL_DATABASE = {
     "monday_com": ["monday.com", "monday"],
     "clickup": ["clickup"],
     "linear": ["linear"],
-
-    # ==================== API & DOCUMENTATION (15 skills) ====================
     "rest": ["rest", "restful", "rest api"],
     "graphql": ["graphql", "gql"],
     "swagger": ["swagger", "swagger ui", "swagger editor"],
@@ -321,8 +288,6 @@ SKILL_DATABASE = {
     "openapi_generator": ["openapi generator"],
     "api_blueprint": ["api blueprint"],
     "raml": ["raml"],
-
-    # ==================== SECURITY & AUTHENTICATION (14 skills) ====================
     "oauth2": ["oauth2", "oauth 2.0", "oauth"],
     "openid_connect": ["oidc", "openid connect"],
     "saml": ["saml", "saml 2.0"],
@@ -335,10 +300,7 @@ SKILL_DATABASE = {
     "pkcs": ["pkcs", "public key cryptography"],
     "lets_encrypt": ["letsencrypt", "let's encrypt"],
     "hashicorp_vault": ["hashicorp vault", "vault"],
-    "snyk": ["snyk"],
     "semgrep": ["semgrep"],
-
-    # ==================== WEB3/BLOCKCHAIN (16 skills) ====================
     "solidity": ["solidity", "solidity ethereum"],
     "web3_js": ["web3.js", "web3 js", "web3 javascript"],
     "ethers_js": ["ethers.js", "ethers js"],
@@ -355,8 +317,6 @@ SKILL_DATABASE = {
     "metamask": ["metamask", "metamask wallet"],
     "web3_py": ["web3.py", "web3 python"],
     "brownie": ["brownie"],
-
-    # ==================== CMS & LOW-CODE PLATFORMS (16 skills) ====================
     "contentful": ["contentful", "contentful cms"],
     "strapi": ["strapi"],
     "sanity": ["sanity", "sanity cms"],
@@ -373,8 +333,6 @@ SKILL_DATABASE = {
     "n8n": ["n8n"],
     "make": ["make", "make.com"],
     "integromat": ["integromat"],
-
-    # ==================== DESIGN & UI/UX (12 skills) ====================
     "figma": ["figma"],
     "sketch": ["sketch"],
     "adobe_xd": ["adobe xd", "xd"],
@@ -387,8 +345,6 @@ SKILL_DATABASE = {
     "indesign": ["indesign", "adobe indesign"],
     "illustrator": ["illustrator", "adobe illustrator"],
     "photoshop": ["photoshop", "adobe photoshop"],
-
-    # ==================== PROJECT MANAGEMENT & PRODUCTIVITY (12 skills) ====================
     "excel": ["excel", "ms excel", "microsoft excel"],
     "power_bi": ["power bi", "powerbi"],
     "notion": ["notion"],
@@ -399,10 +355,7 @@ SKILL_DATABASE = {
     "miro": ["miro"],
     "lucidchart": ["lucidchart"],
     "draw_io": ["draw.io", "drawio"],
-    "monday": ["monday", "monday.com"],
     "microsoft_project": ["microsoft project"],
-
-    # ==================== BUILD TOOLS & PACKAGE MANAGERS (15 skills) ====================
     "webpack": ["webpack"],
     "vite": ["vite"],
     "babel": ["babel"],
@@ -418,22 +371,8 @@ SKILL_DATABASE = {
     "sbt": ["sbt"],
     "cargo": ["cargo"],
     "nuget": ["nuget"],
-
-    # ==================== MONITORING & OBSERVABILITY (12 skills) ====================
-    "prometheus": ["prometheus", "prom"],
-    "grafana": ["grafana", "grafana dashboard"],
-    "elastic_stack": ["elk", "elastic stack"],
-    "opensearch": ["opensearch"],
-    "datadog": ["datadog", "datadog monitoring"],
-    "new_relic": ["new relic", "newrelic"],
-    "splunk": ["splunk"],
-    "dynatrace": ["dynatrace"],
-    "honeycomb": ["honeycomb"],
-    "opentelemetry": ["opentelemetry", "otel"],
     "cloudwatch": ["cloudwatch", "aws cloudwatch"],
     "stackdriver": ["stackdriver"],
-
-    # ==================== EMERGING & SPECIALTY (10 skills) ====================
     "ai_ml": ["artificial intelligence", "ai", "ai ml", "aiml", "machine learning", "ml"],
     "deep_learning": ["deep learning", "dl"],
     "data_science": ["data science"],
@@ -444,152 +383,10 @@ SKILL_DATABASE = {
     "serverless": ["serverless"],
     "microservices": ["microservices"],
     "devops": ["devops", "dev ops"],
-}
+    "machine_learning": ["machine learning", "ml"]
+},
+"skill_families" : {
 
-
-# 1) STRICT EQUIVALENCE (safe substitutions)
-# Use this ONLY when you want: "If JD asks X, Y should count as X".
-# Keep this small to avoid wrong matches.
-SKILL_EQUIVALENCE = {
-    # ==================== CLOUD PLATFORMS ====================
-    "aws": ["aws", "amazon web services"],
-    "gcp": ["gcp", "google cloud", "google cloud platform"],
-    "azure": ["azure", "microsoft azure"],
-    "digitalocean": ["digitalocean", "do"],
-    "heroku": ["heroku"],
-
-    # ==================== VERSION CONTROL ====================
-    "git": ["git"],
-    "github": ["github"],
-    "gitlab": ["gitlab"],
-    "bitbucket": ["bitbucket"],
-
-    # ==================== KUBERNETES ECOSYSTEM ====================
-    "kubernetes": ["kubernetes", "k8s"],
-    "helm": ["helm"],
-    "kustomize": ["kustomize"],
-    "argo_cd": ["argo cd", "argocd"],
-    "flux": ["flux"],
-
-    # ==================== CI/CD TOOLS ====================
-    "github_actions": ["github actions", "gh actions", "github workflows"],
-    "gitlab_ci": ["gitlab ci", "gitlab pipelines"],
-    "azure_devops": ["azure devops", "ado"],
-    "jenkins": ["jenkins"],
-    "circleci": ["circleci", "circle ci"],
-
-    # ==================== INFRASTRUCTURE AS CODE ====================
-    "terraform": ["terraform", "tf"],
-    "pulumi": ["pulumi"],
-    "cloudformation": ["cloudformation", "cfn"],
-    "ansible": ["ansible"],
-    "puppet": ["puppet"],
-    "chef": ["chef"],
-
-    # ==================== DATABASE SYSTEMS ====================
-    "postgresql": ["postgresql", "postgres", "psql"],
-    "mysql": ["mysql"],
-    "mariadb": ["mariadb"],
-    "sql_server": ["sql server", "mssql", "microsoft sql server"],
-    "oracle": ["oracle", "oracle db"],
-    "sqlite": ["sqlite"],
-    "mongodb": ["mongodb", "mongo"],
-    "cassandra": ["cassandra"],
-    "redis": ["redis"],
-    "neo4j": ["neo4j"],
-    "elasticsearch": ["elasticsearch", "es"],
-    "opensearch": ["opensearch"],
-
-    # ==================== MESSAGE QUEUES ====================
-    "kafka": ["kafka", "apache kafka"],
-    "rabbitmq": ["rabbitmq", "rabbit mq"],
-    "nats": ["nats", "nats io"],
-
-    # ==================== RUNTIME & FRAMEWORKS ====================
-    "nodejs": ["node", "nodejs", "node js"],
-    "react": ["react", "reactjs", "react.js", "react js"],
-    "vue": ["vue", "vuejs", "vue.js"],
-    "angular": ["angular"],
-    "django": ["django"],
-    "flask": ["flask"],
-    "fastapi": ["fastapi"],
-    "spring_boot": ["spring boot", "springboot"],
-    "spring": ["spring"],
-    "rails": ["rails", "ruby on rails"],
-    "asp_net_core": ["asp.net core", "aspnetcore"],
-
-    # ==================== PROGRAMMING LANGUAGES ====================
-    "python": ["python", "python3"],
-    "javascript": ["javascript", "js"],
-    "typescript": ["typescript", "ts"],
-    "java": ["java"],
-    "go": ["go", "golang"],
-    "rust": ["rust", "rustlang"],
-    "ruby": ["ruby"],
-    "php": ["php"],
-    "kotlin": ["kotlin"],
-    "swift": ["swift"],
-    "r": ["r"],
-    "scala": ["scala"],
-
-    # ==================== ML/AI FRAMEWORKS ====================
-    "tensorflow": ["tensorflow", "tf"],
-    "pytorch": ["pytorch", "torch"],
-    "keras": ["keras"],
-    "scikit_learn": ["scikit-learn", "sklearn"],
-    "hugging_face": ["hugging face", "hf", "transformers"],
-    "langchain": ["langchain"],
-    "llamaindex": ["llamaindex"],
-    "openai": ["openai"],
-    "anthropic": ["anthropic", "claude"],
-    "mlflow": ["mlflow"],
-    "wandb": ["wandb", "weights and biases"],
-
-    # ==================== DATA TOOLS ====================
-    "apache_spark": ["spark", "apache spark"],
-    "apache_airflow": ["airflow", "apache airflow"],
-    "dbt": ["dbt", "data build tool"],
-    "pandas": ["pandas"],
-    "numpy": ["numpy"],
-    "duckdb": ["duckdb", "duck db"],
-    "polars": ["polars"],
-
-    # ==================== MONITORING & LOGGING ====================
-    "prometheus": ["prometheus", "prom"],
-    "grafana": ["grafana"],
-    "elastic_stack": ["elk", "elastic stack"],
-    "datadog": ["datadog"],
-    "new_relic": ["new relic", "newrelic"],
-    "splunk": ["splunk"],
-
-    # ==================== API STANDARDS ====================
-    "rest": ["rest", "restful"],
-    "graphql": ["graphql"],
-    "grpc": ["grpc"],
-
-    # ==================== TESTING FRAMEWORKS ====================
-    "pytest": ["pytest"],
-    "jest": ["jest"],
-    "cypress": ["cypress"],
-    "playwright": ["playwright"],
-    "selenium": ["selenium"],
-
-    # ==================== CONTAINERIZATION ====================
-    "docker": ["docker"],
-    "podman": ["podman"],
-
-    # ==================== DESIGN & TOOLS ====================
-    "figma": ["figma"],
-    "jira": ["jira"],
-    "confluence": ["confluence"],
-    "slack": ["slack"],
-}
-
-
-# 2) RELATED FAMILIES (NOT equivalent)
-# Use this when you want: "Candidate has something close, mark as REVIEW or give partial score".
-SKILL_FAMILIES = {
-    # ==================== CLOUD PLATFORMS ====================
     "cloud_platform": ["aws", "azure", "gcp", "digitalocean", "heroku", "ibm cloud", "oracle cloud"],
     "aws_compute": ["ec2", "lambda", "ecs"],
     "aws_storage": ["s3", "ebs"],
@@ -608,43 +405,36 @@ SKILL_FAMILIES = {
     "azure_ml": ["cognitive services"],
     "azure_messaging": ["service bus", "event hubs"],
 
-    # ==================== DATABASES ====================
     "relational_database": ["mysql", "postgresql", "sql_server", "oracle db", "mariadb", "sqlite", "amazon aurora"],
     "nosql_database": ["mongodb", "cassandra", "dynamodb", "couchbase", "redis", "neo4j", "firebase"],
     "search_engine": ["elasticsearch", "opensearch", "solr"],
     "data_warehouse": ["snowflake", "amazon redshift", "google bigquery", "azure synapse", "databricks"],
-    "data_lake": ["delta lake", "iceberg", "hudi"],
     "time_series_db": ["influxdb", "prometheus"],
     "graph_database": ["neo4j", "arangodb"],
 
-    # ==================== CONTAINERIZATION & ORCHESTRATION ====================
     "containerization": ["docker", "podman", "docker swarm"],
     "container_orchestration": ["kubernetes", "docker swarm", "ecs"],
     "orchestration": ["kubernetes", "helm", "kustomize", "amazon eks", "amazon ecs"],
     "kubernetes_tools": ["helm", "kustomize", "argo cd", "flux"],
     "service_mesh": ["istio", "linkerd", "consul"],
 
-    # ==================== CI/CD & DEVOPS ====================
     "ci_cd": ["jenkins", "github_actions", "gitlab_ci", "circleci", "travis ci", "bamboo", "azure_devops"],
     "ci_cd_platforms": ["github", "gitlab", "bitbucket", "gitea"],
     "infrastructure_as_code": ["terraform", "pulumi", "aws cloudformation", "ansible", "chef", "puppet", "bicep"],
     "secrets_management": ["vault", "sealed secrets", "external secrets"],
     "gitops": ["argo cd", "flux"],
 
-    # ==================== MONITORING & OBSERVABILITY ====================
     "monitoring": ["prometheus", "grafana", "datadog", "new relic", "cloudwatch"],
     "logging": ["elk", "elasticsearch", "logstash", "kibana", "splunk", "loki", "fluentd"],
     "tracing": ["jaeger", "zipkin", "lightstep"],
     "apm": ["datadog", "new relic", "dynatrace", "elastic apm"],
     "metrics": ["prometheus", "influxdb", "graphite"],
 
-    # ==================== MESSAGE QUEUES & STREAMING ====================
     "message_queue": ["kafka", "rabbitmq", "activemq", "zeromq"],
     "pub_sub": ["kafka", "rabbitmq", "aws sns", "aws sqs", "google pubsub", "azure service bus"],
     "streaming": ["kafka", "kinesis", "pubsub", "rabbitmq", "apache flink", "apache beam"],
     "kafka_ecosystem": ["kafka", "kafka connect", "kafka streams", "confluent"],
 
-    # ==================== BACKEND FRAMEWORKS ====================
     "python_backend": ["django", "flask", "fastapi", "pyramid", "tornado", "aiohttp", "starlette"],
     "node_backend": ["express", "nestjs", "koa", "fastify", "hapi"],
     "java_backend": ["spring boot", "spring", "quarkus", "micronaut", "grails"],
@@ -654,7 +444,6 @@ SKILL_FAMILIES = {
     "dotnet_backend": ["asp.net core", "asp.net"],
     "php_backend": ["laravel", "symfony", "slim", "lumen"],
 
-    # ==================== FRONTEND FRAMEWORKS ====================
     "frontend_framework": ["react", "angular", "vue", "svelte", "ember", "next.js", "nuxt", "remix", "astro"],
     "react_ecosystem": ["react", "next.js", "react native", "remix", "astro"],
     "vue_ecosystem": ["vue", "nuxt"],
@@ -664,25 +453,21 @@ SKILL_FAMILIES = {
     "state_management": ["redux", "vuex", "pinia", "zustand", "recoil", "jotai"],
     "http_client": ["axios", "fetch", "superagent", "node-fetch"],
 
-    # ==================== API ARCHITECTURES ====================
     "api_style": ["rest", "graphql", "grpc", "webhook"],
     "api_gateway": ["kong", "tyk", "nginx", "aws api gateway", "apigee"],
     "api_documentation": ["swagger", "openapi", "asyncapi", "redoc"],
     "rpc_protocol": ["json-rpc", "xml-rpc"],
 
-    # ==================== DATA ENGINEERING ====================
     "data_processing": ["apache spark", "hadoop", "apache flink", "apache beam", "dask"],
     "workflow_orchestration": ["apache airflow", "dagster", "prefect", "temporal"],
     "etl_tools": ["dbt", "ssis", "informatica", "talend", "apache nifi"],
     "data_lake": ["delta lake", "apache iceberg", "apache hudi"],
     "data_quality": ["great expectations", "soda", "dbt tests"],
 
-    # ==================== DATA ANALYTICS & VISUALIZATION ====================
     "bi_tool": ["tableau", "power bi", "looker", "qlik", "metabase", "superset", "mode analytics"],
     "data_visualization": ["matplotlib", "plotly", "seaborn", "d3.js", "altair"],
     "analytics_platform": ["amplitude", "mixpanel", "segment", "google analytics"],
 
-    # ==================== MACHINE LEARNING & AI ====================
     "ml_frameworks": ["scikit-learn", "tensorflow", "pytorch", "keras", "xgboost", "lightgbm", "catboost"],
     "nlp_tools": ["spacy", "nltk", "transformers", "huggingface", "sentence transformers", "gensim"],
     "llm_stack": ["openai", "anthropic", "gemini", "llama", "mistral", "langchain", "llamaindex"],
@@ -693,7 +478,6 @@ SKILL_FAMILIES = {
     "computer_vision": ["opencv", "pillow", "scikit-image", "torchvision"],
     "time_series": ["statsmodels", "prophet", "pmdarima", "autots"],
 
-    # ==================== TESTING & QUALITY ====================
     "testing_python": ["pytest", "unittest", "nose", "nose2"],
     "testing_js": ["jest", "mocha", "vitest", "playwright", "cypress"],
     "testing_java": ["junit", "testng", "mockito"],
@@ -701,62 +485,52 @@ SKILL_FAMILIES = {
     "code_quality": ["sonarqube", "eslint", "flake8", "pylint", "black", "prettier"],
     "security_scanning": ["snyk", "owasp", "semgrep", "trivy"],
 
-    # ==================== MOBILE DEVELOPMENT ====================
     "cross_platform_mobile": ["react native", "flutter", "xamarin", "cordova", "ionic"],
     "native_ios": ["swift", "swiftui", "uikit", "objective-c"],
     "native_android": ["kotlin", "java", "jetpack compose"],
     "mobile_framework": ["react native", "flutter", "xamarin", "nativescript", "expo"],
     "mobile_web": ["pwa", "react native web", "flutter web"],
 
-    # ==================== LOW-CODE & NO-CODE ====================
     "low_code_platform": ["retool", "powerapps", "mendix", "outsystems"],
     "no_code_platform": ["bubble", "webflow", "flutterflow"],
     "automation_platform": ["zapier", "n8n", "make", "integromat"],
     "cms_headless": ["contentful", "strapi", "sanity", "directus"],
 
-    # ==================== WEB3 & BLOCKCHAIN ====================
     "blockchain_platform": ["ethereum", "solana", "polygon", "bitcoin"],
     "smart_contract_language": ["solidity", "rust", "move"],
     "web3_library": ["web3.js", "ethers.js", "web3.py"],
     "blockchain_dev_tool": ["hardhat", "truffle", "foundry", "anchor"],
     "blockchain_framework": ["dapp framework", "scaffold-eth"],
 
-    # ==================== VERSION CONTROL ====================
     "version_control": ["git", "svn", "mercurial"],
     "git_platform": ["github", "gitlab", "bitbucket", "gitea", "gitolite"],
     "git_workflow": ["github flow", "git flow", "trunk-based development"],
 
-    # ==================== PROJECT MANAGEMENT ====================
     "issue_tracking": ["jira", "trello", "asana", "monday.com", "clickup", "linear", "github issues"],
     "knowledge_base": ["confluence", "notion", "obsidian", "wiki"],
     "communication": ["slack", "teams", "discord", "telegram"],
     "meeting_tool": ["zoom", "meet", "webex", "teams"],
 
-    # ==================== DESIGN & PROTOTYPING ====================
     "ui_ux_design": ["figma", "sketch", "adobe xd", "invision", "balsamiq", "axure", "framer"],
     "design_system": ["storybook", "chromatic", "zeplin"],
     "prototyping": ["figma", "invision", "marvel", "principle"],
 
-    # ==================== PACKAGE MANAGERS ====================
     "js_package_manager": ["npm", "yarn", "pnpm"],
     "python_package_manager": ["pip", "poetry", "pipenv", "conda"],
     "java_build_tool": ["maven", "gradle", "sbt"],
     "rust_package_manager": ["cargo"],
     "go_package_manager": ["go modules"],
 
-    # ==================== OS & SHELL ====================
     "operating_system": ["linux", "windows", "macos"],
     "linux_distro": ["ubuntu", "centos", "debian", "rhel", "fedora"],
     "shell_scripting": ["bash", "zsh", "powershell", "fish", "sh"],
 
-    # ==================== DEVELOPER TOOLS ====================
     "ide": ["vscode", "intellij", "pycharm", "webstorm", "visual studio"],
     "text_editor": ["vim", "emacs", "sublime", "atom", "vscode"],
     "documentation_tool": ["swagger", "openapi", "mkdocs", "gitbook"],
     "debugging": ["gdb", "lldb", "delve", "pdb"],
     "profiling": ["perf", "valgrind", "cProfile", "py-spy"],
 
-    # ==================== SPECIALTY & EMERGING ====================
     "serverless": ["aws lambda", "azure functions", "gcp cloud functions"],
     "microservices": ["docker", "kubernetes", "service mesh"],
     "devops_practices": ["ci/cd", "infrastructure as code", "containerization", "orchestration"],
@@ -764,26 +538,4 @@ SKILL_FAMILIES = {
     "data_stack": ["dbt", "airflow", "spark", "snowflake", "kafka"],
 }
 
-requirement_map = {
-    "Bachelor of Technology in Computer Science": ["Bachelor of Technology in Computer Science","B.Tech CSE", "B.Tech in CS", "B.Tech CS", "B.Tech. (Computer Science)"],
-
-    "Bachelor of Science in Computer Science": ["Bachelor of Science in Computer Science","B.S. CS", "B.Sc. CS", "BSCS", "Bachelor of Computer Science"],
-
-    "Bachelor of Engineering in Computer Science": ["Bachelor of Engineering in Computer Science","B.E. CSE", "B.E. CS", "B.E. in Computer Science"],
-
-    "Bachelor of Computer Applications": ["Bachelor of Computer Applications","BCA", "B.C.A.", "Bachelor in Computer Applications"],
-
-    "Master of Technology in Computer Science": ["Master of Technology in Computer Science","M.Tech CSE", "M.Tech CS", "M.Tech in Computer Science"],
-
-    "Master of Science in Computer Science": ["Master of Science in Computer Science","M.S. CS", "M.Sc. CS", "MSCS", "Master of Computer Science"],
-
-    "Master of Computer Applications": ["Master of Computer Applications","MCA", "M.C.A.", "Master in Computer Applications"],
-
-    "Doctor of Philosophy in Computer Science": ["Doctor of Philosophy in Computer Science","Ph.D. CS", "PhD in Computer Science", "Ph.D. in CSE"],
-
-    "Bachelor's or Master's degree in Computer Science":[
-    "Bachelor’s Master’s degree in Computer Science","Bachelor's Master's degree in Computer Science","Bachelor's Master's in computer science",
-    "Bachelor’s Master’s in computer science"
-    ]
-
-    }
+}

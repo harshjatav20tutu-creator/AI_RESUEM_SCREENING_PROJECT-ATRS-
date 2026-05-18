@@ -2,95 +2,64 @@ import pdfplumber
 import os 
 from typing import  List 
 from docx import Document 
+from docx.text.paragraph import Paragraph
+from docx.table import Table
 
 
-def extract_text_from_docu(docx_path:str)->str:
-    # it can't handle multiple pages 
-    doc = Document(docx_path)
-    parts: List[str] = []
+class JDParser:
 
-    for par in doc.paragraphs:
-        t = par.text.strip()
-        if t:
-            parts.append(t)
+    def __init__(self, path_or_jdtext:str):
+        self.path_or_jdtext = self.path_or_jdtext
 
-    for table in doc.tables:
-        for row in table.rows:
-            for cell in row.cells:
-                t = cell.text.strip()
-                parts.append(t)
+    def jd_pdf_parser(self):
+        pass
 
-    return "\n".join(parts)
+    def jd_docx_parser(self):
 
-def ext_text_from_textfile(text_file_path:str)->str:
-    with open(text_file_path,"r",encoding="utf-8", errors= 'ignore') as f:
-        return f.read()
+        try:
+            doc = Document(self.path_or_jdtext)
+        except FileNotFoundError:
+            raise FileNotFoundError(f"DOCX file not found at: {self.path_or_jdtext}")
+        except Exception as e:
+            raise Exception(f"Error reading DOCX file: {str(e)}")
+
+        document_text = []
+
+        try:
+            # Traverse body elements sequentially to maintain reading order
+            for element in doc.element.body:
+                # Check for paragraph element (CT_P)
+                if element.tag.split('}')[-1] == 'p':
+                    para = Paragraph(element, doc)
+                    text = para.text.strip()
+                    if text:  # Skip completely empty paragraphs
+                        document_text.append(text)
+                
+                # Check for table element (CT_Tbl)
+                elif element.tag.split('}')[-1] == 'tbl':
+                    table = Table(element, doc)
+                    # Build Markdown table
+                    markdown_lines = []
+                    for i, row in enumerate(table.rows):
+                        # Extract cell text, preserving structure
+                        cells = [cell.text.strip() for cell in row.cells]
+                        row_markdown = "| " + " | ".join(cells) + " |"
+                        markdown_lines.append(row_markdown)
+                        
+                        # Add header separator after first row
+                        if i == 0:
+                            sep = "| " + " | ".join(["---"] * len(cells)) + " |"
+                            markdown_lines.append(sep)
+                    
+                    if markdown_lines:
+                        document_text.append("\n".join(markdown_lines))
+            
+            # Join all sequential elements with newlines
+            return "\n".join(document_text)
+
+        except Exception as e:
+            raise Exception(f"Error processing DOCX content: {str(e)}")
     
-# below functions is for pdf 
-
-def page_has_tables(page)->bool:
-    tables = page.extract_tables()
-    if not tables:
-        return False
-    return bool(tables)
-    
-
-def jd_table_extraction(page)->str:
-
-    table_rawtext = []
-    tables = page.extract_tables()
-    for table in tables:
-        for row in table:
-            if not row:
-                continue
-
-            clean_cells = []
-            for cell in row:
-                if cell:
-                    clean_cells.append(cell.strip())
-
-            if clean_cells:
-                table_rawtext.append(" ".join(clean_cells))
-
-    return " ".join(table_rawtext)
-
-
-def get_jd_text_pdf(pdf_path:str)->str:
-    
-    page_text = []
-    with pdfplumber.open(pdf_path) as pdf:
-
-        for page in pdf.pages:
-            if page_has_tables(page):
-                text = jd_table_extraction(page)
-            else:
-                text = page.extract_text()
-
-            if text :
-                page_text.append(text)
-
-    return " ".join(page_text)
-
-# main function to extract text from different type of files 
-
-def text_extraction_from_files(jd_input)->str:
-
-    if os.path.isfile(jd_input):
-        low = jd_input.lower()
-
-        if low.endswith(".txt"):
-            return ext_text_from_textfile(jd_input)
-        
-        if low.endswith(".docx"):
-            return extract_text_from_docu(jd_input)
-        
-        if low.endswith(".pdf"):
-            return get_jd_text_pdf(jd_input)
-        
-        raise ValueError(f"Unsupported JD file type {jd_input}:")
-    
-    return jd_input
-
 
 
 

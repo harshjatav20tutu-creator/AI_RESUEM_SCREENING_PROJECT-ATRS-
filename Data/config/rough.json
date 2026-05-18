@@ -1,0 +1,24 @@
+{"skills": {"programming_languages": ["JavaScript", "TypeScript"
+        ], "frameworks": ["React", "Node.js"
+        ], "tools": ["Kubernetes", "Docker", "Terraform"
+        ], "soft_skills": ["Technical Leadership", "Engineering Strategy", "Team Mentorship & Code Reviews", "Agile/Scrum Management", "CI/CD Pipeline Optimization", "Cross-functional Collaboration"
+        ], "other_skills": ["Cloud Architecture", "Microservices Architecture", "Distributed Systems Design", "API Design (REST, GraphQL)", "Relational Database Modeling", "NoSQL Database Modeling", "Performance Tuning", "Secure Coding Practices", "Infrastructure as Code"
+        ]
+    }, "summary": {"professional_title": "Principal Software Engineer", "years_of_experience": 9, "core_expertise": ["Scalable Architectures", "Cloud Adoption", "Technical Leadership"
+        ], "short_bio": "Results-driven principal software engineer with over 9 years of experience designing scalable full-stack architectures and driving cloud adoption."
+    }, "experience": {"current_role": {"title": "Lead Software Engineer", "company": "Google LLC", "duration": "01/2020 - 10/2023", "key_achievements": ["Architected and implemented a new microservices-oriented architecture that improved system resilience and scalability, enabling an annual growth rate of 20%.", "Collaborated with product management to develop a roadmap that synchronized engineering efforts with business goals, leading to a software delivery cycle 25% faster.", " Conducted comprehensive code reviews and integrated optimized coding practices which led to a 15% reduction in application defects."
+            ], "technologies_used": ["React"
+            ]
+        }, "past_roles": [
+            {"title": "Software Engineer", "company": "Amazon Web Services", "years": 4
+            },
+            {"title": "Junior Software Developer", "company": "IBM", "years": 3
+            }
+        ], "total_years_experience": 7
+    }, "education": {"education": {"highest_degree_level": "Master", "institution": "University of Texas at Austin", "degree_name": "Master of Science in Computer Science", "field_of_study": None, "graduation_year": 2014, "gpa": None, "other_degrees": []
+        }
+    }, "other_attributes": {"achievements": ["30% reduction in latency", "accommodate 1m concurrent users", "50% increase in customer engagement", "60% reduction in processing time", "40% increase in team performance", "six-month reduction in project delivery times"
+        ], "additional_skills": ["cloud technologies", "software architecture", "full-stack development"
+        ], "professional_memberships": [], "languages": None, "publications": None, "volunteer_work": None, "certifications": None, "other_details": None
+    }
+}

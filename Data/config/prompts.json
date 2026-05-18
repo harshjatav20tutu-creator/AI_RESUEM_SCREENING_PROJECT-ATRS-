@@ -51,12 +51,12 @@
       }
     },
     "example": {
-      "input": "BS in Physics from University of XYZ 2018. MS in CS from Stanford University 2020.",
+      "input": "BS in Physics from University of XYZ 2018. MS in Computer Science from Stanford University 2020.",
       "output": {
         "education": {
           "highest_degree_level": "Master",
           "institution": "Stanford University",
-          "degree_name": "MS in CS",
+          "degree_name": "MS in Computer Science",
           "field_of_study": "Computer Science",
           "graduation_year": 2020,
           "gpa": null,
