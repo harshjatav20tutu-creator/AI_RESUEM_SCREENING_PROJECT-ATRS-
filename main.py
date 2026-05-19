@@ -1,19 +1,21 @@
 from src.parser.a_text_extractor_code import ResumeParser
 from src.parser.b_resume_segment_engin import ResumeTextNormalizedandSegmentationEngine
 from src.parser.c_candidate_info_ext import CandidateAttributesExtractionEngine
+from src.parser.g_jd_text_extraction import JDParser
+
 #######################################################################################################
 
-from src.parser.d_skills_db import SKILL_DATABASE
-from src.parser.e_text_skills_extraction import get_skills_text
-from src.parser.f_resume_skill_weight import weight_resume_skills
-from src.parser.g_jd_text_extraction import text_extraction_from_files
-from src.parser.h_jd_section_extraction import jd_sections_ext
-from src.parser.i_jd_skills_ext import jd_extract_skills
-from src.parser.j_jd_skill_weight import jd_skill_weight_ext
-from src.parser.j_jd_skill_weight import to_flat_skill_weights
-from src.parser.k_skills_matching_scoring import resume_scoring
-from src.parser.m_jd_quatification_gate_info_ext import qualification_requirements_for_resume
-from src.parser.o_candidate_attribute_ext import candidate_info_ext_for_eligibility_gate
+# from src.parser.d_skills_db import SKILL_DATABASE
+# from src.parser.e_text_skills_extraction import get_skills_text
+# from src.parser.f_resume_skill_weight import weight_resume_skills
+# from src.parser.g_jd_text_extraction import text_extraction_from_files
+# from src.parser.h_jd_section_extraction import jd_sections_ext
+# from src.parser.i_jd_skills_ext import jd_extract_skills
+# from src.parser.j_jd_skill_weight import jd_skill_weight_ext
+# from src.parser.j_jd_skill_weight import to_flat_skill_weights
+# from src.parser.k_skills_matching_scoring import resume_scoring
+# from src.parser.m_jd_quatification_gate_info_ext import qualification_requirements_for_resume
+# from src.parser.o_candidate_attribute_ext import candidate_info_ext_for_eligibility_gate
 # printing two times 
 
 
@@ -33,7 +35,8 @@ from src.parser.o_candidate_attribute_ext import candidate_info_ext_for_eligibil
 def main(resume_path = r'C:/Users/HP/OneDrive/Documents/AI_resume_screening_project/Data/Resumes/resume_01.pdf',
          section_keywords_path = r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\resume_sections.json",
          extra_headers_path = r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\resume_extra_section.json",
-         sec_prompt_config_path= r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\prompts.json"):
+         sec_prompt_config_path= r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\prompts.json",
+         jd_path=r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\job_descriptions\sample-job-description.pdf"):
     
     resume_parser = ResumeParser(resume_path)
     raw_resume_text = resume_parser.resume_text_extractor() 
@@ -46,13 +49,13 @@ def main(resume_path = r'C:/Users/HP/OneDrive/Documents/AI_resume_screening_proj
                                                                          raw_resume_text,
                                                                          resume_norm_text_n_segments,
                                                                          sec_prompt_config_path)
+    
+    # candidate_attributes = ext_candidate_attribute_engine.candidate_attributes_extractions_from_resume_sections()
 
+    job_description_parser = JDParser(jd_path)
+    jd_text = job_description_parser.jd_parser()
+    # jd_extracted_requirement = job_description_parser.jd_requirements_extraction_engine(jd_text)
 
-    print(resume_norm_text_n_segments)
-
+    print()
 
 main()
-# resume_path = r'C:/Users/HP/OneDrive/Documents/AI_resume_screening_project/Data/Resumes/resume_01.pdf',
-#     section_keywords_path = r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\resume_sections.json",
-#     extra_headers_path = r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\resume_extra_section.json",
-#     sec_prompt_config_path= r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\prompts.json"

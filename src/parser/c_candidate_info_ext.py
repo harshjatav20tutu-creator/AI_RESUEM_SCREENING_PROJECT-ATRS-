@@ -329,6 +329,10 @@ class CandidateAttributesExtractionEngine:
             Dictionary containing extracted attributes for all sections
         """
         extracted_attributes = {}
+
+        candi_personal_info = self.candidate_personal_info()
+        extracted_attributes["personal_info"] = candi_personal_info
+
         other_sections = []  # List to accumulate sections not in config
         
         if not self.resume_sections:
@@ -389,7 +393,6 @@ class CandidateAttributesExtractionEngine:
                     else:
                         # If JSON extraction fails, store the raw text
                         extracted_attributes[section_name] = {"raw_response": model_output}
-                    print("section is processed successfully!")
                         
                 except requests.exceptions.ConnectionError:
                     print(f"Warning: Cannot connect to Ollama service for section '{section_name}'")

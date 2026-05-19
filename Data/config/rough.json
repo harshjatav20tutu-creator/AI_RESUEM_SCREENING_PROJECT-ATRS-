@@ -1,24 +1,117 @@
-{"skills": {"programming_languages": ["JavaScript", "TypeScript"
-        ], "frameworks": ["React", "Node.js"
-        ], "tools": ["Kubernetes", "Docker", "Terraform"
-        ], "soft_skills": ["Technical Leadership", "Engineering Strategy", "Team Mentorship & Code Reviews", "Agile/Scrum Management", "CI/CD Pipeline Optimization", "Cross-functional Collaboration"
-        ], "other_skills": ["Cloud Architecture", "Microservices Architecture", "Distributed Systems Design", "API Design (REST, GraphQL)", "Relational Database Modeling", "NoSQL Database Modeling", "Performance Tuning", "Secure Coding Practices", "Infrastructure as Code"
+{
+    "personal_info": {
+        "candidate_name": "WILLIAMS",
+        "location": "Austin, Texas",
+        "emails": [],
+        "phone_numbers": []
+    },
+    "skills": {
+        "programming_languages": [
+            "JavaScript",
+            "Node.js"
+        ],
+        "frameworks": [
+            "React",
+            "Microservices architecture"
+        ],
+        "tools": [
+            "AWS",
+            "Azure",
+            "Kubernetes",
+            "Docker",
+            "Terraform"
+        ],
+        "soft_skills": [
+            "Technical Leadership",
+            "Engineering Strategy",
+            "Team Mentorship & Code Reviews",
+            "Agile/Scrum Management",
+            "CI/CD Pipeline Optimization",
+            "Cross-Functional Collaboration"
+        ],
+        "other_skills": [
+            "Cloud & System Architecture",
+            "Distributed Systems Design",
+            "API Design (REST & GraphQL)",
+            "Relational & NoSQL Database Modeling",
+            "Performance Tuning",
+            "Secure Coding Practices"
         ]
-    }, "summary": {"professional_title": "Principal Software Engineer", "years_of_experience": 9, "core_expertise": ["Scalable Architectures", "Cloud Adoption", "Technical Leadership"
-        ], "short_bio": "Results-driven principal software engineer with over 9 years of experience designing scalable full-stack architectures and driving cloud adoption."
-    }, "experience": {"current_role": {"title": "Lead Software Engineer", "company": "Google LLC", "duration": "01/2020 - 10/2023", "key_achievements": ["Architected and implemented a new microservices-oriented architecture that improved system resilience and scalability, enabling an annual growth rate of 20%.", "Collaborated with product management to develop a roadmap that synchronized engineering efforts with business goals, leading to a software delivery cycle 25% faster.", " Conducted comprehensive code reviews and integrated optimized coding practices which led to a 15% reduction in application defects."
-            ], "technologies_used": ["React"
+    },
+    "summary": {
+        "professional_title": "Principal Software Engineer",
+        "years_of_experience": 9,
+        "core_expertise": [
+            "Full-stack Architecture",
+            "Cloud Computing",
+            "Technical Leadership"
+        ],
+        "short_bio": "Results-driven principal software engineer with over 9 years of experience designing scalable full-stack architectures and driving cloud adoption."
+    },
+    "experience": {
+        "current_role": {
+            "title": "Lead Software Engineer",
+            "company": "Google LLC",
+            "duration": "2020 - 2023",
+            "key_achievements": [
+                "Architected and implemented a new microservices-oriented architecture that improved system resilience and scalability, enabling an annual growth rate of 20%.",
+                "Collaborated with product management to develop a roadmap that synchronized engineering efforts with business goals, leading to a software delivery cycle 25% faster.",
+                "Conduct comprehensive code reviews and integrated optimized coding practices which led to a 15% reduction in application defects."
+            ],
+            "technologies_used": [
+                "Microservices",
+                "Azure",
+                "AWS"
             ]
-        }, "past_roles": [
-            {"title": "Software Engineer", "company": "Amazon Web Services", "years": 4
+        },
+        "past_roles": [
+            {
+                "title": "Software Engineer",
+                "company": "Amazon Web Services",
+                "years": 3
             },
-            {"title": "Junior Software Developer", "company": "IBM", "years": 3
+            {
+                "title": "Junior Software Developer",
+                "company": "IBM",
+                "years": 2
             }
-        ], "total_years_experience": 7
-    }, "education": {"education": {"highest_degree_level": "Master", "institution": "University of Texas at Austin", "degree_name": "Master of Science in Computer Science", "field_of_study": None, "graduation_year": 2014, "gpa": None, "other_degrees": []
+        ],
+        "total_years_experience": 5
+    },
+    "education": {
+        "education": {
+            "highest_degree_level": "Master",
+            "institution": "University of Texas at Austin",
+            "degree_name": "MS in Computer Science",
+            "field_of_study": None,
+            "graduation_year": 2014,
+            "gpa": None,
+            "other_degrees": []
         }
-    }, "other_attributes": {"achievements": ["30% reduction in latency", "accommodate 1m concurrent users", "50% increase in customer engagement", "60% reduction in processing time", "40% increase in team performance", "six-month reduction in project delivery times"
-        ], "additional_skills": ["cloud technologies", "software architecture", "full-stack development"
-        ], "professional_memberships": [], "languages": None, "publications": None, "volunteer_work": None, "certifications": None, "other_details": None
+    },
+    "other_attributes": {
+        "achievements": [
+            "30% reduction in latency",
+            "accommodated 1m concurrent users",
+            "50% increase in customer engagement",
+            "60% decrease in processing time",
+            "40% increase in team performance",
+            "6-month reduction in project delivery times"
+        ],
+        "professional_memberships": [],
+        "additional_skills": [
+            "cloud technologies",
+            "software architecture",
+            "full-stack development"
+        ],
+        "languages": [],
+        "publications": [],
+        "awards_honors": "successful project delivery",
+        "volunteer_work": [],
+        "other_details": "Austin, Texas"
+    },
+    "jd_output": {"job_title": "AI Engineer", "min_years_experience": 2, "work_mode": "Unspecified", "location": None, "mandatory_skills": ["Python", "TensorFlow", "PyTorch", "LLMs", "SLMs", "RAG architectures", "Vector databases (Pinecone, FAISS, Weaviate)", "Agentic AI frameworks (LangGraph, AutoGen, CrewAI)", "Cloud platforms (AWS, Azure, GCP)"
+        ], "preferred_skills": ["Prompt engineering", "Fine-tuning", "RAG-enhanced GenAI models", "Agent-based AI solutions", "Banking/financial domain processes (risk, compliance, KYC, lending, fraud detection)", "AI/ML certifications (AWS AI/ML Specialty, Microsoft AI Engineer, NVIDIA Deep Learning, Generative AI certifications)"
+        ], "role_responsibilities": "Design and implement AI/ML models leveraging LLMs, SLMs, RAG pipelines, and Agentic AI frameworks. Develop end-to-end AI workflows, including data ingestion, preprocessing, model training, fine-tuning, and deployment. Collaborate with data engineers to integrate structured and unstructured banking data securely. Implement and optimize vector databases, embeddings, and retrieval mechanisms. Ensure AI model governance, explainability, and compliance with banking regulations. Work with business and domain experts to translate requirements into AI-driven solutions. Monitor model performance, implement feedback loops, and continuously improve AI systems. Stay updated on emerging AI technologies and frameworks relevant to banking use cases."
     }
 }
