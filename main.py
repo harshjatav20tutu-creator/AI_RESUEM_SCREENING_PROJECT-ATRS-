@@ -56,6 +56,6 @@ def main(resume_path = r'C:/Users/HP/OneDrive/Documents/AI_resume_screening_proj
     jd_text = job_description_parser.jd_parser()
     # jd_extracted_requirement = job_description_parser.jd_requirements_extraction_engine(jd_text)
 
-    print()
+    print(candidate_attributes)
 
 main()

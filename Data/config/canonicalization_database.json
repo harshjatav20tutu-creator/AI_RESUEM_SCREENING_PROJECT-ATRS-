@@ -1,541 +1,3003 @@
-{"skill_database" : {
-    "python": ["python", "python3", "python 3", "py"],
-    "javascript": ["javascript", "js", "js/ts"],
-    "typescript": ["typescript", "ts", "TS"],
-    "java": ["java", "jdk"],
-    "c": ["c", "c programming"],
-    "c++": ["c++", "cpp", "c plus plus"],
-    "c#": ["c#", "c sharp", "csharp", "dotnet lang"],
-    "go": ["go", "golang"],
-    "rust": ["rust", "rustlang"],
-    "ruby": ["ruby", "rb", "ruby lang"],
-    "php": ["php", "php programming"],
-    "kotlin": ["kotlin", "kt"],
-    "swift": ["swift", "ios lang"],
-    "r": ["r", "r language", "r programming"],
-    "scala": ["scala", "scala lang"],
-    "elixir": ["elixir", "erlang vm"],
-    "node_js": ["node.js", "node js", "node", "nodejs"],
-    "vb_net": ["vb.net", "vbnet", "visual basic"],
-    "groovy": ["groovy"],
-    "clojure": ["clojure"],
-    "react": ["react", "reactjs", "react.js", "react js"],
-    "react_js": ["react", "reactjs", "react.js", "react js"],
-    "next_js": ["next.js", "nextjs", "next", "next.js framework"],
-    "vue_js": ["vue", "vuejs", "vue.js", "vue js"],
-    "nuxt": ["nuxt", "nuxtjs", "nuxt.js"],
-    "angular": ["angular", "angularjs", "angular.js"],
-    "svelte": ["svelte", "sveltejs"],
-    "sveltekit": ["sveltekit", "svelte-kit"],
-    "remix": ["remix", "remix.run"],
-    "astro": ["astro", "astro.build"],
-    "qwik": ["qwik", "qwik.dev"],
-    "ember": ["ember", "emberjs", "ember.js"],
-    "backbone": ["backbone", "backbonejs", "backbone.js"],
-    "html": ["html", "html5", "html 5"],
-    "css": ["css", "css3", "css 3", "styling"],
-    "sass": ["sass", "scss", "sass/scss"],
-    "tailwind": ["tailwind", "tailwind css", "tailwindcss"],
-    "bootstrap": ["bootstrap", "bootstrap css"],
-    "material_ui": ["material-ui", "mui", "material ui"],
-    "less": ["less", "less css"],
-    "bulma": ["bulma"],
-    "foundation": ["foundation", "foundation css"],
-    "semantic_ui": ["semantic ui", "semantic"],
-    "axios": ["axios"],
-    "fetch_api": ["fetch", "fetch api"],
-    "express": ["express", "expressjs", "express.js"],
-    "flask": ["flask", "flask python"],
-    "fastapi": ["fastapi", "fast api"],
-    "django": ["django", "django framework"],
-    "spring_boot": ["spring boot", "springboot", "spring"],
-    "spring": ["spring", "springframework"],
-    "spring_cloud": ["spring cloud", "spring-cloud"],
-    "spring_mvc": ["spring mvc"],
-    "spring_data": ["spring data", "spring-data"],
-    "spring_security": ["spring security", "spring-security"],
-    "quarkus": ["quarkus", "quarkus framework"],
-    "micronaut": ["micronaut", "micronaut framework"],
-    "asp_net_core": ["asp.net core", "asp.net", "aspnetcore", "asp.net core"],
-    "asp_net": ["asp.net", "asp", "asp.net framework"],
-    "rails": ["rails", "ruby on rails", "rubyonrails"],
-    "sinatra": ["sinatra", "ruby sinatra"],
-    "fiber": ["fiber", "go fiber"],
-    "gin": ["gin", "go gin"],
-    "echo": ["echo", "go echo"],
-    "rocket": ["rocket", "rust rocket"],
-    "actix": ["actix", "rust actix"],
-    "pyramid": ["pyramid", "pylons"],
-    "tornado": ["tornado"],
-    "aiohttp": ["aiohttp"],
-    "starlette": ["starlette"],
-    "nest_js": ["nestjs", "nest.js", "nest"],
-    "hapi": ["hapi", "hapijs"],
-    "koa": ["koa", "koajs"],
-    "fastify": ["fastify"],
-    "graphene": ["graphene"],
-    "grpc": ["grpc", "g rpc"],
-    "aws": ["aws", "amazon web services", "amazon aws"],
-    "aws_lambda": ["lambda", "aws lambda"],
-    "aws_ec2": ["ec2", "aws ec2", "elastic compute"],
-    "aws_s3": ["s3", "aws s3", "simple storage service"],
-    "aws_rds": ["rds", "aws rds", "relational database service"],
-    "aws_dynamodb": ["dynamodb", "aws dynamodb", "dynamo"],
-    "aws_aurora": ["aurora", "aws aurora"],
-    "aws_sagemaker": ["sagemaker", "aws sagemaker"],
-    "aws_appsync": ["appsync", "aws appsync"],
-    "aws_amplify": ["amplify", "aws amplify"],
-    "aws_api_gateway": ["api gateway", "aws api gateway"],
-    "aws_cloudformation": ["cloudformation", "aws cloudformation", "cfn"],
-    "aws_cloudwatch": ["cloudwatch", "aws cloudwatch"],
-    "aws_codepipeline": ["codepipeline", "aws codepipeline"],
-    "aws_codebuild": ["codebuild", "aws codebuild"],
-    "aws_sns": ["sns", "aws sns", "simple notification"],
-    "aws_sqs": ["sqs", "aws sqs", "simple queue"],
-    "aws_kinesis": ["kinesis", "aws kinesis"],
-    "aws_ecs": ["ecs", "aws ecs", "elastic container"],
-    "aws_secretsmanager": ["secrets manager", "aws secrets"],
-    "gcp": ["gcp", "google cloud", "google cloud platform"],
-    "cloud_functions": ["cloud functions", "gcf"],
-    "app_engine": ["app engine", "gae"],
-    "compute_engine": ["compute engine", "gce"],
-    "cloud_storage": ["cloud storage", "gcs", "gs"],
-    "firestore": ["firestore", "cloud firestore"],
-    "bigquery": ["bigquery", "big query", "bq"],
-    "dataflow": ["dataflow", "cloud dataflow"],
-    "pubsub": ["pubsub", "cloud pubsub", "pub/sub"],
-    "vertex_ai": ["vertex ai", "vertex"],
-    "cloud_run": ["cloud run", "run"],
-    "gke": ["gke", "kubernetes engine", "gke kubernetes"],
-    "cloud_sql": ["cloud sql", "cloud-sql"],
-    "cloud_iam": ["cloud iam", "iam"],
-    "cloud_monitoring": ["cloud monitoring", "stackdriver"],
-    "azure": ["azure", "microsoft azure"],
-    "azure_functions": ["azure functions", "functions"],
-    "azure_app_service": ["app service", "azure app service"],
-    "azure_vm": ["vms", "vm", "azure vms", "azure virtual machines"],
-    "azure_blob_storage": ["blob storage", "azure blob"],
-    "azure_cosmos_db": ["cosmos db", "cosmosdb", "azure cosmos"],
-    "azure_sql_database": ["azure sql", "sql database"],
-    "azure_synapse": ["synapse", "azure synapse"],
-    "azure_service_bus": ["service bus", "azure bus"],
-    "azure_event_hubs": ["event hubs", "azure events"],
-    "azure_cognitive_services": ["cognitive services", "azure ai"],
-    "azure_logic_apps": ["logic apps", "azure logic"],
-    "azure_key_vault": ["key vault", "azure vault"],
-    "digitalocean": ["digitalocean", "do", "digital ocean"],
-    "heroku": ["heroku"],
-    "react_native": ["react native", "rn", "react-native"],
-    "flutter": ["flutter", "flutter framework"],
-    "xamarin": ["xamarin", "xamarin.forms", "xamarin android"],
-    "swiftui": ["swiftui", "swift ui"],
-    "uikit": ["uikit", "ui kit"],
-    "android": ["android", "android development", "android sdk"],
-    "ionic": ["ionic", "ionicframework"],
-    "nativescript": ["nativescript", "native script"],
-    "pwa": ["pwa", "progressive web app"],
-    "expo": ["expo"],
-    "capacitor": ["capacitor"],
-    "apache_spark": ["spark", "apache spark"],
-    "apache_airflow": ["airflow", "apache airflow"],
-    "dbt": ["dbt", "data build tool"],
-    "jupyter": ["jupyter", "jupyter notebook"],
-    "anaconda": ["anaconda", "conda"],
-    "polars": ["polars", "polars rs"],
-    "dask": ["dask", "dask distributed"],
-    "duckdb": ["duckdb", "duck db"],
-    "pandas": ["pandas", "pd"],
-    "numpy": ["numpy", "np"],
-    "tableau": ["tableau", "tableau desktop"],
-    "looker": ["looker", "looker studio"],
-    "qlik": ["qlik", "qlikview", "qlik sense"],
-    "grafana": ["grafana", "grafana oss"],
-    "mode_analytics": ["mode", "mode analytics"],
-    "metabase": ["metabase"],
-    "superset": ["superset", "apache superset"],
-    "amplitude": ["amplitude", "amplitude analytics"],
-    "mixpanel": ["mixpanel", "mixpanel analytics"],
-    "segment": ["segment", "segment cdp"],
-    "google_analytics": ["google analytics", "ga4", "ga"],
-    "splunk": ["splunk"],
-    "snowflake": ["snowflake"],
-    "redshift": ["redshift", "amazon redshift"],
-    "databricks": ["databricks"],
-    "tensorflow": ["tensorflow", "tf"],
-    "pytorch": ["pytorch", "torch", "pytorch tensor"],
-    "keras": ["keras"],
-    "scikit_learn": ["scikit-learn", "sklearn"],
-    "hugging_face": ["hugging face", "hf", "transformers"],
-    "langchain": ["langchain", "lang chain"],
-    "llamaindex": ["llamaindex", "llama index"],
-    "anthropic": ["anthropic", "claude"],
-    "google_gemini": ["gemini", "google gemini", "bard"],
-    "meta_llama": ["llama", "meta llama", "llama 2"],
-    "mistral": ["mistral", "mistral ai"],
-    "openai": ["openai", "openai api", "gpt"],
-    "localai": ["localai", "local ai"],
-    "ollama": ["ollama", "ollama.ai"],
-    "ray": ["ray", "ray framework"],
-    "mlflow": ["mlflow", "ml flow"],
-    "wandb": ["wandb", "weights biases", "weights and biases"],
-    "xgboost": ["xgboost"],
-    "lightgbm": ["lightgbm", "light gbm"],
-    "catboost": ["catboost"],
-    "spacy": ["spacy"],
-    "otel": ["otel", "opentelemetry"],
-    "docker": ["docker", "docker container"],
-    "kubernetes": ["kubernetes", "k8s", "k8"],
-    "helm": ["helm", "helm kubernetes"],
-    "kustomize": ["kustomize"],
-    "argo_cd": ["argo cd", "argocd"],
-    "flux": ["flux", "gitops flux"],
-    "terraform": ["terraform", "tf"],
-    "pulumi": ["pulumi", "pulumi iac"],
-    "cloudformation": ["cloudformation", "cfn"],
-    "ansible": ["ansible", "ansible playbooks"],
-    "puppet": ["puppet"],
-    "chef": ["chef", "chef configuration"],
-    "crossplane": ["crossplane"],
-    "vault": ["vault", "hashicorp vault"],
-    "consul": ["consul", "hashicorp consul"],
-    "nginx": ["nginx", "nginx webserver"],
-    "apache": ["apache", "apache webserver"],
-    "haproxy": ["haproxy", "ha proxy"],
-    "prometheus": ["prometheus", "prom"],
-    "datadog": ["datadog", "datadog apm"],
-    "new_relic": ["new relic", "newrelic", "nr"],
-    "jaeger": ["jaeger", "jaeger tracing"],
-    "zipkin": ["zipkin"],
-    "dynatrace": ["dynatrace"],
-    "honeycomb": ["honeycomb", "honeycomb io"],
-    "elasticsearch": ["elasticsearch", "es", "elastic"],
-    "logstash": ["logstash"],
-    "kibana": ["kibana"],
-    "apache_kafka": ["kafka", "apache kafka"],
-    "rabbitmq": ["rabbitmq", "rabbit mq"],
-    "azure_service_bus": ["service bus", "azure service bus"],
-    "google_pubsub": ["pubsub", "google pubsub"],
-    "apache_pulsar": ["pulsar", "apache pulsar"],
-    "nats": ["nats", "nats io"],
-    "redis": ["redis", "redis queue"],
-    "redis_streams": ["redis streams"],
-    "redis_queue": ["redis queue", "rq"],
-    "kafka_streams": ["kafka streams"],
-    "flink": ["flink", "apache flink"],
-    "beam": ["beam", "apache beam"],
-    "kafka_connect": ["kafka connect"],
-    "mqtt": ["mqtt"],
-    "amqp": ["amqp"],
-    "sql": ["sql", "sql database", "relational sql"],
-    "mysql": ["mysql"],
-    "postgresql": ["postgresql", "postgres", "psql"],
-    "sqlite": ["sqlite"],
-    "mariadb": ["mariadb"],
-    "oracle_db": ["oracle db", "oracle"],
-    "mongodb": ["mongodb", "mongo"],
-    "cassandra": ["cassandra"],
-    "couchbase": ["couchbase"],
-    "neo4j": ["neo4j"],
-    "firebase": ["firebase", "firebase firestore"],
-    "dynamodb": ["dynamodb"],
-    "opensearch": ["opensearch", "elastic opensearch"],
-    "solr": ["solr"],
-    "memcached": ["memcached"],
-    "etcd": ["etcd"],
-    "cockroachdb": ["cockroachdb", "cockroach"],
-    "tidb": ["tidb"],
-    "planetscale": ["planetscale"],
-    "pytest": ["pytest"],
-    "unittest": ["unittest"],
-    "nose": ["nose"],
-    "jest": ["jest", "jestjs"],
-    "mocha": ["mocha", "mocha test"],
-    "cypress": ["cypress", "cypress testing"],
-    "playwright": ["playwright"],
-    "selenium": ["selenium", "selenium webdriver"],
-    "vitest": ["vitest"],
-    "chai": ["chai", "chai assertion"],
-    "storybook": ["storybook"],
-    "sonarqube": ["sonarqube", "sonar"],
-    "snyk": ["snyk"],
-    "eslint": ["eslint", "es lint"],
-    "prettier": ["prettier"],
-    "black": ["black", "black formatter"],
-    "ruff": ["ruff"],
-    "flake8": ["flake8"],
-    "git": ["git", "version control"],
-    "github": ["github"],
-    "gitlab": ["gitlab"],
-    "bitbucket": ["bitbucket"],
-    "jira": ["jira", "atlassian jira"],
-    "trello": ["trello"],
-    "asana": ["asana"],
-    "monday_com": ["monday.com", "monday"],
-    "clickup": ["clickup"],
-    "linear": ["linear"],
-    "rest": ["rest", "restful", "rest api"],
-    "graphql": ["graphql", "gql"],
-    "swagger": ["swagger", "swagger ui", "swagger editor"],
-    "openapi": ["openapi", "openapi spec"],
-    "asyncapi": ["asyncapi"],
-    "postman": ["postman", "postman api"],
-    "insomnia": ["insomnia", "insomnia rest"],
-    "json": ["json"],
-    "xml": ["xml"],
-    "protobuf": ["protobuf", "proto", "protocol buffers"],
-    "thrift": ["thrift", "apache thrift"],
-    "avro": ["avro", "apache avro"],
-    "openapi_generator": ["openapi generator"],
-    "api_blueprint": ["api blueprint"],
-    "raml": ["raml"],
-    "oauth2": ["oauth2", "oauth 2.0", "oauth"],
-    "openid_connect": ["oidc", "openid connect"],
-    "saml": ["saml", "saml 2.0"],
-    "jwt": ["jwt", "json web token"],
-    "okta": ["okta", "okta auth"],
-    "auth0": ["auth0", "auth zero"],
-    "owasp": ["owasp"],
-    "tls": ["tls", "ssl", "https"],
-    "ssh": ["ssh", "secure shell"],
-    "pkcs": ["pkcs", "public key cryptography"],
-    "lets_encrypt": ["letsencrypt", "let's encrypt"],
-    "hashicorp_vault": ["hashicorp vault", "vault"],
-    "semgrep": ["semgrep"],
-    "solidity": ["solidity", "solidity ethereum"],
-    "web3_js": ["web3.js", "web3 js", "web3 javascript"],
-    "ethers_js": ["ethers.js", "ethers js"],
-    "hardhat": ["hardhat", "hardhat ethereum"],
-    "truffle": ["truffle", "truffle framework"],
-    "foundry": ["foundry", "foundry eth"],
-    "anchor": ["anchor", "anchor solana", "rust anchor"],
-    "ethereum": ["ethereum", "eth"],
-    "solana": ["solana", "sol"],
-    "polygon": ["polygon", "matic"],
-    "bitcoin": ["bitcoin", "btc"],
-    "openzeppelin": ["openzeppelin", "oz contracts"],
-    "ganache": ["ganache"],
-    "metamask": ["metamask", "metamask wallet"],
-    "web3_py": ["web3.py", "web3 python"],
-    "brownie": ["brownie"],
-    "contentful": ["contentful", "contentful cms"],
-    "strapi": ["strapi"],
-    "sanity": ["sanity", "sanity cms"],
-    "directus": ["directus"],
-    "ghost": ["ghost", "ghost cms"],
-    "wordpress": ["wordpress", "wp"],
-    "webflow": ["webflow"],
-    "zapier": ["zapier", "zapier automation"],
-    "airtable": ["airtable", "airtable base"],
-    "retool": ["retool", "retool ui"],
-    "bubble": ["bubble", "bubble io"],
-    "flutterflow": ["flutterflow", "flutter flow"],
-    "powerapps": ["powerapps", "power apps", "microsoft powerapps"],
-    "n8n": ["n8n"],
-    "make": ["make", "make.com"],
-    "integromat": ["integromat"],
-    "figma": ["figma"],
-    "sketch": ["sketch"],
-    "adobe_xd": ["adobe xd", "xd"],
-    "invision": ["invision"],
-    "balsamiq": ["balsamiq"],
-    "axure": ["axure"],
-    "framer": ["framer"],
-    "principle": ["principle"],
-    "marvel": ["marvel"],
-    "indesign": ["indesign", "adobe indesign"],
-    "illustrator": ["illustrator", "adobe illustrator"],
-    "photoshop": ["photoshop", "adobe photoshop"],
-    "excel": ["excel", "ms excel", "microsoft excel"],
-    "power_bi": ["power bi", "powerbi"],
-    "notion": ["notion"],
-    "confluence": ["confluence"],
-    "slack": ["slack"],
-    "teams": ["teams", "microsoft teams"],
-    "zoom": ["zoom"],
-    "miro": ["miro"],
-    "lucidchart": ["lucidchart"],
-    "draw_io": ["draw.io", "drawio"],
-    "microsoft_project": ["microsoft project"],
-    "webpack": ["webpack"],
-    "vite": ["vite"],
-    "babel": ["babel"],
-    "parcel": ["parcel"],
-    "rollup": ["rollup"],
-    "esbuild": ["esbuild"],
-    "npm": ["npm", "node package manager"],
-    "yarn": ["yarn"],
-    "pnpm": ["pnpm"],
-    "pip": ["pip"],
-    "maven": ["maven"],
-    "gradle": ["gradle"],
-    "sbt": ["sbt"],
-    "cargo": ["cargo"],
-    "nuget": ["nuget"],
-    "cloudwatch": ["cloudwatch", "aws cloudwatch"],
-    "stackdriver": ["stackdriver"],
-    "ai_ml": ["artificial intelligence", "ai", "ai ml", "aiml", "machine learning", "ml"],
-    "deep_learning": ["deep learning", "dl"],
-    "data_science": ["data science"],
-    "computer_vision": ["computer vision", "cv", "vision"],
-    "nlp": ["nlp", "natural language processing"],
-    "iot": ["iot", "internet of things"],
-    "edge_computing": ["edge computing"],
-    "serverless": ["serverless"],
-    "microservices": ["microservices"],
-    "devops": ["devops", "dev ops"],
-    "machine_learning": ["machine learning", "ml"]
-},
-"skill_families" : {
-
-    "cloud_platform": ["aws", "azure", "gcp", "digitalocean", "heroku", "ibm cloud", "oracle cloud"],
-    "aws_compute": ["ec2", "lambda", "ecs"],
-    "aws_storage": ["s3", "ebs"],
-    "aws_database": ["rds", "dynamodb", "aurora"],
-    "aws_ml": ["sagemaker"],
-    "aws_messaging": ["sns", "sqs"],
-    "aws_monitoring": ["cloudwatch"],
-    "gcp_compute": ["cloud functions", "app engine", "compute engine"],
-    "gcp_storage": ["cloud storage", "gcs"],
-    "gcp_database": ["firestore", "cloud sql", "bigquery"],
-    "gcp_ml": ["vertex ai"],
-    "gcp_messaging": ["pubsub"],
-    "azure_compute": ["azure functions", "app service", "azure vm"],
-    "azure_storage": ["blob storage", "queue storage"],
-    "azure_database": ["cosmos db", "sql database"],
-    "azure_ml": ["cognitive services"],
-    "azure_messaging": ["service bus", "event hubs"],
-
-    "relational_database": ["mysql", "postgresql", "sql_server", "oracle db", "mariadb", "sqlite", "amazon aurora"],
-    "nosql_database": ["mongodb", "cassandra", "dynamodb", "couchbase", "redis", "neo4j", "firebase"],
-    "search_engine": ["elasticsearch", "opensearch", "solr"],
-    "data_warehouse": ["snowflake", "amazon redshift", "google bigquery", "azure synapse", "databricks"],
-    "time_series_db": ["influxdb", "prometheus"],
-    "graph_database": ["neo4j", "arangodb"],
-
-    "containerization": ["docker", "podman", "docker swarm"],
-    "container_orchestration": ["kubernetes", "docker swarm", "ecs"],
-    "orchestration": ["kubernetes", "helm", "kustomize", "amazon eks", "amazon ecs"],
-    "kubernetes_tools": ["helm", "kustomize", "argo cd", "flux"],
-    "service_mesh": ["istio", "linkerd", "consul"],
-
-    "ci_cd": ["jenkins", "github_actions", "gitlab_ci", "circleci", "travis ci", "bamboo", "azure_devops"],
-    "ci_cd_platforms": ["github", "gitlab", "bitbucket", "gitea"],
-    "infrastructure_as_code": ["terraform", "pulumi", "aws cloudformation", "ansible", "chef", "puppet", "bicep"],
-    "secrets_management": ["vault", "sealed secrets", "external secrets"],
-    "gitops": ["argo cd", "flux"],
-
-    "monitoring": ["prometheus", "grafana", "datadog", "new relic", "cloudwatch"],
-    "logging": ["elk", "elasticsearch", "logstash", "kibana", "splunk", "loki", "fluentd"],
-    "tracing": ["jaeger", "zipkin", "lightstep"],
-    "apm": ["datadog", "new relic", "dynatrace", "elastic apm"],
-    "metrics": ["prometheus", "influxdb", "graphite"],
-
-    "message_queue": ["kafka", "rabbitmq", "activemq", "zeromq"],
-    "pub_sub": ["kafka", "rabbitmq", "aws sns", "aws sqs", "google pubsub", "azure service bus"],
-    "streaming": ["kafka", "kinesis", "pubsub", "rabbitmq", "apache flink", "apache beam"],
-    "kafka_ecosystem": ["kafka", "kafka connect", "kafka streams", "confluent"],
-
-    "python_backend": ["django", "flask", "fastapi", "pyramid", "tornado", "aiohttp", "starlette"],
-    "node_backend": ["express", "nestjs", "koa", "fastify", "hapi"],
-    "java_backend": ["spring boot", "spring", "quarkus", "micronaut", "grails"],
-    "ruby_backend": ["rails", "sinatra"],
-    "go_backend": ["fiber", "gin", "echo", "beego"],
-    "rust_backend": ["rocket", "actix", "warp"],
-    "dotnet_backend": ["asp.net core", "asp.net"],
-    "php_backend": ["laravel", "symfony", "slim", "lumen"],
-
-    "frontend_framework": ["react", "angular", "vue", "svelte", "ember", "next.js", "nuxt", "remix", "astro"],
-    "react_ecosystem": ["react", "next.js", "react native", "remix", "astro"],
-    "vue_ecosystem": ["vue", "nuxt"],
-    "angular_ecosystem": ["angular", "ngrx"],
-    "css_framework": ["tailwind", "bootstrap", "material ui", "bulma", "foundation", "semantic ui", "sass", "less"],
-    "build_tools": ["webpack", "vite", "parcel", "esbuild", "rollup", "babel"],
-    "state_management": ["redux", "vuex", "pinia", "zustand", "recoil", "jotai"],
-    "http_client": ["axios", "fetch", "superagent", "node-fetch"],
-
-    "api_style": ["rest", "graphql", "grpc", "webhook"],
-    "api_gateway": ["kong", "tyk", "nginx", "aws api gateway", "apigee"],
-    "api_documentation": ["swagger", "openapi", "asyncapi", "redoc"],
-    "rpc_protocol": ["json-rpc", "xml-rpc"],
-
-    "data_processing": ["apache spark", "hadoop", "apache flink", "apache beam", "dask"],
-    "workflow_orchestration": ["apache airflow", "dagster", "prefect", "temporal"],
-    "etl_tools": ["dbt", "ssis", "informatica", "talend", "apache nifi"],
-    "data_lake": ["delta lake", "apache iceberg", "apache hudi"],
-    "data_quality": ["great expectations", "soda", "dbt tests"],
-
-    "bi_tool": ["tableau", "power bi", "looker", "qlik", "metabase", "superset", "mode analytics"],
-    "data_visualization": ["matplotlib", "plotly", "seaborn", "d3.js", "altair"],
-    "analytics_platform": ["amplitude", "mixpanel", "segment", "google analytics"],
-
-    "ml_frameworks": ["scikit-learn", "tensorflow", "pytorch", "keras", "xgboost", "lightgbm", "catboost"],
-    "nlp_tools": ["spacy", "nltk", "transformers", "huggingface", "sentence transformers", "gensim"],
-    "llm_stack": ["openai", "anthropic", "gemini", "llama", "mistral", "langchain", "llamaindex"],
-    "llm_provider": ["openai", "anthropic", "google", "meta", "mistral"],
-    "vector_database": ["faiss", "pinecone", "weaviate", "qdrant", "chroma", "milvus"],
-    "mlops": ["mlflow", "wandb", "kubeflow", "sagemaker", "vertex ai", "azure ml"],
-    "model_deployment": ["docker", "kubernetes", "fastapi", "bentoml", "ray serve", "seldon"],
-    "computer_vision": ["opencv", "pillow", "scikit-image", "torchvision"],
-    "time_series": ["statsmodels", "prophet", "pmdarima", "autots"],
-
-    "testing_python": ["pytest", "unittest", "nose", "nose2"],
-    "testing_js": ["jest", "mocha", "vitest", "playwright", "cypress"],
-    "testing_java": ["junit", "testng", "mockito"],
-    "e2e_testing": ["cypress", "playwright", "selenium", "puppeteer"],
-    "code_quality": ["sonarqube", "eslint", "flake8", "pylint", "black", "prettier"],
-    "security_scanning": ["snyk", "owasp", "semgrep", "trivy"],
-
-    "cross_platform_mobile": ["react native", "flutter", "xamarin", "cordova", "ionic"],
-    "native_ios": ["swift", "swiftui", "uikit", "objective-c"],
-    "native_android": ["kotlin", "java", "jetpack compose"],
-    "mobile_framework": ["react native", "flutter", "xamarin", "nativescript", "expo"],
-    "mobile_web": ["pwa", "react native web", "flutter web"],
-
-    "low_code_platform": ["retool", "powerapps", "mendix", "outsystems"],
-    "no_code_platform": ["bubble", "webflow", "flutterflow"],
-    "automation_platform": ["zapier", "n8n", "make", "integromat"],
-    "cms_headless": ["contentful", "strapi", "sanity", "directus"],
-
-    "blockchain_platform": ["ethereum", "solana", "polygon", "bitcoin"],
-    "smart_contract_language": ["solidity", "rust", "move"],
-    "web3_library": ["web3.js", "ethers.js", "web3.py"],
-    "blockchain_dev_tool": ["hardhat", "truffle", "foundry", "anchor"],
-    "blockchain_framework": ["dapp framework", "scaffold-eth"],
-
-    "version_control": ["git", "svn", "mercurial"],
-    "git_platform": ["github", "gitlab", "bitbucket", "gitea", "gitolite"],
-    "git_workflow": ["github flow", "git flow", "trunk-based development"],
-
-    "issue_tracking": ["jira", "trello", "asana", "monday.com", "clickup", "linear", "github issues"],
-    "knowledge_base": ["confluence", "notion", "obsidian", "wiki"],
-    "communication": ["slack", "teams", "discord", "telegram"],
-    "meeting_tool": ["zoom", "meet", "webex", "teams"],
-
-    "ui_ux_design": ["figma", "sketch", "adobe xd", "invision", "balsamiq", "axure", "framer"],
-    "design_system": ["storybook", "chromatic", "zeplin"],
-    "prototyping": ["figma", "invision", "marvel", "principle"],
-
-    "js_package_manager": ["npm", "yarn", "pnpm"],
-    "python_package_manager": ["pip", "poetry", "pipenv", "conda"],
-    "java_build_tool": ["maven", "gradle", "sbt"],
-    "rust_package_manager": ["cargo"],
-    "go_package_manager": ["go modules"],
-
-    "operating_system": ["linux", "windows", "macos"],
-    "linux_distro": ["ubuntu", "centos", "debian", "rhel", "fedora"],
-    "shell_scripting": ["bash", "zsh", "powershell", "fish", "sh"],
-
-    "ide": ["vscode", "intellij", "pycharm", "webstorm", "visual studio"],
-    "text_editor": ["vim", "emacs", "sublime", "atom", "vscode"],
-    "documentation_tool": ["swagger", "openapi", "mkdocs", "gitbook"],
-    "debugging": ["gdb", "lldb", "delve", "pdb"],
-    "profiling": ["perf", "valgrind", "cProfile", "py-spy"],
-
-    "serverless": ["aws lambda", "azure functions", "gcp cloud functions"],
-    "microservices": ["docker", "kubernetes", "service mesh"],
-    "devops_practices": ["ci/cd", "infrastructure as code", "containerization", "orchestration"],
-    "ai_ml_ops": ["mlflow", "wandb", "kubeflow", "sagemaker"],
-    "data_stack": ["dbt", "airflow", "spark", "snowflake", "kafka"],
-}
-
+{
+    "skill_database": {
+        "python": [
+            "python",
+            "python3",
+            "python 3",
+            "py"
+        ],
+        "javascript": [
+            "javascript",
+            "js",
+            "js/ts"
+        ],
+        "typescript": [
+            "typescript",
+            "ts",
+            "TS"
+        ],
+        "java": [
+            "java",
+            "jdk"
+        ],
+        "c": [
+            "c",
+            "c programming"
+        ],
+        "c++": [
+            "c++",
+            "cpp",
+            "c plus plus"
+        ],
+        "c#": [
+            "c#",
+            "c sharp",
+            "csharp",
+            "dotnet lang"
+        ],
+        "go": [
+            "go",
+            "golang"
+        ],
+        "rust": [
+            "rust",
+            "rustlang"
+        ],
+        "ruby": [
+            "ruby",
+            "rb",
+            "ruby lang"
+        ],
+        "php": [
+            "php",
+            "php programming"
+        ],
+        "kotlin": [
+            "kotlin",
+            "kt"
+        ],
+        "swift": [
+            "swift",
+            "ios lang"
+        ],
+        "r": [
+            "r",
+            "r language",
+            "r programming"
+        ],
+        "scala": [
+            "scala",
+            "scala lang"
+        ],
+        "elixir": [
+            "elixir",
+            "erlang vm"
+        ],
+        "node_js": [
+            "node.js",
+            "node js",
+            "node",
+            "nodejs"
+        ],
+        "vb_net": [
+            "vb.net",
+            "vbnet",
+            "visual basic"
+        ],
+        "groovy": [
+            "groovy"
+        ],
+        "clojure": [
+            "clojure"
+        ],
+        "react": [
+            "react",
+            "reactjs",
+            "react.js",
+            "react js"
+        ],
+        "react_js": [
+            "react",
+            "reactjs",
+            "react.js",
+            "react js"
+        ],
+        "next_js": [
+            "next.js",
+            "nextjs",
+            "next",
+            "next.js framework"
+        ],
+        "vue_js": [
+            "vue",
+            "vuejs",
+            "vue.js",
+            "vue js"
+        ],
+        "nuxt": [
+            "nuxt",
+            "nuxtjs",
+            "nuxt.js"
+        ],
+        "angular": [
+            "angular",
+            "angularjs",
+            "angular.js"
+        ],
+        "svelte": [
+            "svelte",
+            "sveltejs"
+        ],
+        "sveltekit": [
+            "sveltekit",
+            "svelte-kit"
+        ],
+        "remix": [
+            "remix",
+            "remix.run"
+        ],
+        "astro": [
+            "astro",
+            "astro.build"
+        ],
+        "qwik": [
+            "qwik",
+            "qwik.dev"
+        ],
+        "ember": [
+            "ember",
+            "emberjs",
+            "ember.js"
+        ],
+        "backbone": [
+            "backbone",
+            "backbonejs",
+            "backbone.js"
+        ],
+        "html": [
+            "html",
+            "html5",
+            "html 5"
+        ],
+        "css": [
+            "css",
+            "css3",
+            "css 3",
+            "styling"
+        ],
+        "sass": [
+            "sass",
+            "scss",
+            "sass/scss"
+        ],
+        "tailwind": [
+            "tailwind",
+            "tailwind css",
+            "tailwindcss"
+        ],
+        "bootstrap": [
+            "bootstrap",
+            "bootstrap css"
+        ],
+        "material_ui": [
+            "material-ui",
+            "mui",
+            "material ui"
+        ],
+        "less": [
+            "less",
+            "less css"
+        ],
+        "bulma": [
+            "bulma"
+        ],
+        "foundation": [
+            "foundation",
+            "foundation css"
+        ],
+        "semantic_ui": [
+            "semantic ui",
+            "semantic"
+        ],
+        "axios": [
+            "axios"
+        ],
+        "fetch_api": [
+            "fetch",
+            "fetch api"
+        ],
+        "express": [
+            "express",
+            "expressjs",
+            "express.js"
+        ],
+        "flask": [
+            "flask",
+            "flask python"
+        ],
+        "fastapi": [
+            "fastapi",
+            "fast api"
+        ],
+        "django": [
+            "django",
+            "django framework"
+        ],
+        "spring_boot": [
+            "spring boot",
+            "springboot",
+            "spring"
+        ],
+        "spring": [
+            "spring",
+            "springframework"
+        ],
+        "spring_cloud": [
+            "spring cloud",
+            "spring-cloud"
+        ],
+        "spring_mvc": [
+            "spring mvc"
+        ],
+        "spring_data": [
+            "spring data",
+            "spring-data"
+        ],
+        "spring_security": [
+            "spring security",
+            "spring-security"
+        ],
+        "quarkus": [
+            "quarkus",
+            "quarkus framework"
+        ],
+        "micronaut": [
+            "micronaut",
+            "micronaut framework"
+        ],
+        "asp_net_core": [
+            "asp.net core",
+            "asp.net",
+            "aspnetcore",
+            "asp.net core"
+        ],
+        "asp_net": [
+            "asp.net",
+            "asp",
+            "asp.net framework"
+        ],
+        "rails": [
+            "rails",
+            "ruby on rails",
+            "rubyonrails"
+        ],
+        "sinatra": [
+            "sinatra",
+            "ruby sinatra"
+        ],
+        "fiber": [
+            "fiber",
+            "go fiber"
+        ],
+        "gin": [
+            "gin",
+            "go gin"
+        ],
+        "echo": [
+            "echo",
+            "go echo"
+        ],
+        "rocket": [
+            "rocket",
+            "rust rocket"
+        ],
+        "actix": [
+            "actix",
+            "rust actix"
+        ],
+        "pyramid": [
+            "pyramid",
+            "pylons"
+        ],
+        "tornado": [
+            "tornado"
+        ],
+        "aiohttp": [
+            "aiohttp"
+        ],
+        "starlette": [
+            "starlette"
+        ],
+        "nest_js": [
+            "nestjs",
+            "nest.js",
+            "nest"
+        ],
+        "hapi": [
+            "hapi",
+            "hapijs"
+        ],
+        "koa": [
+            "koa",
+            "koajs"
+        ],
+        "fastify": [
+            "fastify"
+        ],
+        "graphene": [
+            "graphene"
+        ],
+        "grpc": [
+            "grpc",
+            "g rpc"
+        ],
+        "aws": [
+            "aws",
+            "amazon web services",
+            "amazon aws"
+        ],
+        "aws_lambda": [
+            "lambda",
+            "aws lambda"
+        ],
+        "aws_ec2": [
+            "ec2",
+            "aws ec2",
+            "elastic compute"
+        ],
+        "aws_s3": [
+            "s3",
+            "aws s3",
+            "simple storage service"
+        ],
+        "aws_rds": [
+            "rds",
+            "aws rds",
+            "relational database service"
+        ],
+        "aws_dynamodb": [
+            "dynamodb",
+            "aws dynamodb",
+            "dynamo"
+        ],
+        "aws_aurora": [
+            "aurora",
+            "aws aurora"
+        ],
+        "aws_sagemaker": [
+            "sagemaker",
+            "aws sagemaker"
+        ],
+        "aws_appsync": [
+            "appsync",
+            "aws appsync"
+        ],
+        "aws_amplify": [
+            "amplify",
+            "aws amplify"
+        ],
+        "aws_api_gateway": [
+            "api gateway",
+            "aws api gateway"
+        ],
+        "aws_cloudformation": [
+            "cloudformation",
+            "aws cloudformation",
+            "cfn"
+        ],
+        "aws_cloudwatch": [
+            "cloudwatch",
+            "aws cloudwatch"
+        ],
+        "aws_codepipeline": [
+            "codepipeline",
+            "aws codepipeline"
+        ],
+        "aws_codebuild": [
+            "codebuild",
+            "aws codebuild"
+        ],
+        "aws_sns": [
+            "sns",
+            "aws sns",
+            "simple notification"
+        ],
+        "aws_sqs": [
+            "sqs",
+            "aws sqs",
+            "simple queue"
+        ],
+        "aws_kinesis": [
+            "kinesis",
+            "aws kinesis"
+        ],
+        "aws_ecs": [
+            "ecs",
+            "aws ecs",
+            "elastic container"
+        ],
+        "aws_secretsmanager": [
+            "secrets manager",
+            "aws secrets"
+        ],
+        "gcp": [
+            "gcp",
+            "google cloud",
+            "google cloud platform"
+        ],
+        "cloud_functions": [
+            "cloud functions",
+            "gcf"
+        ],
+        "app_engine": [
+            "app engine",
+            "gae"
+        ],
+        "compute_engine": [
+            "compute engine",
+            "gce"
+        ],
+        "cloud_storage": [
+            "cloud storage",
+            "gcs",
+            "gs"
+        ],
+        "firestore": [
+            "firestore",
+            "cloud firestore"
+        ],
+        "bigquery": [
+            "bigquery",
+            "big query",
+            "bq"
+        ],
+        "dataflow": [
+            "dataflow",
+            "cloud dataflow"
+        ],
+        "pubsub": [
+            "pubsub",
+            "cloud pubsub",
+            "pub/sub"
+        ],
+        "vertex_ai": [
+            "vertex ai",
+            "vertex"
+        ],
+        "cloud_run": [
+            "cloud run",
+            "run"
+        ],
+        "gke": [
+            "gke",
+            "kubernetes engine",
+            "gke kubernetes"
+        ],
+        "cloud_sql": [
+            "cloud sql",
+            "cloud-sql"
+        ],
+        "cloud_iam": [
+            "cloud iam",
+            "iam"
+        ],
+        "cloud_monitoring": [
+            "cloud monitoring",
+            "stackdriver"
+        ],
+        "azure": [
+            "azure",
+            "microsoft azure"
+        ],
+        "azure_functions": [
+            "azure functions",
+            "functions"
+        ],
+        "azure_app_service": [
+            "app service",
+            "azure app service"
+        ],
+        "azure_vm": [
+            "vms",
+            "vm",
+            "azure vms",
+            "azure virtual machines"
+        ],
+        "azure_blob_storage": [
+            "blob storage",
+            "azure blob"
+        ],
+        "azure_cosmos_db": [
+            "cosmos db",
+            "cosmosdb",
+            "azure cosmos"
+        ],
+        "azure_sql_database": [
+            "azure sql",
+            "sql database"
+        ],
+        "azure_synapse": [
+            "synapse",
+            "azure synapse"
+        ],
+        "azure_event_hubs": [
+            "event hubs",
+            "azure events"
+        ],
+        "azure_cognitive_services": [
+            "cognitive services",
+            "azure ai"
+        ],
+        "azure_logic_apps": [
+            "logic apps",
+            "azure logic"
+        ],
+        "azure_key_vault": [
+            "key vault",
+            "azure vault"
+        ],
+        "digitalocean": [
+            "digitalocean",
+            "do",
+            "digital ocean"
+        ],
+        "heroku": [
+            "heroku"
+        ],
+        "react_native": [
+            "react native",
+            "rn",
+            "react-native"
+        ],
+        "flutter": [
+            "flutter",
+            "flutter framework"
+        ],
+        "xamarin": [
+            "xamarin",
+            "xamarin.forms",
+            "xamarin android"
+        ],
+        "swiftui": [
+            "swiftui",
+            "swift ui"
+        ],
+        "uikit": [
+            "uikit",
+            "ui kit"
+        ],
+        "android": [
+            "android",
+            "android development",
+            "android sdk"
+        ],
+        "ionic": [
+            "ionic",
+            "ionicframework"
+        ],
+        "nativescript": [
+            "nativescript",
+            "native script"
+        ],
+        "pwa": [
+            "pwa",
+            "progressive web app"
+        ],
+        "expo": [
+            "expo"
+        ],
+        "capacitor": [
+            "capacitor"
+        ],
+        "apache_spark": [
+            "spark",
+            "apache spark"
+        ],
+        "apache_airflow": [
+            "airflow",
+            "apache airflow"
+        ],
+        "dbt": [
+            "dbt",
+            "data build tool"
+        ],
+        "jupyter": [
+            "jupyter",
+            "jupyter notebook"
+        ],
+        "anaconda": [
+            "anaconda",
+            "conda"
+        ],
+        "polars": [
+            "polars",
+            "polars rs"
+        ],
+        "dask": [
+            "dask",
+            "dask distributed"
+        ],
+        "duckdb": [
+            "duckdb",
+            "duck db"
+        ],
+        "pandas": [
+            "pandas",
+            "pd"
+        ],
+        "numpy": [
+            "numpy",
+            "np"
+        ],
+        "tableau": [
+            "tableau",
+            "tableau desktop"
+        ],
+        "looker": [
+            "looker",
+            "looker studio"
+        ],
+        "qlik": [
+            "qlik",
+            "qlikview",
+            "qlik sense"
+        ],
+        "grafana": [
+            "grafana",
+            "grafana oss"
+        ],
+        "mode_analytics": [
+            "mode",
+            "mode analytics"
+        ],
+        "metabase": [
+            "metabase"
+        ],
+        "superset": [
+            "superset",
+            "apache superset"
+        ],
+        "amplitude": [
+            "amplitude",
+            "amplitude analytics"
+        ],
+        "mixpanel": [
+            "mixpanel",
+            "mixpanel analytics"
+        ],
+        "segment": [
+            "segment",
+            "segment cdp"
+        ],
+        "google_analytics": [
+            "google analytics",
+            "ga4",
+            "ga"
+        ],
+        "splunk": [
+            "splunk"
+        ],
+        "snowflake": [
+            "snowflake"
+        ],
+        "redshift": [
+            "redshift",
+            "amazon redshift"
+        ],
+        "databricks": [
+            "databricks"
+        ],
+        "tensorflow": [
+            "tensorflow",
+            "tf"
+        ],
+        "pytorch": [
+            "pytorch",
+            "torch",
+            "pytorch tensor"
+        ],
+        "keras": [
+            "keras"
+        ],
+        "scikit_learn": [
+            "scikit-learn",
+            "sklearn"
+        ],
+        "hugging_face": [
+            "hugging face",
+            "hf",
+            "transformers"
+        ],
+        "langchain": [
+            "langchain",
+            "lang chain"
+        ],
+        "llamaindex": [
+            "llamaindex",
+            "llama index"
+        ],
+        "anthropic": [
+            "anthropic",
+            "claude"
+        ],
+        "google_gemini": [
+            "gemini",
+            "google gemini",
+            "bard"
+        ],
+        "meta_llama": [
+            "llama",
+            "meta llama",
+            "llama 2"
+        ],
+        "mistral": [
+            "mistral",
+            "mistral ai"
+        ],
+        "openai": [
+            "openai",
+            "openai api",
+            "gpt"
+        ],
+        "localai": [
+            "localai",
+            "local ai"
+        ],
+        "ollama": [
+            "ollama",
+            "ollama.ai"
+        ],
+        "ray": [
+            "ray",
+            "ray framework"
+        ],
+        "mlflow": [
+            "mlflow",
+            "ml flow"
+        ],
+        "wandb": [
+            "wandb",
+            "weights biases",
+            "weights and biases"
+        ],
+        "xgboost": [
+            "xgboost"
+        ],
+        "lightgbm": [
+            "lightgbm",
+            "light gbm"
+        ],
+        "catboost": [
+            "catboost"
+        ],
+        "spacy": [
+            "spacy"
+        ],
+        "otel": [
+            "otel",
+            "opentelemetry"
+        ],
+        "docker": [
+            "docker",
+            "docker container"
+        ],
+        "kubernetes": [
+            "kubernetes",
+            "k8s",
+            "k8"
+        ],
+        "helm": [
+            "helm",
+            "helm kubernetes"
+        ],
+        "kustomize": [
+            "kustomize"
+        ],
+        "argo_cd": [
+            "argo cd",
+            "argocd"
+        ],
+        "flux": [
+            "flux",
+            "gitops flux"
+        ],
+        "terraform": [
+            "terraform",
+            "tf"
+        ],
+        "pulumi": [
+            "pulumi",
+            "pulumi iac"
+        ],
+        "cloudformation": [
+            "cloudformation",
+            "cfn"
+        ],
+        "ansible": [
+            "ansible",
+            "ansible playbooks"
+        ],
+        "puppet": [
+            "puppet"
+        ],
+        "chef": [
+            "chef",
+            "chef configuration"
+        ],
+        "crossplane": [
+            "crossplane"
+        ],
+        "vault": [
+            "vault",
+            "hashicorp vault"
+        ],
+        "consul": [
+            "consul",
+            "hashicorp consul"
+        ],
+        "nginx": [
+            "nginx",
+            "nginx webserver"
+        ],
+        "apache": [
+            "apache",
+            "apache webserver"
+        ],
+        "haproxy": [
+            "haproxy",
+            "ha proxy"
+        ],
+        "prometheus": [
+            "prometheus",
+            "prom"
+        ],
+        "datadog": [
+            "datadog",
+            "datadog apm"
+        ],
+        "new_relic": [
+            "new relic",
+            "newrelic",
+            "nr"
+        ],
+        "jaeger": [
+            "jaeger",
+            "jaeger tracing"
+        ],
+        "zipkin": [
+            "zipkin"
+        ],
+        "dynatrace": [
+            "dynatrace"
+        ],
+        "honeycomb": [
+            "honeycomb",
+            "honeycomb io"
+        ],
+        "elasticsearch": [
+            "elasticsearch",
+            "es",
+            "elastic"
+        ],
+        "logstash": [
+            "logstash"
+        ],
+        "kibana": [
+            "kibana"
+        ],
+        "apache_kafka": [
+            "kafka",
+            "apache kafka"
+        ],
+        "rabbitmq": [
+            "rabbitmq",
+            "rabbit mq"
+        ],
+        "azure_service_bus": [
+            "service bus",
+            "azure service bus"
+        ],
+        "google_pubsub": [
+            "pubsub",
+            "google pubsub"
+        ],
+        "apache_pulsar": [
+            "pulsar",
+            "apache pulsar"
+        ],
+        "nats": [
+            "nats",
+            "nats io"
+        ],
+        "redis": [
+            "redis",
+            "redis queue"
+        ],
+        "redis_streams": [
+            "redis streams"
+        ],
+        "redis_queue": [
+            "redis queue",
+            "rq"
+        ],
+        "kafka_streams": [
+            "kafka streams"
+        ],
+        "flink": [
+            "flink",
+            "apache flink"
+        ],
+        "beam": [
+            "beam",
+            "apache beam"
+        ],
+        "kafka_connect": [
+            "kafka connect"
+        ],
+        "mqtt": [
+            "mqtt"
+        ],
+        "amqp": [
+            "amqp"
+        ],
+        "sql": [
+            "sql",
+            "sql database",
+            "relational sql"
+        ],
+        "mysql": [
+            "mysql"
+        ],
+        "postgresql": [
+            "postgresql",
+            "postgres",
+            "psql"
+        ],
+        "sqlite": [
+            "sqlite"
+        ],
+        "mariadb": [
+            "mariadb"
+        ],
+        "oracle_db": [
+            "oracle db",
+            "oracle"
+        ],
+        "mongodb": [
+            "mongodb",
+            "mongo"
+        ],
+        "cassandra": [
+            "cassandra"
+        ],
+        "couchbase": [
+            "couchbase"
+        ],
+        "neo4j": [
+            "neo4j"
+        ],
+        "firebase": [
+            "firebase",
+            "firebase firestore"
+        ],
+        "dynamodb": [
+            "dynamodb"
+        ],
+        "opensearch": [
+            "opensearch",
+            "elastic opensearch"
+        ],
+        "solr": [
+            "solr"
+        ],
+        "memcached": [
+            "memcached"
+        ],
+        "etcd": [
+            "etcd"
+        ],
+        "cockroachdb": [
+            "cockroachdb",
+            "cockroach"
+        ],
+        "tidb": [
+            "tidb"
+        ],
+        "planetscale": [
+            "planetscale"
+        ],
+        "pytest": [
+            "pytest"
+        ],
+        "unittest": [
+            "unittest"
+        ],
+        "nose": [
+            "nose"
+        ],
+        "jest": [
+            "jest",
+            "jestjs"
+        ],
+        "mocha": [
+            "mocha",
+            "mocha test"
+        ],
+        "cypress": [
+            "cypress",
+            "cypress testing"
+        ],
+        "playwright": [
+            "playwright"
+        ],
+        "selenium": [
+            "selenium",
+            "selenium webdriver"
+        ],
+        "vitest": [
+            "vitest"
+        ],
+        "chai": [
+            "chai",
+            "chai assertion"
+        ],
+        "storybook": [
+            "storybook"
+        ],
+        "sonarqube": [
+            "sonarqube",
+            "sonar"
+        ],
+        "snyk": [
+            "snyk"
+        ],
+        "eslint": [
+            "eslint",
+            "es lint"
+        ],
+        "prettier": [
+            "prettier"
+        ],
+        "black": [
+            "black",
+            "black formatter"
+        ],
+        "ruff": [
+            "ruff"
+        ],
+        "flake8": [
+            "flake8"
+        ],
+        "git": [
+            "git",
+            "version control"
+        ],
+        "github": [
+            "github"
+        ],
+        "gitlab": [
+            "gitlab"
+        ],
+        "bitbucket": [
+            "bitbucket"
+        ],
+        "jira": [
+            "jira",
+            "atlassian jira"
+        ],
+        "trello": [
+            "trello"
+        ],
+        "asana": [
+            "asana"
+        ],
+        "monday_com": [
+            "monday.com",
+            "monday"
+        ],
+        "clickup": [
+            "clickup"
+        ],
+        "linear": [
+            "linear"
+        ],
+        "rest": [
+            "rest",
+            "restful",
+            "rest api"
+        ],
+        "graphql": [
+            "graphql",
+            "gql"
+        ],
+        "swagger": [
+            "swagger",
+            "swagger ui",
+            "swagger editor"
+        ],
+        "openapi": [
+            "openapi",
+            "openapi spec"
+        ],
+        "asyncapi": [
+            "asyncapi"
+        ],
+        "postman": [
+            "postman",
+            "postman api"
+        ],
+        "insomnia": [
+            "insomnia",
+            "insomnia rest"
+        ],
+        "json": [
+            "json"
+        ],
+        "xml": [
+            "xml"
+        ],
+        "protobuf": [
+            "protobuf",
+            "proto",
+            "protocol buffers"
+        ],
+        "thrift": [
+            "thrift",
+            "apache thrift"
+        ],
+        "avro": [
+            "avro",
+            "apache avro"
+        ],
+        "openapi_generator": [
+            "openapi generator"
+        ],
+        "api_blueprint": [
+            "api blueprint"
+        ],
+        "raml": [
+            "raml"
+        ],
+        "oauth2": [
+            "oauth2",
+            "oauth 2.0",
+            "oauth"
+        ],
+        "openid_connect": [
+            "oidc",
+            "openid connect"
+        ],
+        "saml": [
+            "saml",
+            "saml 2.0"
+        ],
+        "jwt": [
+            "jwt",
+            "json web token"
+        ],
+        "okta": [
+            "okta",
+            "okta auth"
+        ],
+        "auth0": [
+            "auth0",
+            "auth zero"
+        ],
+        "owasp": [
+            "owasp"
+        ],
+        "tls": [
+            "tls",
+            "ssl",
+            "https"
+        ],
+        "ssh": [
+            "ssh",
+            "secure shell"
+        ],
+        "pkcs": [
+            "pkcs",
+            "public key cryptography"
+        ],
+        "lets_encrypt": [
+            "letsencrypt",
+            "let's encrypt"
+        ],
+        "hashicorp_vault": [
+            "hashicorp vault",
+            "vault"
+        ],
+        "semgrep": [
+            "semgrep"
+        ],
+        "solidity": [
+            "solidity",
+            "solidity ethereum"
+        ],
+        "web3_js": [
+            "web3.js",
+            "web3 js",
+            "web3 javascript"
+        ],
+        "ethers_js": [
+            "ethers.js",
+            "ethers js"
+        ],
+        "hardhat": [
+            "hardhat",
+            "hardhat ethereum"
+        ],
+        "truffle": [
+            "truffle",
+            "truffle framework"
+        ],
+        "foundry": [
+            "foundry",
+            "foundry eth"
+        ],
+        "anchor": [
+            "anchor",
+            "anchor solana",
+            "rust anchor"
+        ],
+        "ethereum": [
+            "ethereum",
+            "eth"
+        ],
+        "solana": [
+            "solana",
+            "sol"
+        ],
+        "polygon": [
+            "polygon",
+            "matic"
+        ],
+        "bitcoin": [
+            "bitcoin",
+            "btc"
+        ],
+        "openzeppelin": [
+            "openzeppelin",
+            "oz contracts"
+        ],
+        "ganache": [
+            "ganache"
+        ],
+        "metamask": [
+            "metamask",
+            "metamask wallet"
+        ],
+        "web3_py": [
+            "web3.py",
+            "web3 python"
+        ],
+        "brownie": [
+            "brownie"
+        ],
+        "contentful": [
+            "contentful",
+            "contentful cms"
+        ],
+        "strapi": [
+            "strapi"
+        ],
+        "sanity": [
+            "sanity",
+            "sanity cms"
+        ],
+        "directus": [
+            "directus"
+        ],
+        "ghost": [
+            "ghost",
+            "ghost cms"
+        ],
+        "wordpress": [
+            "wordpress",
+            "wp"
+        ],
+        "webflow": [
+            "webflow"
+        ],
+        "zapier": [
+            "zapier",
+            "zapier automation"
+        ],
+        "airtable": [
+            "airtable",
+            "airtable base"
+        ],
+        "retool": [
+            "retool",
+            "retool ui"
+        ],
+        "bubble": [
+            "bubble",
+            "bubble io"
+        ],
+        "flutterflow": [
+            "flutterflow",
+            "flutter flow"
+        ],
+        "powerapps": [
+            "powerapps",
+            "power apps",
+            "microsoft powerapps"
+        ],
+        "n8n": [
+            "n8n"
+        ],
+        "make": [
+            "make",
+            "make.com"
+        ],
+        "integromat": [
+            "integromat"
+        ],
+        "figma": [
+            "figma"
+        ],
+        "sketch": [
+            "sketch"
+        ],
+        "adobe_xd": [
+            "adobe xd",
+            "xd"
+        ],
+        "invision": [
+            "invision"
+        ],
+        "balsamiq": [
+            "balsamiq"
+        ],
+        "axure": [
+            "axure"
+        ],
+        "framer": [
+            "framer"
+        ],
+        "principle": [
+            "principle"
+        ],
+        "marvel": [
+            "marvel"
+        ],
+        "indesign": [
+            "indesign",
+            "adobe indesign"
+        ],
+        "illustrator": [
+            "illustrator",
+            "adobe illustrator"
+        ],
+        "photoshop": [
+            "photoshop",
+            "adobe photoshop"
+        ],
+        "excel": [
+            "excel",
+            "ms excel",
+            "microsoft excel"
+        ],
+        "power_bi": [
+            "power bi",
+            "powerbi"
+        ],
+        "notion": [
+            "notion"
+        ],
+        "confluence": [
+            "confluence"
+        ],
+        "slack": [
+            "slack"
+        ],
+        "teams": [
+            "teams",
+            "microsoft teams"
+        ],
+        "zoom": [
+            "zoom"
+        ],
+        "miro": [
+            "miro"
+        ],
+        "lucidchart": [
+            "lucidchart"
+        ],
+        "draw_io": [
+            "draw.io",
+            "drawio"
+        ],
+        "microsoft_project": [
+            "microsoft project"
+        ],
+        "webpack": [
+            "webpack"
+        ],
+        "vite": [
+            "vite"
+        ],
+        "babel": [
+            "babel"
+        ],
+        "parcel": [
+            "parcel"
+        ],
+        "rollup": [
+            "rollup"
+        ],
+        "esbuild": [
+            "esbuild"
+        ],
+        "npm": [
+            "npm",
+            "node package manager"
+        ],
+        "yarn": [
+            "yarn"
+        ],
+        "pnpm": [
+            "pnpm"
+        ],
+        "pip": [
+            "pip"
+        ],
+        "maven": [
+            "maven"
+        ],
+        "gradle": [
+            "gradle"
+        ],
+        "sbt": [
+            "sbt"
+        ],
+        "cargo": [
+            "cargo"
+        ],
+        "nuget": [
+            "nuget"
+        ],
+        "cloudwatch": [
+            "cloudwatch",
+            "aws cloudwatch"
+        ],
+        "stackdriver": [
+            "stackdriver"
+        ],
+        "ai_ml": [
+            "artificial intelligence",
+            "ai",
+            "ai ml",
+            "aiml",
+            "machine learning",
+            "ml"
+        ],
+        "deep_learning": [
+            "deep learning",
+            "dl"
+        ],
+        "data_science": [
+            "data science"
+        ],
+        "computer_vision": [
+            "computer vision",
+            "cv",
+            "vision"
+        ],
+        "nlp": [
+            "nlp",
+            "natural language processing"
+        ],
+        "iot": [
+            "iot",
+            "internet of things"
+        ],
+        "edge_computing": [
+            "edge computing"
+        ],
+        "serverless": [
+            "serverless"
+        ],
+        "microservices": [
+            "microservices"
+        ],
+        "devops": [
+            "devops",
+            "dev ops"
+        ],
+        "machine_learning": [
+            "machine learning",
+            "ml"
+        ]
+    },
+    "skill_families": {
+        "cloud_platform": [
+            "aws",
+            "azure",
+            "gcp",
+            "digitalocean",
+            "heroku",
+            "ibm cloud",
+            "oracle cloud"
+        ],
+        "aws_compute": [
+            "ec2",
+            "lambda",
+            "ecs"
+        ],
+        "aws_storage": [
+            "s3",
+            "ebs"
+        ],
+        "aws_database": [
+            "rds",
+            "dynamodb",
+            "aurora"
+        ],
+        "aws_ml": [
+            "sagemaker"
+        ],
+        "aws_messaging": [
+            "sns",
+            "sqs"
+        ],
+        "aws_monitoring": [
+            "cloudwatch"
+        ],
+        "gcp_compute": [
+            "cloud functions",
+            "app engine",
+            "compute engine"
+        ],
+        "gcp_storage": [
+            "cloud storage",
+            "gcs"
+        ],
+        "gcp_database": [
+            "firestore",
+            "cloud sql",
+            "bigquery"
+        ],
+        "gcp_ml": [
+            "vertex ai"
+        ],
+        "gcp_messaging": [
+            "pubsub"
+        ],
+        "azure_compute": [
+            "azure functions",
+            "app service",
+            "azure vm"
+        ],
+        "azure_storage": [
+            "blob storage",
+            "queue storage"
+        ],
+        "azure_database": [
+            "cosmos db",
+            "sql database"
+        ],
+        "azure_ml": [
+            "cognitive services"
+        ],
+        "azure_messaging": [
+            "service bus",
+            "event hubs"
+        ],
+        "relational_database": [
+            "mysql",
+            "postgresql",
+            "sql_server",
+            "oracle db",
+            "mariadb",
+            "sqlite",
+            "amazon aurora"
+        ],
+        "nosql_database": [
+            "mongodb",
+            "cassandra",
+            "dynamodb",
+            "couchbase",
+            "redis",
+            "neo4j",
+            "firebase"
+        ],
+        "search_engine": [
+            "elasticsearch",
+            "opensearch",
+            "solr"
+        ],
+        "data_warehouse": [
+            "snowflake",
+            "amazon redshift",
+            "google bigquery",
+            "azure synapse",
+            "databricks"
+        ],
+        "time_series_db": [
+            "influxdb",
+            "prometheus"
+        ],
+        "graph_database": [
+            "neo4j",
+            "arangodb"
+        ],
+        "containerization": [
+            "docker",
+            "podman",
+            "docker swarm"
+        ],
+        "container_orchestration": [
+            "kubernetes",
+            "docker swarm",
+            "ecs"
+        ],
+        "orchestration": [
+            "kubernetes",
+            "helm",
+            "kustomize",
+            "amazon eks",
+            "amazon ecs"
+        ],
+        "kubernetes_tools": [
+            "helm",
+            "kustomize",
+            "argo cd",
+            "flux"
+        ],
+        "service_mesh": [
+            "istio",
+            "linkerd",
+            "consul"
+        ],
+        "ci_cd": [
+            "jenkins",
+            "github_actions",
+            "gitlab_ci",
+            "circleci",
+            "travis ci",
+            "bamboo",
+            "azure_devops"
+        ],
+        "ci_cd_platforms": [
+            "github",
+            "gitlab",
+            "bitbucket",
+            "gitea"
+        ],
+        "infrastructure_as_code": [
+            "terraform",
+            "pulumi",
+            "aws cloudformation",
+            "ansible",
+            "chef",
+            "puppet",
+            "bicep"
+        ],
+        "secrets_management": [
+            "vault",
+            "sealed secrets",
+            "external secrets"
+        ],
+        "gitops": [
+            "argo cd",
+            "flux"
+        ],
+        "monitoring": [
+            "prometheus",
+            "grafana",
+            "datadog",
+            "new relic",
+            "cloudwatch"
+        ],
+        "logging": [
+            "elk",
+            "elasticsearch",
+            "logstash",
+            "kibana",
+            "splunk",
+            "loki",
+            "fluentd"
+        ],
+        "tracing": [
+            "jaeger",
+            "zipkin",
+            "lightstep"
+        ],
+        "apm": [
+            "datadog",
+            "new relic",
+            "dynatrace",
+            "elastic apm"
+        ],
+        "metrics": [
+            "prometheus",
+            "influxdb",
+            "graphite"
+        ],
+        "message_queue": [
+            "kafka",
+            "rabbitmq",
+            "activemq",
+            "zeromq"
+        ],
+        "pub_sub": [
+            "kafka",
+            "rabbitmq",
+            "aws sns",
+            "aws sqs",
+            "google pubsub",
+            "azure service bus"
+        ],
+        "streaming": [
+            "kafka",
+            "kinesis",
+            "pubsub",
+            "rabbitmq",
+            "apache flink",
+            "apache beam"
+        ],
+        "kafka_ecosystem": [
+            "kafka",
+            "kafka connect",
+            "kafka streams",
+            "confluent"
+        ],
+        "python_backend": [
+            "django",
+            "flask",
+            "fastapi",
+            "pyramid",
+            "tornado",
+            "aiohttp",
+            "starlette"
+        ],
+        "node_backend": [
+            "express",
+            "nestjs",
+            "koa",
+            "fastify",
+            "hapi"
+        ],
+        "java_backend": [
+            "spring boot",
+            "spring",
+            "quarkus",
+            "micronaut",
+            "grails"
+        ],
+        "ruby_backend": [
+            "rails",
+            "sinatra"
+        ],
+        "go_backend": [
+            "fiber",
+            "gin",
+            "echo",
+            "beego"
+        ],
+        "rust_backend": [
+            "rocket",
+            "actix",
+            "warp"
+        ],
+        "dotnet_backend": [
+            "asp.net core",
+            "asp.net"
+        ],
+        "php_backend": [
+            "laravel",
+            "symfony",
+            "slim",
+            "lumen"
+        ],
+        "frontend_framework": [
+            "react",
+            "angular",
+            "vue",
+            "svelte",
+            "ember",
+            "next.js",
+            "nuxt",
+            "remix",
+            "astro"
+        ],
+        "react_ecosystem": [
+            "react",
+            "next.js",
+            "react native",
+            "remix",
+            "astro"
+        ],
+        "vue_ecosystem": [
+            "vue",
+            "nuxt"
+        ],
+        "angular_ecosystem": [
+            "angular",
+            "ngrx"
+        ],
+        "css_framework": [
+            "tailwind",
+            "bootstrap",
+            "material ui",
+            "bulma",
+            "foundation",
+            "semantic ui",
+            "sass",
+            "less"
+        ],
+        "build_tools": [
+            "webpack",
+            "vite",
+            "parcel",
+            "esbuild",
+            "rollup",
+            "babel"
+        ],
+        "state_management": [
+            "redux",
+            "vuex",
+            "pinia",
+            "zustand",
+            "recoil",
+            "jotai"
+        ],
+        "http_client": [
+            "axios",
+            "fetch",
+            "superagent",
+            "node-fetch"
+        ],
+        "api_style": [
+            "rest",
+            "graphql",
+            "grpc",
+            "webhook"
+        ],
+        "api_gateway": [
+            "kong",
+            "tyk",
+            "nginx",
+            "aws api gateway",
+            "apigee"
+        ],
+        "api_documentation": [
+            "swagger",
+            "openapi",
+            "asyncapi",
+            "redoc"
+        ],
+        "rpc_protocol": [
+            "json-rpc",
+            "xml-rpc"
+        ],
+        "data_processing": [
+            "apache spark",
+            "hadoop",
+            "apache flink",
+            "apache beam",
+            "dask"
+        ],
+        "workflow_orchestration": [
+            "apache airflow",
+            "dagster",
+            "prefect",
+            "temporal"
+        ],
+        "etl_tools": [
+            "dbt",
+            "ssis",
+            "informatica",
+            "talend",
+            "apache nifi"
+        ],
+        "data_lake": [
+            "delta lake",
+            "apache iceberg",
+            "apache hudi"
+        ],
+        "data_quality": [
+            "great expectations",
+            "soda",
+            "dbt tests"
+        ],
+        "bi_tool": [
+            "tableau",
+            "power bi",
+            "looker",
+            "qlik",
+            "metabase",
+            "superset",
+            "mode analytics"
+        ],
+        "data_visualization": [
+            "matplotlib",
+            "plotly",
+            "seaborn",
+            "d3.js",
+            "altair"
+        ],
+        "analytics_platform": [
+            "amplitude",
+            "mixpanel",
+            "segment",
+            "google analytics"
+        ],
+        "ml_frameworks": [
+            "scikit-learn",
+            "tensorflow",
+            "pytorch",
+            "keras",
+            "xgboost",
+            "lightgbm",
+            "catboost"
+        ],
+        "nlp_tools": [
+            "spacy",
+            "nltk",
+            "transformers",
+            "huggingface",
+            "sentence transformers",
+            "gensim"
+        ],
+        "llm_stack": [
+            "openai",
+            "anthropic",
+            "gemini",
+            "llama",
+            "mistral",
+            "langchain",
+            "llamaindex"
+        ],
+        "llm_provider": [
+            "openai",
+            "anthropic",
+            "google",
+            "meta",
+            "mistral"
+        ],
+        "vector_database": [
+            "faiss",
+            "pinecone",
+            "weaviate",
+            "qdrant",
+            "chroma",
+            "milvus"
+        ],
+        "mlops": [
+            "mlflow",
+            "wandb",
+            "kubeflow",
+            "sagemaker",
+            "vertex ai",
+            "azure ml"
+        ],
+        "model_deployment": [
+            "docker",
+            "kubernetes",
+            "fastapi",
+            "bentoml",
+            "ray serve",
+            "seldon"
+        ],
+        "computer_vision": [
+            "opencv",
+            "pillow",
+            "scikit-image",
+            "torchvision"
+        ],
+        "time_series": [
+            "statsmodels",
+            "prophet",
+            "pmdarima",
+            "autots"
+        ],
+        "testing_python": [
+            "pytest",
+            "unittest",
+            "nose",
+            "nose2"
+        ],
+        "testing_js": [
+            "jest",
+            "mocha",
+            "vitest",
+            "playwright",
+            "cypress"
+        ],
+        "testing_java": [
+            "junit",
+            "testng",
+            "mockito"
+        ],
+        "e2e_testing": [
+            "cypress",
+            "playwright",
+            "selenium",
+            "puppeteer"
+        ],
+        "code_quality": [
+            "sonarqube",
+            "eslint",
+            "flake8",
+            "pylint",
+            "black",
+            "prettier"
+        ],
+        "security_scanning": [
+            "snyk",
+            "owasp",
+            "semgrep",
+            "trivy"
+        ],
+        "cross_platform_mobile": [
+            "react native",
+            "flutter",
+            "xamarin",
+            "cordova",
+            "ionic"
+        ],
+        "native_ios": [
+            "swift",
+            "swiftui",
+            "uikit",
+            "objective-c"
+        ],
+        "native_android": [
+            "kotlin",
+            "java",
+            "jetpack compose"
+        ],
+        "mobile_framework": [
+            "react native",
+            "flutter",
+            "xamarin",
+            "nativescript",
+            "expo"
+        ],
+        "mobile_web": [
+            "pwa",
+            "react native web",
+            "flutter web"
+        ],
+        "low_code_platform": [
+            "retool",
+            "powerapps",
+            "mendix",
+            "outsystems"
+        ],
+        "no_code_platform": [
+            "bubble",
+            "webflow",
+            "flutterflow"
+        ],
+        "automation_platform": [
+            "zapier",
+            "n8n",
+            "make",
+            "integromat"
+        ],
+        "cms_headless": [
+            "contentful",
+            "strapi",
+            "sanity",
+            "directus"
+        ],
+        "blockchain_platform": [
+            "ethereum",
+            "solana",
+            "polygon",
+            "bitcoin"
+        ],
+        "smart_contract_language": [
+            "solidity",
+            "rust",
+            "move"
+        ],
+        "web3_library": [
+            "web3.js",
+            "ethers.js",
+            "web3.py"
+        ],
+        "blockchain_dev_tool": [
+            "hardhat",
+            "truffle",
+            "foundry",
+            "anchor"
+        ],
+        "blockchain_framework": [
+            "dapp framework",
+            "scaffold-eth"
+        ],
+        "version_control": [
+            "git",
+            "svn",
+            "mercurial"
+        ],
+        "git_platform": [
+            "github",
+            "gitlab",
+            "bitbucket",
+            "gitea",
+            "gitolite"
+        ],
+        "git_workflow": [
+            "github flow",
+            "git flow",
+            "trunk-based development"
+        ],
+        "issue_tracking": [
+            "jira",
+            "trello",
+            "asana",
+            "monday.com",
+            "clickup",
+            "linear",
+            "github issues"
+        ],
+        "knowledge_base": [
+            "confluence",
+            "notion",
+            "obsidian",
+            "wiki"
+        ],
+        "communication": [
+            "slack",
+            "teams",
+            "discord",
+            "telegram"
+        ],
+        "meeting_tool": [
+            "zoom",
+            "meet",
+            "webex",
+            "teams"
+        ],
+        "ui_ux_design": [
+            "figma",
+            "sketch",
+            "adobe xd",
+            "invision",
+            "balsamiq",
+            "axure",
+            "framer"
+        ],
+        "design_system": [
+            "storybook",
+            "chromatic",
+            "zeplin"
+        ],
+        "prototyping": [
+            "figma",
+            "invision",
+            "marvel",
+            "principle"
+        ],
+        "js_package_manager": [
+            "npm",
+            "yarn",
+            "pnpm"
+        ],
+        "python_package_manager": [
+            "pip",
+            "poetry",
+            "pipenv",
+            "conda"
+        ],
+        "java_build_tool": [
+            "maven",
+            "gradle",
+            "sbt"
+        ],
+        "rust_package_manager": [
+            "cargo"
+        ],
+        "go_package_manager": [
+            "go modules"
+        ],
+        "operating_system": [
+            "linux",
+            "windows",
+            "macos"
+        ],
+        "linux_distro": [
+            "ubuntu",
+            "centos",
+            "debian",
+            "rhel",
+            "fedora"
+        ],
+        "shell_scripting": [
+            "bash",
+            "zsh",
+            "powershell",
+            "fish",
+            "sh"
+        ],
+        "ide": [
+            "vscode",
+            "intellij",
+            "pycharm",
+            "webstorm",
+            "visual studio"
+        ],
+        "text_editor": [
+            "vim",
+            "emacs",
+            "sublime",
+            "atom",
+            "vscode"
+        ],
+        "documentation_tool": [
+            "swagger",
+            "openapi",
+            "mkdocs",
+            "gitbook"
+        ],
+        "debugging": [
+            "gdb",
+            "lldb",
+            "delve",
+            "pdb"
+        ],
+        "profiling": [
+            "perf",
+            "valgrind",
+            "cProfile",
+            "py-spy"
+        ],
+        "serverless": [
+            "aws lambda",
+            "azure functions",
+            "gcp cloud functions"
+        ],
+        "microservices": [
+            "docker",
+            "kubernetes",
+            "service mesh"
+        ],
+        "devops_practices": [
+            "ci/cd",
+            "infrastructure as code",
+            "containerization",
+            "orchestration"
+        ],
+        "ai_ml_ops": [
+            "mlflow",
+            "wandb",
+            "kubeflow",
+            "sagemaker"
+        ],
+        "data_stack": [
+            "dbt",
+            "airflow",
+            "spark",
+            "snowflake",
+            "kafka"
+        ]
+    },
+    "canonical_map": {
+        "python": "python",
+        "python3": "python",
+        "python 3": "python",
+        "py": "python",
+        "javascript": "javascript",
+        "js": "javascript",
+        "js/ts": "javascript",
+        "typescript": "typescript",
+        "ts": "typescript",
+        "java": "java",
+        "jdk": "java",
+        "c": "c",
+        "c programming": "c",
+        "c++": "c++",
+        "cpp": "c++",
+        "c plus plus": "c++",
+        "c#": "c#",
+        "c sharp": "c#",
+        "csharp": "c#",
+        "dotnet lang": "c#",
+        "go": "go",
+        "golang": "go",
+        "rust": "rust",
+        "rustlang": "rust",
+        "ruby": "ruby",
+        "rb": "ruby",
+        "ruby lang": "ruby",
+        "php": "php",
+        "php programming": "php",
+        "kotlin": "kotlin",
+        "kt": "kotlin",
+        "swift": "swift",
+        "ios lang": "swift",
+        "r": "r",
+        "r language": "r",
+        "r programming": "r",
+        "scala": "scala",
+        "scala lang": "scala",
+        "elixir": "elixir",
+        "erlang vm": "elixir",
+        "node.js": "node_js",
+        "node js": "node_js",
+        "node": "node_js",
+        "nodejs": "node_js",
+        "vb.net": "vb_net",
+        "vbnet": "vb_net",
+        "visual basic": "vb_net",
+        "groovy": "groovy",
+        "clojure": "clojure",
+        "react": "react_js",
+        "reactjs": "react_js",
+        "react.js": "react_js",
+        "react js": "react_js",
+        "next.js": "next_js",
+        "nextjs": "next_js",
+        "next": "next_js",
+        "next.js framework": "next_js",
+        "vue": "vue_js",
+        "vuejs": "vue_js",
+        "vue.js": "vue_js",
+        "vue js": "vue_js",
+        "nuxt": "nuxt",
+        "nuxtjs": "nuxt",
+        "nuxt.js": "nuxt",
+        "angular": "angular",
+        "angularjs": "angular",
+        "angular.js": "angular",
+        "svelte": "svelte",
+        "sveltejs": "svelte",
+        "sveltekit": "sveltekit",
+        "svelte-kit": "sveltekit",
+        "remix": "remix",
+        "remix.run": "remix",
+        "astro": "astro",
+        "astro.build": "astro",
+        "qwik": "qwik",
+        "qwik.dev": "qwik",
+        "ember": "ember",
+        "emberjs": "ember",
+        "ember.js": "ember",
+        "backbone": "backbone",
+        "backbonejs": "backbone",
+        "backbone.js": "backbone",
+        "html": "html",
+        "html5": "html",
+        "html 5": "html",
+        "css": "css",
+        "css3": "css",
+        "css 3": "css",
+        "styling": "css",
+        "sass": "sass",
+        "scss": "sass",
+        "sass/scss": "sass",
+        "tailwind": "tailwind",
+        "tailwind css": "tailwind",
+        "tailwindcss": "tailwind",
+        "bootstrap": "bootstrap",
+        "bootstrap css": "bootstrap",
+        "material-ui": "material_ui",
+        "mui": "material_ui",
+        "material ui": "material_ui",
+        "less": "less",
+        "less css": "less",
+        "bulma": "bulma",
+        "foundation": "foundation",
+        "foundation css": "foundation",
+        "semantic ui": "semantic_ui",
+        "semantic": "semantic_ui",
+        "axios": "axios",
+        "fetch": "fetch_api",
+        "fetch api": "fetch_api",
+        "express": "express",
+        "expressjs": "express",
+        "express.js": "express",
+        "flask": "flask",
+        "flask python": "flask",
+        "fastapi": "fastapi",
+        "fast api": "fastapi",
+        "django": "django",
+        "django framework": "django",
+        "spring boot": "spring_boot",
+        "springboot": "spring_boot",
+        "spring": "spring",
+        "springframework": "spring",
+        "spring cloud": "spring_cloud",
+        "spring-cloud": "spring_cloud",
+        "spring mvc": "spring_mvc",
+        "spring data": "spring_data",
+        "spring-data": "spring_data",
+        "spring security": "spring_security",
+        "spring-security": "spring_security",
+        "quarkus": "quarkus",
+        "quarkus framework": "quarkus",
+        "micronaut": "micronaut",
+        "micronaut framework": "micronaut",
+        "asp.net core": "asp_net_core",
+        "asp.net": "asp_net",
+        "aspnetcore": "asp_net_core",
+        "asp": "asp_net",
+        "asp.net framework": "asp_net",
+        "rails": "rails",
+        "ruby on rails": "rails",
+        "rubyonrails": "rails",
+        "sinatra": "sinatra",
+        "ruby sinatra": "sinatra",
+        "fiber": "fiber",
+        "go fiber": "fiber",
+        "gin": "gin",
+        "go gin": "gin",
+        "echo": "echo",
+        "go echo": "echo",
+        "rocket": "rocket",
+        "rust rocket": "rocket",
+        "actix": "actix",
+        "rust actix": "actix",
+        "pyramid": "pyramid",
+        "pylons": "pyramid",
+        "tornado": "tornado",
+        "aiohttp": "aiohttp",
+        "starlette": "starlette",
+        "nestjs": "nest_js",
+        "nest.js": "nest_js",
+        "nest": "nest_js",
+        "hapi": "hapi",
+        "hapijs": "hapi",
+        "koa": "koa",
+        "koajs": "koa",
+        "fastify": "fastify",
+        "graphene": "graphene",
+        "grpc": "grpc",
+        "g rpc": "grpc",
+        "aws": "aws",
+        "amazon web services": "aws",
+        "amazon aws": "aws",
+        "lambda": "aws_lambda",
+        "aws lambda": "aws_lambda",
+        "ec2": "aws_ec2",
+        "aws ec2": "aws_ec2",
+        "elastic compute": "aws_ec2",
+        "s3": "aws_s3",
+        "aws s3": "aws_s3",
+        "simple storage service": "aws_s3",
+        "rds": "aws_rds",
+        "aws rds": "aws_rds",
+        "relational database service": "aws_rds",
+        "dynamodb": "dynamodb",
+        "aws dynamodb": "aws_dynamodb",
+        "dynamo": "aws_dynamodb",
+        "aurora": "aws_aurora",
+        "aws aurora": "aws_aurora",
+        "sagemaker": "aws_sagemaker",
+        "aws sagemaker": "aws_sagemaker",
+        "appsync": "aws_appsync",
+        "aws appsync": "aws_appsync",
+        "amplify": "aws_amplify",
+        "aws amplify": "aws_amplify",
+        "api gateway": "aws_api_gateway",
+        "aws api gateway": "aws_api_gateway",
+        "cloudformation": "cloudformation",
+        "aws cloudformation": "aws_cloudformation",
+        "cfn": "cloudformation",
+        "cloudwatch": "cloudwatch",
+        "aws cloudwatch": "cloudwatch",
+        "codepipeline": "aws_codepipeline",
+        "aws codepipeline": "aws_codepipeline",
+        "codebuild": "aws_codebuild",
+        "aws codebuild": "aws_codebuild",
+        "sns": "aws_sns",
+        "aws sns": "aws_sns",
+        "simple notification": "aws_sns",
+        "sqs": "aws_sqs",
+        "aws sqs": "aws_sqs",
+        "simple queue": "aws_sqs",
+        "kinesis": "aws_kinesis",
+        "aws kinesis": "aws_kinesis",
+        "ecs": "aws_ecs",
+        "aws ecs": "aws_ecs",
+        "elastic container": "aws_ecs",
+        "secrets manager": "aws_secretsmanager",
+        "aws secrets": "aws_secretsmanager",
+        "gcp": "gcp",
+        "google cloud": "gcp",
+        "google cloud platform": "gcp",
+        "cloud functions": "cloud_functions",
+        "gcf": "cloud_functions",
+        "app engine": "app_engine",
+        "gae": "app_engine",
+        "compute engine": "compute_engine",
+        "gce": "compute_engine",
+        "cloud storage": "cloud_storage",
+        "gcs": "cloud_storage",
+        "gs": "cloud_storage",
+        "firestore": "firestore",
+        "cloud firestore": "firestore",
+        "bigquery": "bigquery",
+        "big query": "bigquery",
+        "bq": "bigquery",
+        "dataflow": "dataflow",
+        "cloud dataflow": "dataflow",
+        "pubsub": "google_pubsub",
+        "cloud pubsub": "pubsub",
+        "pub/sub": "pubsub",
+        "vertex ai": "vertex_ai",
+        "vertex": "vertex_ai",
+        "cloud run": "cloud_run",
+        "run": "cloud_run",
+        "gke": "gke",
+        "kubernetes engine": "gke",
+        "gke kubernetes": "gke",
+        "cloud sql": "cloud_sql",
+        "cloud-sql": "cloud_sql",
+        "cloud iam": "cloud_iam",
+        "iam": "cloud_iam",
+        "cloud monitoring": "cloud_monitoring",
+        "stackdriver": "stackdriver",
+        "azure": "azure",
+        "microsoft azure": "azure",
+        "azure functions": "azure_functions",
+        "functions": "azure_functions",
+        "app service": "azure_app_service",
+        "azure app service": "azure_app_service",
+        "vms": "azure_vm",
+        "vm": "azure_vm",
+        "azure vms": "azure_vm",
+        "azure virtual machines": "azure_vm",
+        "blob storage": "azure_blob_storage",
+        "azure blob": "azure_blob_storage",
+        "cosmos db": "azure_cosmos_db",
+        "cosmosdb": "azure_cosmos_db",
+        "azure cosmos": "azure_cosmos_db",
+        "azure sql": "azure_sql_database",
+        "sql database": "sql",
+        "synapse": "azure_synapse",
+        "azure synapse": "azure_synapse",
+        "event hubs": "azure_event_hubs",
+        "azure events": "azure_event_hubs",
+        "cognitive services": "azure_cognitive_services",
+        "azure ai": "azure_cognitive_services",
+        "logic apps": "azure_logic_apps",
+        "azure logic": "azure_logic_apps",
+        "key vault": "azure_key_vault",
+        "azure vault": "azure_key_vault",
+        "digitalocean": "digitalocean",
+        "do": "digitalocean",
+        "digital ocean": "digitalocean",
+        "heroku": "heroku",
+        "react native": "react_native",
+        "rn": "react_native",
+        "react-native": "react_native",
+        "flutter": "flutter",
+        "flutter framework": "flutter",
+        "xamarin": "xamarin",
+        "xamarin.forms": "xamarin",
+        "xamarin android": "xamarin",
+        "swiftui": "swiftui",
+        "swift ui": "swiftui",
+        "uikit": "uikit",
+        "ui kit": "uikit",
+        "android": "android",
+        "android development": "android",
+        "android sdk": "android",
+        "ionic": "ionic",
+        "ionicframework": "ionic",
+        "nativescript": "nativescript",
+        "native script": "nativescript",
+        "pwa": "pwa",
+        "progressive web app": "pwa",
+        "expo": "expo",
+        "capacitor": "capacitor",
+        "spark": "apache_spark",
+        "apache spark": "apache_spark",
+        "airflow": "apache_airflow",
+        "apache airflow": "apache_airflow",
+        "dbt": "dbt",
+        "data build tool": "dbt",
+        "jupyter": "jupyter",
+        "jupyter notebook": "jupyter",
+        "anaconda": "anaconda",
+        "conda": "anaconda",
+        "polars": "polars",
+        "polars rs": "polars",
+        "dask": "dask",
+        "dask distributed": "dask",
+        "duckdb": "duckdb",
+        "duck db": "duckdb",
+        "pandas": "pandas",
+        "pd": "pandas",
+        "numpy": "numpy",
+        "np": "numpy",
+        "tableau": "tableau",
+        "tableau desktop": "tableau",
+        "looker": "looker",
+        "looker studio": "looker",
+        "qlik": "qlik",
+        "qlikview": "qlik",
+        "qlik sense": "qlik",
+        "grafana": "grafana",
+        "grafana oss": "grafana",
+        "mode": "mode_analytics",
+        "mode analytics": "mode_analytics",
+        "metabase": "metabase",
+        "superset": "superset",
+        "apache superset": "superset",
+        "amplitude": "amplitude",
+        "amplitude analytics": "amplitude",
+        "mixpanel": "mixpanel",
+        "mixpanel analytics": "mixpanel",
+        "segment": "segment",
+        "segment cdp": "segment",
+        "google analytics": "google_analytics",
+        "ga4": "google_analytics",
+        "ga": "google_analytics",
+        "splunk": "splunk",
+        "snowflake": "snowflake",
+        "redshift": "redshift",
+        "amazon redshift": "redshift",
+        "databricks": "databricks",
+        "tensorflow": "tensorflow",
+        "tf": "terraform",
+        "pytorch": "pytorch",
+        "torch": "pytorch",
+        "pytorch tensor": "pytorch",
+        "keras": "keras",
+        "scikit-learn": "scikit_learn",
+        "sklearn": "scikit_learn",
+        "hugging face": "hugging_face",
+        "hf": "hugging_face",
+        "transformers": "hugging_face",
+        "langchain": "langchain",
+        "lang chain": "langchain",
+        "llamaindex": "llamaindex",
+        "llama index": "llamaindex",
+        "anthropic": "anthropic",
+        "claude": "anthropic",
+        "gemini": "google_gemini",
+        "google gemini": "google_gemini",
+        "bard": "google_gemini",
+        "llama": "meta_llama",
+        "meta llama": "meta_llama",
+        "llama 2": "meta_llama",
+        "mistral": "mistral",
+        "mistral ai": "mistral",
+        "openai": "openai",
+        "openai api": "openai",
+        "gpt": "openai",
+        "localai": "localai",
+        "local ai": "localai",
+        "ollama": "ollama",
+        "ollama.ai": "ollama",
+        "ray": "ray",
+        "ray framework": "ray",
+        "mlflow": "mlflow",
+        "ml flow": "mlflow",
+        "wandb": "wandb",
+        "weights biases": "wandb",
+        "weights and biases": "wandb",
+        "xgboost": "xgboost",
+        "lightgbm": "lightgbm",
+        "light gbm": "lightgbm",
+        "catboost": "catboost",
+        "spacy": "spacy",
+        "otel": "otel",
+        "opentelemetry": "otel",
+        "docker": "docker",
+        "docker container": "docker",
+        "kubernetes": "kubernetes",
+        "k8s": "kubernetes",
+        "k8": "kubernetes",
+        "helm": "helm",
+        "helm kubernetes": "helm",
+        "kustomize": "kustomize",
+        "argo cd": "argo_cd",
+        "argocd": "argo_cd",
+        "flux": "flux",
+        "gitops flux": "flux",
+        "terraform": "terraform",
+        "pulumi": "pulumi",
+        "pulumi iac": "pulumi",
+        "ansible": "ansible",
+        "ansible playbooks": "ansible",
+        "puppet": "puppet",
+        "chef": "chef",
+        "chef configuration": "chef",
+        "crossplane": "crossplane",
+        "vault": "hashicorp_vault",
+        "hashicorp vault": "hashicorp_vault",
+        "consul": "consul",
+        "hashicorp consul": "consul",
+        "nginx": "nginx",
+        "nginx webserver": "nginx",
+        "apache": "apache",
+        "apache webserver": "apache",
+        "haproxy": "haproxy",
+        "ha proxy": "haproxy",
+        "prometheus": "prometheus",
+        "prom": "prometheus",
+        "datadog": "datadog",
+        "datadog apm": "datadog",
+        "new relic": "new_relic",
+        "newrelic": "new_relic",
+        "nr": "new_relic",
+        "jaeger": "jaeger",
+        "jaeger tracing": "jaeger",
+        "zipkin": "zipkin",
+        "dynatrace": "dynatrace",
+        "honeycomb": "honeycomb",
+        "honeycomb io": "honeycomb",
+        "elasticsearch": "elasticsearch",
+        "es": "elasticsearch",
+        "elastic": "elasticsearch",
+        "logstash": "logstash",
+        "kibana": "kibana",
+        "kafka": "apache_kafka",
+        "apache kafka": "apache_kafka",
+        "rabbitmq": "rabbitmq",
+        "rabbit mq": "rabbitmq",
+        "service bus": "azure_service_bus",
+        "azure service bus": "azure_service_bus",
+        "google pubsub": "google_pubsub",
+        "pulsar": "apache_pulsar",
+        "apache pulsar": "apache_pulsar",
+        "nats": "nats",
+        "nats io": "nats",
+        "redis": "redis",
+        "redis queue": "redis_queue",
+        "redis streams": "redis_streams",
+        "rq": "redis_queue",
+        "kafka streams": "kafka_streams",
+        "flink": "flink",
+        "apache flink": "flink",
+        "beam": "beam",
+        "apache beam": "beam",
+        "kafka connect": "kafka_connect",
+        "mqtt": "mqtt",
+        "amqp": "amqp",
+        "sql": "sql",
+        "relational sql": "sql",
+        "mysql": "mysql",
+        "postgresql": "postgresql",
+        "postgres": "postgresql",
+        "psql": "postgresql",
+        "sqlite": "sqlite",
+        "mariadb": "mariadb",
+        "oracle db": "oracle_db",
+        "oracle": "oracle_db",
+        "mongodb": "mongodb",
+        "mongo": "mongodb",
+        "cassandra": "cassandra",
+        "couchbase": "couchbase",
+        "neo4j": "neo4j",
+        "firebase": "firebase",
+        "firebase firestore": "firebase",
+        "opensearch": "opensearch",
+        "elastic opensearch": "opensearch",
+        "solr": "solr",
+        "memcached": "memcached",
+        "etcd": "etcd",
+        "cockroachdb": "cockroachdb",
+        "cockroach": "cockroachdb",
+        "tidb": "tidb",
+        "planetscale": "planetscale",
+        "pytest": "pytest",
+        "unittest": "unittest",
+        "nose": "nose",
+        "jest": "jest",
+        "jestjs": "jest",
+        "mocha": "mocha",
+        "mocha test": "mocha",
+        "cypress": "cypress",
+        "cypress testing": "cypress",
+        "playwright": "playwright",
+        "selenium": "selenium",
+        "selenium webdriver": "selenium",
+        "vitest": "vitest",
+        "chai": "chai",
+        "chai assertion": "chai",
+        "storybook": "storybook",
+        "sonarqube": "sonarqube",
+        "sonar": "sonarqube",
+        "snyk": "snyk",
+        "eslint": "eslint",
+        "es lint": "eslint",
+        "prettier": "prettier",
+        "black": "black",
+        "black formatter": "black",
+        "ruff": "ruff",
+        "flake8": "flake8",
+        "git": "git",
+        "version control": "git",
+        "github": "github",
+        "gitlab": "gitlab",
+        "bitbucket": "bitbucket",
+        "jira": "jira",
+        "atlassian jira": "jira",
+        "trello": "trello",
+        "asana": "asana",
+        "monday.com": "monday_com",
+        "monday": "monday_com",
+        "clickup": "clickup",
+        "linear": "linear",
+        "rest": "rest",
+        "restful": "rest",
+        "rest api": "rest",
+        "graphql": "graphql",
+        "gql": "graphql",
+        "swagger": "swagger",
+        "swagger ui": "swagger",
+        "swagger editor": "swagger",
+        "openapi": "openapi",
+        "openapi spec": "openapi",
+        "asyncapi": "asyncapi",
+        "postman": "postman",
+        "postman api": "postman",
+        "insomnia": "insomnia",
+        "insomnia rest": "insomnia",
+        "json": "json",
+        "xml": "xml",
+        "protobuf": "protobuf",
+        "proto": "protobuf",
+        "protocol buffers": "protobuf",
+        "thrift": "thrift",
+        "apache thrift": "thrift",
+        "avro": "avro",
+        "apache avro": "avro",
+        "openapi generator": "openapi_generator",
+        "api blueprint": "api_blueprint",
+        "raml": "raml",
+        "oauth2": "oauth2",
+        "oauth 2.0": "oauth2",
+        "oauth": "oauth2",
+        "oidc": "openid_connect",
+        "openid connect": "openid_connect",
+        "saml": "saml",
+        "saml 2.0": "saml",
+        "jwt": "jwt",
+        "json web token": "jwt",
+        "okta": "okta",
+        "okta auth": "okta",
+        "auth0": "auth0",
+        "auth zero": "auth0",
+        "owasp": "owasp",
+        "tls": "tls",
+        "ssl": "tls",
+        "https": "tls",
+        "ssh": "ssh",
+        "secure shell": "ssh",
+        "pkcs": "pkcs",
+        "public key cryptography": "pkcs",
+        "letsencrypt": "lets_encrypt",
+        "let's encrypt": "lets_encrypt",
+        "semgrep": "semgrep",
+        "solidity": "solidity",
+        "solidity ethereum": "solidity",
+        "web3.js": "web3_js",
+        "web3 js": "web3_js",
+        "web3 javascript": "web3_js",
+        "ethers.js": "ethers_js",
+        "ethers js": "ethers_js",
+        "hardhat": "hardhat",
+        "hardhat ethereum": "hardhat",
+        "truffle": "truffle",
+        "truffle framework": "truffle",
+        "foundry": "foundry",
+        "foundry eth": "foundry",
+        "anchor": "anchor",
+        "anchor solana": "anchor",
+        "rust anchor": "anchor",
+        "ethereum": "ethereum",
+        "eth": "ethereum",
+        "solana": "solana",
+        "sol": "solana",
+        "polygon": "polygon",
+        "matic": "polygon",
+        "bitcoin": "bitcoin",
+        "btc": "bitcoin",
+        "openzeppelin": "openzeppelin",
+        "oz contracts": "openzeppelin",
+        "ganache": "ganache",
+        "metamask": "metamask",
+        "metamask wallet": "metamask",
+        "web3.py": "web3_py",
+        "web3 python": "web3_py",
+        "brownie": "brownie",
+        "contentful": "contentful",
+        "contentful cms": "contentful",
+        "strapi": "strapi",
+        "sanity": "sanity",
+        "sanity cms": "sanity",
+        "directus": "directus",
+        "ghost": "ghost",
+        "ghost cms": "ghost",
+        "wordpress": "wordpress",
+        "wp": "wordpress",
+        "webflow": "webflow",
+        "zapier": "zapier",
+        "zapier automation": "zapier",
+        "airtable": "airtable",
+        "airtable base": "airtable",
+        "retool": "retool",
+        "retool ui": "retool",
+        "bubble": "bubble",
+        "bubble io": "bubble",
+        "flutterflow": "flutterflow",
+        "flutter flow": "flutterflow",
+        "powerapps": "powerapps",
+        "power apps": "powerapps",
+        "microsoft powerapps": "powerapps",
+        "n8n": "n8n",
+        "make": "make",
+        "make.com": "make",
+        "integromat": "integromat",
+        "figma": "figma",
+        "sketch": "sketch",
+        "adobe xd": "adobe_xd",
+        "xd": "adobe_xd",
+        "invision": "invision",
+        "balsamiq": "balsamiq",
+        "axure": "axure",
+        "framer": "framer",
+        "principle": "principle",
+        "marvel": "marvel",
+        "indesign": "indesign",
+        "adobe indesign": "indesign",
+        "illustrator": "illustrator",
+        "adobe illustrator": "illustrator",
+        "photoshop": "photoshop",
+        "adobe photoshop": "photoshop",
+        "excel": "excel",
+        "ms excel": "excel",
+        "microsoft excel": "excel",
+        "power bi": "power_bi",
+        "powerbi": "power_bi",
+        "notion": "notion",
+        "confluence": "confluence",
+        "slack": "slack",
+        "teams": "teams",
+        "microsoft teams": "teams",
+        "zoom": "zoom",
+        "miro": "miro",
+        "lucidchart": "lucidchart",
+        "draw.io": "draw_io",
+        "drawio": "draw_io",
+        "microsoft project": "microsoft_project",
+        "webpack": "webpack",
+        "vite": "vite",
+        "babel": "babel",
+        "parcel": "parcel",
+        "rollup": "rollup",
+        "esbuild": "esbuild",
+        "npm": "npm",
+        "node package manager": "npm",
+        "yarn": "yarn",
+        "pnpm": "pnpm",
+        "pip": "pip",
+        "maven": "maven",
+        "gradle": "gradle",
+        "sbt": "sbt",
+        "cargo": "cargo",
+        "nuget": "nuget",
+        "artificial intelligence": "ai_ml",
+        "ai": "ai_ml",
+        "ai ml": "ai_ml",
+        "aiml": "ai_ml",
+        "machine learning": "machine_learning",
+        "ml": "machine_learning",
+        "deep learning": "deep_learning",
+        "dl": "deep_learning",
+        "data science": "data_science",
+        "computer vision": "computer_vision",
+        "cv": "computer_vision",
+        "vision": "computer_vision",
+        "nlp": "nlp",
+        "natural language processing": "nlp",
+        "iot": "iot",
+        "internet of things": "iot",
+        "edge computing": "edge_computing",
+        "serverless": "serverless",
+        "microservices": "microservices",
+        "devops": "devops",
+        "dev ops": "devops"
+    }
 }

@@ -2,9 +2,8 @@
   "summary": {
     "task": "Extract professional summary details from the provided resume text.",
     "instructions": [
-      "Output ONLY valid JSON.",
-      "Do not include conversational text or explanations.",
-      "If a field is missing, return null."
+      "Extract years_of_experience ONLY if explicitly mentioned in the text. Do NOT estimate or calculate from dates.",
+      "core_expertise must contain only 3-5 items explicitly mentioned. Do NOT add assumed or common domains."
     ],
     "schema": {
       "professional_title": "The most recent or target job title.",
@@ -29,9 +28,8 @@
   "education": {
     "task": "Identify the highest degree and list others from the resume text.",
     "instructions": [
-      "Output ONLY valid JSON.",
-      "If only one degree exists, 'other_degrees' should be an empty list.",
-      "Use 'null' for missing fields."
+      "Set graduation_year to null if NOT explicitly mentioned in the text. Do NOT invent or estimate years.",
+      "Highest degree is the most recent graduation date, not the most prestigious institution."
     ],
     "schema": {
       "education": {
@@ -74,16 +72,15 @@
   "experience": {
     "task": "Extract the most recent job in detail and list previous roles.",
     "instructions": [
-      "Output ONLY valid JSON.",
-      "The 'current_role' must be the most recent job mentioned.",
-      "List all other previous jobs in 'past_roles' with minimal detail.",
-      "If a field is missing, use null."
+      "technologies_used must ONLY include tools/languages explicitly stated in the text. Do NOT assume or add common technologies like React, Docker if not mentioned.",
+      "Do NOT infer or hallucinate technologies. If no technologies are mentioned, return an empty list."
     ],
     "schema": {
       "current_role": {
         "title": "Most recent job title.",
         "company": "Company name.",
         "duration": "Start date - End date (or 'Present').",
+        "years_in_role":"calculate using duration",
         "key_achievements": [
           "List of 3 primary responsibilities or wins."
         ],
@@ -107,6 +104,7 @@
           "title": "Senior Developer",
           "company": "TechCorp",
           "duration": "2021 - Present",
+          "years_in_role": 3,
           "key_achievements": [
             "Led a team of 5 engineers",
             "Developed frontend features"
@@ -129,9 +127,8 @@
   "skills": {
     "task": "Identify and categorize technical skills from the resume text.",
     "instructions": [
-      "Output ONLY valid JSON.",
-      "Categorize skills into 'programming_languages', 'frameworks', 'tools', and 'other_skills'.",
-      "If a category has no skills, return an empty list."
+      "Each skill must appear in EXACTLY ONE category. Do NOT repeat the same skill across multiple categories.",
+      "Verify categorization matches the example: e.g., 'REST' and 'GraphQL' go in 'other_skills', not in 'frameworks'."
     ],
     "schema": {
       "programming_languages": [
@@ -183,11 +180,8 @@
   "projects": {
     "task": "Extract key projects from the resume text.",
     "instructions": [
-      "Output ONLY valid JSON.",
-      "Extract up to 5 most relevant projects.",
-      "List projects in reverse chronological order (most recent first).",
-      "If a field is missing, use null.",
-      "Keep descriptions concise (max 15 words)."
+      "technologies array must contain ONLY technologies explicitly mentioned in the input. Do NOT add inferred libraries like 'Scikit-learn' unless mentioned.",
+      "outcome must reference metrics or impact explicitly stated in the text. Do NOT invent or assume quantifiable results."
     ],
     "schema": {
       "projects": [
@@ -235,11 +229,8 @@
   "certifications": {
     "task": "Extract professional certifications and credentials from the resume text.",
     "instructions": [
-      "Output ONLY valid JSON.",
-      "Extract all certifications mentioned.",
-      "List certifications in reverse chronological order (most recent first).",
-      "Use null for missing dates.",
-      "Verify certification name matches the issuing organization."
+      "Set credential_id to null if NOT explicitly mentioned. Do NOT hallucinate or invent credential numbers.",
+      "Dates must be in YYYY-MM or YYYY format only. If date format cannot be determined, use null."
     ],
     "schema": {
       "certifications": [
@@ -284,10 +275,8 @@
   "education_certifications": {
     "task": "Extract education and certifications details from the resume text.",
     "instructions": [
-      "Output ONLY valid JSON.",
-      "Extract the highest degree and all certifications mentioned.",
-      "Use null for missing fields.",
-      "List certifications in reverse chronological order."
+      "Do NOT duplicate any certification between the education.other_degrees and certifications sections.",
+      "graduation_year and issue_date must use only YYYY or YYYY-MM format. Do NOT estimate or invent dates not in text."
     ],
     "schema": {
       "education": {
@@ -355,9 +344,8 @@
   "skills_technologies": {
     "task": "Extract and categorize skills and technologies from the resume text.",
     "instructions": [
-      "Output ONLY valid JSON.",
-      "Categorize into 'programming_languages', 'frameworks', 'tools', 'soft_skills', and 'other_skills'.",
-      "If a category has no skills, return an empty list."
+      "Each skill must appear in EXACTLY ONE category. No skill should be repeated across multiple categories.",
+      "Verify no duplicates between categories (e.g., if 'REST' is in other_skills, do NOT also add to frameworks or tools)."
     ],
     "schema": {
       "programming_languages": [
@@ -407,12 +395,10 @@
     }
   },
   "experience_projects": {
-    "task": "Extract education and certifications details from the resume text.",
+    "task": "Extract the most recent job experience and key projects from the resume text.",
     "instructions": [
-      "Output ONLY valid JSON.",
-      "Extract the most recent job and up to 5 key projects.",
-      "Use null for missing fields.",
-      "List projects in reverse chronological order."
+      "Technologies in both current_role and projects must be explicitly mentioned in the input text. Do NOT add inferred or assumed technologies.",
+      "Project outcomes must reference only quantifiable metrics that are actually stated in the text. Do NOT estimate or invent impact numbers."
     ],
     "schema": {
       "current_role": {

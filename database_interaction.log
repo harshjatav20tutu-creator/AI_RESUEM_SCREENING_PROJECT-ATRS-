@@ -1,0 +1,12 @@
+2026-05-21 00:01:25,735 - INFO - Starting database storage process...
+2026-05-21 00:01:25,804 - INFO - Successfully connected to PostgreSQL database
+2026-05-21 00:01:25,817 - INFO - Candidate 'Aiden Williams' inserted with ID: 1
+2026-05-21 00:01:25,831 - INFO - Inserted 30 skills for candidate 1
+2026-05-21 00:01:25,835 - INFO - Work history 'Lead Software Engineer' at 'Google LLC' inserted with ID: 1
+2026-05-21 00:01:25,839 - INFO - Inserted 3 achievements for job 1
+2026-05-21 00:01:25,840 - INFO - Work history 'Software Engineer' at 'Amazon Web Services' inserted with ID: 2
+2026-05-21 00:01:25,842 - INFO - Inserted 2 work history records for candidate 1
+2026-05-21 00:01:25,849 - INFO - Education 'MS in Computer Science' from 'University of Texas at Austin' inserted for candidate 1
+2026-05-21 00:01:25,854 - INFO - Inserted 6 quantifiable achievements for candidate 1
+2026-05-21 00:01:25,854 - INFO - Successfully stored all data for candidate 1
+2026-05-21 00:01:25,854 - INFO - Database connection closed
