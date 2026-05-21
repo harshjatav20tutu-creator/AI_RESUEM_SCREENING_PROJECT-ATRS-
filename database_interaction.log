@@ -10,3 +10,6 @@
 2026-05-21 00:01:25,854 - INFO - Inserted 6 quantifiable achievements for candidate 1
 2026-05-21 00:01:25,854 - INFO - Successfully stored all data for candidate 1
 2026-05-21 00:01:25,854 - INFO - Database connection closed
+2026-05-21 17:49:05,012 - INFO - Successfully connected to PostgreSQL database
+2026-05-21 17:49:05,016 - INFO - Retrieved 1 candidates for matching
+2026-05-21 17:49:05,016 - INFO - Database connection closed

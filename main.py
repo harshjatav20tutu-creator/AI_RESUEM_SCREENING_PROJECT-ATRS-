@@ -2,6 +2,7 @@ from src.parser.a_text_extractor_code import ResumeParser
 from src.parser.b_resume_segment_engin import ResumeTextNormalizedandSegmentationEngine
 from src.parser.c_candidate_info_ext import CandidateAttributesExtractionEngine
 from src.parser.g_jd_text_extraction import JDParser
+from src.parser.h_skills_normalization_engine import SkillNormalizationEngine
 
 #######################################################################################################
 
@@ -36,7 +37,8 @@ def main(resume_path = r'C:/Users/HP/OneDrive/Documents/AI_resume_screening_proj
          section_keywords_path = r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\resume_sections.json",
          extra_headers_path = r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\resume_extra_section.json",
          sec_prompt_config_path= r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\prompts.json",
-         jd_path=r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\job_descriptions\sample-job-description.pdf"):
+         jd_path=r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\job_descriptions\sample-job-description.pdf",
+         canonical_config_path = r"C:\Users\HP\OneDrive\Documents\AI_resume_screening_project\Data\config\canonicalization_database.json"):
     
     resume_parser = ResumeParser(resume_path)
     raw_resume_text = resume_parser.resume_text_extractor() 
@@ -50,12 +52,18 @@ def main(resume_path = r'C:/Users/HP/OneDrive/Documents/AI_resume_screening_proj
                                                                          resume_norm_text_n_segments,
                                                                          sec_prompt_config_path)
     
-    # candidate_attributes = ext_candidate_attribute_engine.candidate_attributes_extractions_from_resume_sections()
 
     job_description_parser = JDParser(jd_path)
     jd_text = job_description_parser.jd_parser()
-    # jd_extracted_requirement = job_description_parser.jd_requirements_extraction_engine(jd_text)
+    jd_extracted_requirement = job_description_parser.jd_requirements_extraction_engine(jd_text)
 
+    candidate_attributes = ext_candidate_attribute_engine.candidate_attributes_extractions_from_resume_sections()
+    skill_normalizer = SkillNormalizationEngine(canonical_config_path,candidate_attributes,jd_extracted_requirement)
+
+    normalized_candidate_attributes = skill_normalizer.final_candidate_attributes_to_database()
+
+    
+    normalized_job_requirements = skill_normalizer.job_requirements_normalizer()
     print(candidate_attributes)
 
 main()

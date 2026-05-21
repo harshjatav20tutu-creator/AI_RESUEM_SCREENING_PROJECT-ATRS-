@@ -321,7 +321,68 @@ class DatabaseInteraction:
             logger.error(f"Unexpected error in store_to_database: {e}")
             self.disconnect_database()
             return False
+
+    def retrieve_candidates_for_matching(self):
+        """
+        Retrieve all candidates with their normalized skills and total experience.
+        Returns a list of candidates in the format:
+        [
+            {
+                "candidate_id": 1,
+                "normalized_skills": ["python", "java", "react"],
+                "total_years_experience": 7.0
+            },
+            ...
+        ]
+        """
+        try:
+            if not self.connect_to_database():
+                return []
+            
+            cursor = self.connection.cursor()
+            
+            # SQL query to retrieve candidates with aggregated skills
+            retrieve_query = """
+            SELECT 
+                c.candidate_id,
+                c.total_years_experience,
+                ARRAY_AGG(ns.skill_name) FILTER (WHERE ns.skill_name IS NOT NULL) as normalized_skills
+            FROM candidates c
+            LEFT JOIN normalized_skills ns ON c.candidate_id = ns.candidate_id
+            GROUP BY c.candidate_id, c.total_years_experience
+            ORDER BY c.candidate_id;
+            """
+            
+            cursor.execute(retrieve_query)
+            rows = cursor.fetchall()
+            
+            candidates_list = []
+            for row in rows:
+                candidate_id, total_years_experience, skills = row
+                
+                # Handle NULL skills array
+                normalized_skills = skills if skills else []
+                
+                candidate_record = {
+                    "candidate_id": candidate_id,
+                    "normalized_skills": normalized_skills,
+                    "total_years_experience": total_years_experience
+                }
+                candidates_list.append(candidate_record)
+            
+            logger.info(f"Retrieved {len(candidates_list)} candidates for matching")
+            cursor.close()
+            self.disconnect_database()
+            return candidates_list
+            
+        except Error as e:
+            logger.error(f"Error retrieving candidates: {e}")
+            self.disconnect_database()
+            return []
     
+
+
+
 candidate_data = {
         "candidate_info": {
             "name": "Aiden Williams",
@@ -408,4 +469,4 @@ candidate_data = {
 }
 
 output = DatabaseInteraction(candidate_data)
-output.store_to_database()
+print(output.retrieve_candidates_for_matching())
