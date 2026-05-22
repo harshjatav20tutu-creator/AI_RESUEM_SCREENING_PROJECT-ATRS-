@@ -13,3 +13,62 @@
 2026-05-21 17:49:05,012 - INFO - Successfully connected to PostgreSQL database
 2026-05-21 17:49:05,016 - INFO - Retrieved 1 candidates for matching
 2026-05-21 17:49:05,016 - INFO - Database connection closed
+2026-05-22 00:36:45,126 - INFO - Successfully connected to PostgreSQL database
+2026-05-22 00:36:45,159 - INFO - Retrieved 1 candidates for matching
+2026-05-22 00:36:45,159 - INFO - Database connection closed
+2026-05-22 00:44:04,268 - INFO - Successfully connected to PostgreSQL database
+2026-05-22 00:44:04,272 - INFO - Retrieved 1 candidates for matching
+2026-05-22 00:44:04,273 - INFO - Database connection closed
+2026-05-22 11:34:14,428 - INFO - Successfully connected to PostgreSQL database
+2026-05-22 11:34:14,454 - INFO - Retrieved 1 candidates for matching
+2026-05-22 11:34:14,454 - INFO - Database connection closed
+2026-05-22 14:52:58,339 - INFO - Successfully connected to PostgreSQL database
+2026-05-22 14:52:58,362 - INFO - Retrieved 1 candidates for matching
+2026-05-22 14:52:58,363 - INFO - Database connection closed
+2026-05-22 15:04:19,692 - INFO - Successfully connected to PostgreSQL database
+2026-05-22 15:04:19,699 - INFO - Retrieved 1 candidates for matching
+2026-05-22 15:04:19,699 - INFO - Database connection closed
+2026-05-22 15:08:58,781 - INFO - Starting database storage process...
+2026-05-22 15:08:58,835 - INFO - Successfully connected to PostgreSQL database
+2026-05-22 15:08:58,864 - INFO - Candidate 'harsh jatav' inserted with ID: 2
+2026-05-22 15:08:58,877 - INFO - Email 'john.doe@gmail.com' inserted for candidate 2
+2026-05-22 15:08:58,878 - INFO - Phone '+9120032008' inserted for candidate 2
+2026-05-22 15:08:58,883 - INFO - Inserted 26 skills for candidate 2
+2026-05-22 15:08:58,886 - INFO - Work history 'IT Consultant' at 'Computer Science Corporation' inserted with ID: 3
+2026-05-22 15:08:58,888 - INFO - Inserted 1 achievements for job 3
+2026-05-22 15:08:58,889 - INFO - Work history 'IT Support Analyst' at 'Bain Consultants' inserted with ID: 4
+2026-05-22 15:08:58,890 - INFO - Inserted 2 work history records for candidate 2
+2026-05-22 15:08:58,893 - INFO - Education 'MS in network solutions' from 'bruggel university' inserted for candidate 2
+2026-05-22 15:08:58,894 - INFO - No quantifiable achievements to insert
+2026-05-22 15:08:58,894 - INFO - Successfully stored all data for candidate 2
+2026-05-22 15:08:58,894 - INFO - Database connection closed
+2026-05-22 16:28:44,946 - INFO - Successfully connected to PostgreSQL database
+2026-05-22 16:28:44,970 - INFO - Retrieved 2 candidates for matching
+2026-05-22 16:28:44,970 - INFO - Database connection closed
+2026-05-22 16:41:29,309 - INFO - Successfully connected to PostgreSQL database
+2026-05-22 16:41:29,314 - INFO - Retrieved 2 candidates for matching
+2026-05-22 16:41:29,315 - INFO - Database connection closed
+2026-05-22 16:44:19,362 - INFO - Successfully connected to PostgreSQL database
+2026-05-22 16:44:19,365 - INFO - Retrieved 2 candidates for matching
+2026-05-22 16:44:19,366 - INFO - Database connection closed
+2026-05-22 18:24:37,455 - INFO - Successfully connected to PostgreSQL database
+2026-05-22 18:24:37,487 - INFO - Retrieved 2 candidates for matching
+2026-05-22 18:24:37,488 - INFO - Database connection closed
+2026-05-22 18:47:23,135 - INFO - Starting database storage process...
+2026-05-22 18:47:23,304 - INFO - Successfully connected to PostgreSQL database
+2026-05-22 18:47:23,328 - INFO - Candidate 'harsh jatav' inserted with ID: 3
+2026-05-22 18:47:23,334 - INFO - Email 'jake_wyatt@isp.com' inserted for candidate 3
+2026-05-22 18:47:23,335 - INFO - Phone '+915555555555' inserted for candidate 3
+2026-05-22 18:47:23,339 - INFO - Inserted 14 skills for candidate 3
+2026-05-22 18:47:23,342 - INFO - Work history 'machine learning software engineer' at 'siemens' inserted with ID: 5
+2026-05-22 18:47:23,345 - INFO - Inserted 3 achievements for job 5
+2026-05-22 18:47:23,346 - INFO - Work history 'machine learning engineer' at 'intel' inserted with ID: 6
+2026-05-22 18:47:23,346 - INFO - Work history 'data science intern' at 'ATN International' inserted with ID: 7
+2026-05-22 18:47:23,347 - INFO - Inserted 3 work history records for candidate 3
+2026-05-22 18:47:23,349 - INFO - Education 'None' from 'None' inserted for candidate 3
+2026-05-22 18:47:23,349 - INFO - No quantifiable achievements to insert
+2026-05-22 18:47:23,349 - INFO - Successfully stored all data for candidate 3
+2026-05-22 18:47:23,349 - INFO - Database connection closed
+2026-05-22 18:51:27,632 - INFO - Successfully connected to PostgreSQL database
+2026-05-22 18:51:27,639 - INFO - Retrieved 3 candidates for matching
+2026-05-22 18:51:27,639 - INFO - Database connection closed

@@ -139,7 +139,7 @@ class JDParser:
         except Exception as e:
             raise Exception(f"Error processing DOCX content: {str(e)}")
     
-    def jd_parser(self):
+    def jd_text_extractor(self):
         # Clean the input
         cleaned_input = self.path_or_jdtext.strip()
         
@@ -250,7 +250,7 @@ class JDParser:
             response = requests.post(
                 "http://localhost:11434/api/generate",
                 json=payload,
-                timeout=90
+                timeout=180
             )
             response.raise_for_status()
             
@@ -287,4 +287,48 @@ class JDParser:
         except Exception as e:
             print(f"Unexpected error in jd_requirements_extraction_engine: {str(e)}")
             return default_response
+        
+# output = JDParser(path_or_jdtext=None)
+# requirements = output.jd_requirements_extraction_engine('''About the job
+# Role Overview
 
+# work authorization : US
+
+# We are seeking a skilled AI Engineer to join our AI initiatives team in the IT Department. The role involves designing, developing, and deploying AI/ML solutions with a focus on Generative AI, Retrieval-Augmented Generation (RAG), and Agentic AI frameworks. The candidate will collaborate with cross-functional teams to build scalable and compliant AI solutions that enhance banking operations and customer experience.
+
+# Key Responsibilities
+
+# Design and implement AI/ML models leveraging LLMs, SLMs, RAG pipelines, and Agentic AI frameworks.
+# Develop end-to-end AI workflows, including data ingestion, preprocessing, model training, fine-tuning, and deployment.
+# Collaborate with data engineers to integrate structured and unstructured banking data securely.
+# Implement and optimize vector databases, embeddings, and retrieval mechanisms.
+# Ensure AI model governance, explainability, and compliance with banking regulations.
+# Work with business and domain experts to translate requirements into AI-driven solutions.
+# Monitor model performance, implement feedback loops, and continuously improve AI systems.
+# Stay updated on emerging AI technologies and frameworks relevant to banking use cases.
+
+# Required Skills & Qualifications
+
+# Bachelor’s/Master’s degree in Computer Science, Data Science, AI/ML, or related fields.
+# Strong programming skills in Python (TensorFlow, PyTorch, LangChain, Hugging Face, etc.).
+# 2+ years Experience with Generative AI, LLMs/SLMs, RAG architectures, and vector databases (e.g., Pinecone, FAISS, Weaviate).
+# Hands-on knowledge of Agentic AI frameworks (e.g., LangGraph, AutoGen, CrewAI, or similar).
+# Familiarity with cloud platforms (AWS, Azure, GCP) and MLOps practices (Docker, Kubernetes, CI/CD).
+# Understanding of data security, compliance, and governance frameworks in regulated industries (preferably banking/finance).
+# Strong problem-solving skills, analytical mindset, and ability to work in Agile teams.
+
+# Preferred Qualifications
+
+# AI/ML certifications (e.g., AWS AI/ML Specialty, Microsoft AI Engineer, NVIDIA Deep Learning, Generative AI certifications).
+# 2+ Experience with prompt engineering, fine-tuning, and RAG-enhanced GenAI models.
+# Exposure to agent-based AI solutions in enterprise settings.
+# Knowledge of banking/financial domain processes (risk, compliance, KYC, lending, fraud detection).
+
+# if this that :
+# 	db_interaction = DatabaseInteraction(normalized_attributes)
+#         db_interaction.store_to_database()
+# elif this that:
+# 	retrieved_candidate_data_from_database = db_interaction.retrieve_candidates_for_matching() # here db_interaction showing "not defined db_interaction"
+# tell me how to solve this problem do i have to completely separate candidate portal and HR dashboard backend code?''')
+
+# print(requirements)

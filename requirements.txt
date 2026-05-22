@@ -10,3 +10,4 @@ seaborn
 streamlit
 requests
 phonenumbers
+psycopg2-binary

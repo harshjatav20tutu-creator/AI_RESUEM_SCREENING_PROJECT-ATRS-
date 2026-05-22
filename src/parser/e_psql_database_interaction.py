@@ -383,90 +383,90 @@ class DatabaseInteraction:
 
 
 
-candidate_data = {
-        "candidate_info": {
-            "name": "Aiden Williams",
-            "location": "Austin, Texas",
-            "emails": [],
-            "phone_numbers": []
-        },
-        "summary": {
-            "professional_title": "principal software engineer",
-            "short_bio": "results-driven principal software engineer with over 9 years of experience designing scalable full-stack architectures and driving cloud adoption."
-        },
-        "normalized_skills": [
-            "full-stack development",
-            "react_js",
-            "vue_js",
-            "cloud & system architecture",
-            "api design",
-            "docker",
-            "relational database modeling",
-            "engineering strategy",
-            "graphql",
-            "agile/scrum management",
-            "aws",
-            "distributed systems design",
-            "code reviews",
-            "nosql database modeling",
-            "secure coding practices",
-            "performance tuning",
-            "infrastructure as code",
-            "node_js",
-            "cloud technologies",
-            "ci/cd pipeline optimization",
-            "azure",
-            "kubernetes",
-            "team mentorship",
-            "rest",
-            "microservices architecture",
-            "technical leadership",
-            "cross-functional collaboration",
-            "javascript",
-            "terraform",
-            "software architecture"
-        ],
-        "experience_metrics": {
-            "total_years_experience": 7.0,
-            "calculated_months": 84
-        },
-        "work_history": [
-            {
-                "title": "Lead Software Engineer",
-                "company": "Google LLC",
-                "duration": "01/2023 - current",
-                "is_current": True,
-                "key_achievements": [
-                    "Architected and implemented a new microservices-oriented architecture that improved system resilience and scalability, enabling an annual growth rate of 20%.",
-                    "Collaborated with product management to develop a roadmap that synchronized engineering efforts with business goals, leading to a software delivery cycle 25% faster.",
-                    " Conducted comprehensive code reviews and integrated optimized coding practices which led to a 15% reduction in application defects."
-                ]
-            },
-            {
-                "title": "Software Engineer",
-                "company": "Amazon Web Services",
-                "duration": "4 years",
-                "is_current": False,
-                "key_achievements": []
-            }
-        ],
-        "education": {
-            "highest_degree_level": "Master",
-            "institution": "University of Texas at Austin",
-            "degree_name": "MS in Computer Science",
-            "graduation_year": 2014
-        },
-        "metadata": {
-            "quantifiable_achievements": [
-                "30% reduction in latency",
-                "accommodating 1m concurrent users",
-                "50% increase in customer engagement",
-                "60% processing time reduction",
-                "40% team performance increase",
-                "six-month reduction in project delivery times"
-            ]
-        }
-}
+# candidate_data = {
+#         "candidate_info": {
+#             "name": "Aiden Williams",
+#             "location": "Austin, Texas",
+#             "emails": [],
+#             "phone_numbers": []
+#         },
+#         "summary": {
+#             "professional_title": "principal software engineer",
+#             "short_bio": "results-driven principal software engineer with over 9 years of experience designing scalable full-stack architectures and driving cloud adoption."
+#         },
+#         "normalized_skills": [
+#             "full-stack development",
+#             "react_js",
+#             "vue_js",
+#             "cloud & system architecture",
+#             "api design",
+#             "docker",
+#             "relational database modeling",
+#             "engineering strategy",
+#             "graphql",
+#             "agile/scrum management",
+#             "aws",
+#             "distributed systems design",
+#             "code reviews",
+#             "nosql database modeling",
+#             "secure coding practices",
+#             "performance tuning",
+#             "infrastructure as code",
+#             "node_js",
+#             "cloud technologies",
+#             "ci/cd pipeline optimization",
+#             "azure",
+#             "kubernetes",
+#             "team mentorship",
+#             "rest",
+#             "microservices architecture",
+#             "technical leadership",
+#             "cross-functional collaboration",
+#             "javascript",
+#             "terraform",
+#             "software architecture"
+#         ],
+#         "experience_metrics": {
+#             "total_years_experience": 7.0,
+#             "calculated_months": 84
+#         },
+#         "work_history": [
+#             {
+#                 "title": "Lead Software Engineer",
+#                 "company": "Google LLC",
+#                 "duration": "01/2023 - current",
+#                 "is_current": True,
+#                 "key_achievements": [
+#                     "Architected and implemented a new microservices-oriented architecture that improved system resilience and scalability, enabling an annual growth rate of 20%.",
+#                     "Collaborated with product management to develop a roadmap that synchronized engineering efforts with business goals, leading to a software delivery cycle 25% faster.",
+#                     " Conducted comprehensive code reviews and integrated optimized coding practices which led to a 15% reduction in application defects."
+#                 ]
+#             },
+#             {
+#                 "title": "Software Engineer",
+#                 "company": "Amazon Web Services",
+#                 "duration": "4 years",
+#                 "is_current": False,
+#                 "key_achievements": []
+#             }
+#         ],
+#         "education": {
+#             "highest_degree_level": "Master",
+#             "institution": "University of Texas at Austin",
+#             "degree_name": "MS in Computer Science",
+#             "graduation_year": 2014
+#         },
+#         "metadata": {
+#             "quantifiable_achievements": [
+#                 "30% reduction in latency",
+#                 "accommodating 1m concurrent users",
+#                 "50% increase in customer engagement",
+#                 "60% processing time reduction",
+#                 "40% team performance increase",
+#                 "six-month reduction in project delivery times"
+#             ]
+#         }
+# }
 
-output = DatabaseInteraction(candidate_data)
-print(output.retrieve_candidates_for_matching())
+# output = DatabaseInteraction(candidate_data)
+# print(output.retrieve_candidates_for_matching())

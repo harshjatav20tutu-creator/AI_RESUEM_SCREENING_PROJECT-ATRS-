@@ -6,12 +6,11 @@ from datetime import date
 
 class SkillNormalizationEngine:
 
-    def __init__(self, canonical_json_path:str, candidate_attributes:dict=None, job_requirements:dict=None):
+    def __init__(self, canonical_json_path:str, candidate_attributes:dict=None):
         self.canonical_json_path = canonical_json_path
         self.canonical_database = self._load_canonical_database(canonical_json_path)
         self.canonical_map = self.canonical_database.get("canonical_map", {})
         self.candidate_attributes = candidate_attributes or {}
-        self.job_requirements = job_requirements or {}
 
     def _load_canonical_database(self, path):
         try:
@@ -317,63 +316,4 @@ class SkillNormalizationEngine:
         
         return self.normalized_attributes
     
-    def job_requirements_normalizer(self):
-        """
-        Normalize job requirements: normalize mandatory_skills and clean other fields.
-        - Normalizes mandatory_skills via canonical_map (rename to normalized_mandatory_skills)
-        - For all other fields: lowercase and strip strings, keep other values as is
-        - Returns the normalized job requirements in the same structure
-        
-        Returns:
-            {
-                "job_title": "ai engineer",
-                "min_years_experience": 2,
-                "work_mode": "unspecified",
-                "location": None,
-                "normalized_mandatory_skills": ["python", "tensorflow", ...],
-                "preferred_skills": ["prompt engineering", ...],
-                "role_responsibilities": "..."
-            }
-        """
-        if not self.job_requirements or not isinstance(self.job_requirements, dict):
-            return {}
-        
-        # Create a copy to avoid modifying the original
-        normalized_requirements = {}
-        
-        for key, value in self.job_requirements.items():
-            if key == "mandatory_skills":
-                # Normalize mandatory skills and rename to normalized_mandatory_skills
-                if isinstance(value, list):
-                    normalized_skills = []
-                    for skill in value:
-                        if skill and isinstance(skill, str):
-                            normalized = self._normalize_skill(skill)
-                            if normalized and normalized not in normalized_skills:
-                                normalized_skills.append(normalized)
-                    normalized_requirements["normalized_mandatory_skills"] = normalized_skills
-                else:
-                    normalized_requirements["normalized_mandatory_skills"] = []
-            else:
-                # For all other fields: lowercase and strip strings, keep others as is
-                if isinstance(value, str):
-                    normalized_requirements[key] = value.lower().strip()
-                elif isinstance(value, list):
-                    # For lists, clean up each string item
-                    cleaned_list = []
-                    for item in value:
-                        if isinstance(item, str):
-                            cleaned_list.append(item.lower().strip())
-                        else:
-                            cleaned_list.append(item)
-                    normalized_requirements[key] = cleaned_list
-                else:
-                    # Keep other types (int, None, dict, etc.) as is
-                    normalized_requirements[key] = value
-        
-        # Store and return
-        self.normalized_job_requirements = normalized_requirements
-        return self.normalized_job_requirements
-
-
 
