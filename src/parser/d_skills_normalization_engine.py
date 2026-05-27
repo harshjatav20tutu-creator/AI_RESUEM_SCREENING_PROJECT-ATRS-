@@ -111,17 +111,18 @@ class SkillNormalizationEngine:
         # Extract from skills section (all 5 categories)
         skills_section = self.candidate_attributes.get("skills", {})
         if isinstance(skills_section, dict):
-            for category in ["programming_languages", "frameworks", "tools", "soft_skills", "other_skills"]:
+            for category in ["programming_languages", "frameworks"]: #, "tools", "soft_skills", "other_skills"]:
                 skills_list = skills_section.get(category, [])
                 if isinstance(skills_list, list):
                     all_skills.extend(skills_list)
         
         # Extract from other_attributes.additional_skills
-        other_attributes = self.candidate_attributes.get("other_attributes", {})
-        if isinstance(other_attributes, dict):
-            additional_skills = other_attributes.get("additional_skills", [])
-            if isinstance(additional_skills, list):
-                all_skills.extend(additional_skills)
+
+        # other_attributes = self.candidate_attributes.get("other_attributes", {})
+        # if isinstance(other_attributes, dict):
+        #     additional_skills = other_attributes.get("additional_skills", [])
+        #     if isinstance(additional_skills, list):
+        #         all_skills.extend(additional_skills)
         
         return all_skills
     

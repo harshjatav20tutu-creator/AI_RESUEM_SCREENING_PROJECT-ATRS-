@@ -72,3 +72,172 @@
 2026-05-22 18:51:27,632 - INFO - Successfully connected to PostgreSQL database
 2026-05-22 18:51:27,639 - INFO - Retrieved 3 candidates for matching
 2026-05-22 18:51:27,639 - INFO - Database connection closed
+2026-05-27 15:56:09,296 - INFO - Starting database storage process...
+2026-05-27 15:56:09,381 - INFO - Successfully connected to PostgreSQL database
+2026-05-27 15:56:09,388 - INFO - Candidate 'Unknown' inserted with ID: 1
+2026-05-27 15:56:09,388 - INFO - No skills to insert
+2026-05-27 15:56:09,388 - INFO - No work history to insert
+2026-05-27 15:56:09,393 - INFO - Education '' from '' inserted for candidate 1
+2026-05-27 15:56:09,393 - INFO - No quantifiable achievements to insert
+2026-05-27 15:56:09,394 - INFO - Successfully stored all data for candidate 1
+2026-05-27 15:56:09,394 - INFO - Database connection closed
+2026-05-27 16:13:49,163 - INFO - Starting database storage process...
+2026-05-27 16:13:49,244 - INFO - Successfully connected to PostgreSQL database
+2026-05-27 16:13:49,250 - INFO - Candidate 'Marcus Vance' inserted with ID: 1
+2026-05-27 16:13:49,254 - INFO - Email 'marcus.vance.ai@outlook.com' inserted for candidate 1
+2026-05-27 16:13:49,255 - INFO - Phone '+1-206-555-0198' inserted for candidate 1
+2026-05-27 16:13:49,263 - INFO - Inserted 14 skills for candidate 1
+2026-05-27 16:13:49,266 - INFO - Work history 'Senior MLOps Engineer' at 'Anthropic PBC' inserted with ID: 1
+2026-05-27 16:13:49,269 - INFO - Inserted 3 achievements for job 1
+2026-05-27 16:13:49,270 - INFO - Work history 'Machine Learning Engineer' at 'Amazon Web Services' inserted with ID: 2
+2026-05-27 16:13:49,271 - INFO - Inserted 2 achievements for job 2
+2026-05-27 16:13:49,272 - INFO - Work history 'Backend Web Developer' at 'CoreTech Solutions' inserted with ID: 3
+2026-05-27 16:13:49,274 - INFO - Inserted 1 achievements for job 3
+2026-05-27 16:13:49,275 - INFO - Inserted 3 work history records for candidate 1
+2026-05-27 16:13:49,278 - INFO - Education 'MS in Computer Science (AI Specialization)' from 'University of Washington' inserted for candidate 1
+2026-05-27 16:13:49,282 - INFO - Inserted 3 quantifiable achievements for candidate 1
+2026-05-27 16:13:49,283 - INFO - Successfully stored all data for candidate 1
+2026-05-27 16:13:49,283 - INFO - Database connection closed
+2026-05-27 16:15:56,007 - INFO - Starting database storage process...
+2026-05-27 16:15:56,067 - INFO - Successfully connected to PostgreSQL database
+2026-05-27 16:15:56,077 - INFO - Candidate 'Sarah Jenkins' inserted with ID: 2
+2026-05-27 16:15:56,080 - INFO - Email 's.jenkins.ml@gmail.com' inserted for candidate 2
+2026-05-27 16:15:56,081 - INFO - Phone '+1-617-555-0134' inserted for candidate 2
+2026-05-27 16:15:56,089 - INFO - Inserted 13 skills for candidate 2
+2026-05-27 16:15:56,091 - INFO - Work history 'Lead AI Infrastructure Engineer' at 'OpenAI' inserted with ID: 4
+2026-05-27 16:15:56,093 - INFO - Inserted 3 achievements for job 4
+2026-05-27 16:15:56,094 - INFO - Work history 'Senior Data Platform Engineer' at 'Snowflake Inc.' inserted with ID: 5
+2026-05-27 16:15:56,095 - INFO - Inserted 2 achievements for job 5
+2026-05-27 16:15:56,096 - INFO - Work history 'Software Engineer' at 'Massive Dynamics' inserted with ID: 6
+2026-05-27 16:15:56,098 - INFO - Inserted 1 achievements for job 6
+2026-05-27 16:15:56,099 - INFO - Inserted 3 work history records for candidate 2
+2026-05-27 16:15:56,103 - INFO - Education 'PhD in Electrical Engineering and Computer Science' from 'Massachusetts Institute of Technology' inserted for candidate 2
+2026-05-27 16:15:56,107 - INFO - Inserted 3 quantifiable achievements for candidate 2
+2026-05-27 16:15:56,107 - INFO - Successfully stored all data for candidate 2
+2026-05-27 16:15:56,107 - INFO - Database connection closed
+2026-05-27 16:17:02,545 - INFO - Starting database storage process...
+2026-05-27 16:17:02,608 - INFO - Successfully connected to PostgreSQL database
+2026-05-27 16:17:02,618 - INFO - Candidate 'Devon Miller' inserted with ID: 3
+2026-05-27 16:17:02,621 - INFO - Email 'devon.miller.dev@gmail.com' inserted for candidate 3
+2026-05-27 16:17:02,623 - INFO - Phone '+1-312-555-0176' inserted for candidate 3
+2026-05-27 16:17:02,631 - INFO - Inserted 12 skills for candidate 3
+2026-05-27 16:17:02,633 - INFO - Work history 'Machine Learning Engineer' at 'Tempus Labs' inserted with ID: 7
+2026-05-27 16:17:02,635 - INFO - Inserted 3 achievements for job 7
+2026-05-27 16:17:02,636 - INFO - Work history 'Mobile & Backend Developer' at 'Apex Digital' inserted with ID: 8
+2026-05-27 16:17:02,637 - INFO - Inserted 2 achievements for job 8
+2026-05-27 16:17:02,638 - INFO - Inserted 2 work history records for candidate 3
+2026-05-27 16:17:02,640 - INFO - Education 'BS in Computer Science' from 'University of Illinois Urbana-Champaign' inserted for candidate 3
+2026-05-27 16:17:02,642 - INFO - Inserted 3 quantifiable achievements for candidate 3
+2026-05-27 16:17:02,643 - INFO - Successfully stored all data for candidate 3
+2026-05-27 16:17:02,643 - INFO - Database connection closed
+2026-05-27 16:18:36,471 - INFO - Starting database storage process...
+2026-05-27 16:18:36,534 - INFO - Successfully connected to PostgreSQL database
+2026-05-27 16:18:36,538 - INFO - Candidate 'Ananya Nair' inserted with ID: 4
+2026-05-27 16:18:36,540 - INFO - Email 'ananya.nair.ai@nyu.edu' inserted for candidate 4
+2026-05-27 16:18:36,541 - INFO - Phone '+1-212-555-0189' inserted for candidate 4
+2026-05-27 16:18:36,547 - INFO - Inserted 12 skills for candidate 4
+2026-05-27 16:18:36,549 - INFO - Work history 'Computer Vision Engineer' at 'Veritas Robotics' inserted with ID: 9
+2026-05-27 16:18:36,552 - INFO - Inserted 3 achievements for job 9
+2026-05-27 16:18:36,553 - INFO - Work history 'Data Engineer' at 'DataHarvest Corp' inserted with ID: 10
+2026-05-27 16:18:36,555 - INFO - Inserted 2 achievements for job 10
+2026-05-27 16:18:36,556 - INFO - Inserted 2 work history records for candidate 4
+2026-05-27 16:18:36,559 - INFO - Education 'MS in Data Science' from 'New York University' inserted for candidate 4
+2026-05-27 16:18:36,562 - INFO - Inserted 3 quantifiable achievements for candidate 4
+2026-05-27 16:18:36,562 - INFO - Successfully stored all data for candidate 4
+2026-05-27 16:18:36,563 - INFO - Database connection closed
+2026-05-27 16:19:50,740 - INFO - Starting database storage process...
+2026-05-27 16:19:50,807 - INFO - Successfully connected to PostgreSQL database
+2026-05-27 16:19:50,811 - INFO - Candidate 'Liam Gallagher' inserted with ID: 5
+2026-05-27 16:19:50,813 - INFO - Email 'liam.gallagher.tech@gmail.com' inserted for candidate 5
+2026-05-27 16:19:50,814 - INFO - Phone '+1-512-555-0112' inserted for candidate 5
+2026-05-27 16:19:50,822 - INFO - Inserted 12 skills for candidate 5
+2026-05-27 16:19:50,825 - INFO - Work history 'AI Engineering Intern' at 'Cognitive Scale' inserted with ID: 11
+2026-05-27 16:19:50,827 - INFO - Inserted 3 achievements for job 11
+2026-05-27 16:19:50,828 - INFO - Work history 'Junior Web Developer (Part-time)' at 'Texan Web Designs' inserted with ID: 12
+2026-05-27 16:19:50,829 - INFO - Inserted 2 achievements for job 12
+2026-05-27 16:19:50,831 - INFO - Inserted 2 work history records for candidate 5
+2026-05-27 16:19:50,833 - INFO - Education 'BS in Computer Science' from 'University of Texas at Austin' inserted for candidate 5
+2026-05-27 16:19:50,835 - INFO - Inserted 2 quantifiable achievements for candidate 5
+2026-05-27 16:19:50,835 - INFO - Successfully stored all data for candidate 5
+2026-05-27 16:19:50,835 - INFO - Database connection closed
+2026-05-27 16:21:50,433 - INFO - Starting database storage process...
+2026-05-27 16:21:50,495 - INFO - Successfully connected to PostgreSQL database
+2026-05-27 16:21:50,507 - INFO - Candidate 'Chloe Zhao' inserted with ID: 6
+2026-05-27 16:21:50,510 - INFO - Email 'chloe.zhao.ui@gmail.com' inserted for candidate 6
+2026-05-27 16:21:50,511 - INFO - Phone '+1-310-555-0155' inserted for candidate 6
+2026-05-27 16:21:50,518 - INFO - Inserted 16 skills for candidate 6
+2026-05-27 16:21:50,520 - INFO - Work history 'Senior Frontend Developer' at 'Streamline Media' inserted with ID: 13
+2026-05-27 16:21:50,523 - INFO - Inserted 3 achievements for job 13
+2026-05-27 16:21:50,523 - INFO - Work history 'Frontend Engineer' at 'Hedgehog Tech' inserted with ID: 14
+2026-05-27 16:21:50,525 - INFO - Inserted 2 achievements for job 14
+2026-05-27 16:21:50,525 - INFO - Work history 'Junior Developer' at 'Launchpad Software' inserted with ID: 15
+2026-05-27 16:21:50,526 - INFO - Inserted 2 achievements for job 15
+2026-05-27 16:21:50,527 - INFO - Inserted 3 work history records for candidate 6
+2026-05-27 16:21:50,530 - INFO - Education 'BS in Computer Science' from 'University of California, Los Angeles' inserted for candidate 6
+2026-05-27 16:21:50,535 - INFO - Inserted 3 quantifiable achievements for candidate 6
+2026-05-27 16:21:50,535 - INFO - Successfully stored all data for candidate 6
+2026-05-27 16:21:50,536 - INFO - Database connection closed
+2026-05-27 16:22:58,784 - INFO - Starting database storage process...
+2026-05-27 16:22:58,945 - INFO - Successfully connected to PostgreSQL database
+2026-05-27 16:22:58,955 - INFO - Candidate 'Ethan Caldwell' inserted with ID: 7
+2026-05-27 16:22:58,958 - INFO - Email 'ethan.caldwell.dev@proton.me' inserted for candidate 7
+2026-05-27 16:22:58,959 - INFO - Phone '+1-303-555-0167' inserted for candidate 7
+2026-05-27 16:22:58,965 - INFO - Inserted 16 skills for candidate 7
+2026-05-27 16:22:58,967 - INFO - Work history 'Senior Backend Engineer' at 'Quantum Health Tech' inserted with ID: 16
+2026-05-27 16:22:58,969 - INFO - Inserted 3 achievements for job 16
+2026-05-27 16:22:58,970 - INFO - Work history 'Software Engineer (Backend)' at 'NextGen Finance' inserted with ID: 17
+2026-05-27 16:22:58,971 - INFO - Inserted 2 achievements for job 17
+2026-05-27 16:22:58,971 - INFO - Work history 'Systems Developer' at 'Apex Systems' inserted with ID: 18
+2026-05-27 16:22:58,972 - INFO - Inserted 1 achievements for job 18
+2026-05-27 16:22:58,973 - INFO - Inserted 3 work history records for candidate 7
+2026-05-27 16:22:58,976 - INFO - Education 'BS in Computer Science' from 'University of Colorado Boulder' inserted for candidate 7
+2026-05-27 16:22:58,980 - INFO - Inserted 3 quantifiable achievements for candidate 7
+2026-05-27 16:22:58,980 - INFO - Successfully stored all data for candidate 7
+2026-05-27 16:22:58,980 - INFO - Database connection closed
+2026-05-27 16:24:40,864 - INFO - Starting database storage process...
+2026-05-27 16:24:40,921 - INFO - Successfully connected to PostgreSQL database
+2026-05-27 16:24:40,925 - INFO - Candidate 'Dr. Aris Thorne' inserted with ID: 8
+2026-05-27 16:24:40,928 - INFO - Email 'aris.thorne.ds@gmail.com' inserted for candidate 8
+2026-05-27 16:24:40,929 - INFO - Phone '+1-404-555-0123' inserted for candidate 8
+2026-05-27 16:24:40,933 - INFO - Inserted 15 skills for candidate 8
+2026-05-27 16:24:40,935 - INFO - Work history 'Senior Data Scientist' at 'Delta Analytics Corp' inserted with ID: 19
+2026-05-27 16:24:40,938 - INFO - Inserted 3 achievements for job 19
+2026-05-27 16:24:40,939 - INFO - Work history 'Data Scientist' at 'Epitome Financial' inserted with ID: 20
+2026-05-27 16:24:40,941 - INFO - Inserted 2 achievements for job 20
+2026-05-27 16:24:40,942 - INFO - Work history 'Graduate Data Analyst' at 'Georgia Tech Research' inserted with ID: 21
+2026-05-27 16:24:40,944 - INFO - Inserted 1 achievements for job 21
+2026-05-27 16:24:40,945 - INFO - Inserted 3 work history records for candidate 8
+2026-05-27 16:24:40,947 - INFO - Education 'PhD in Computational Science and Engineering' from 'Georgia Institute of Technology' inserted for candidate 8
+2026-05-27 16:24:40,950 - INFO - Inserted 4 quantifiable achievements for candidate 8
+2026-05-27 16:24:40,950 - INFO - Successfully stored all data for candidate 8
+2026-05-27 16:24:40,951 - INFO - Database connection closed
+2026-05-27 16:26:04,496 - INFO - Starting database storage process...
+2026-05-27 16:26:04,563 - INFO - Successfully connected to PostgreSQL database
+2026-05-27 16:26:04,566 - INFO - Candidate 'Jordan Vance' inserted with ID: 9
+2026-05-27 16:26:04,568 - INFO - Email 'jordan.vance.cloud@proton.me' inserted for candidate 9
+2026-05-27 16:26:04,569 - INFO - Phone '+1-214-555-0162' inserted for candidate 9
+2026-05-27 16:26:04,576 - INFO - Inserted 15 skills for candidate 9
+2026-05-27 16:26:04,578 - INFO - Work history 'Senior Cloud Solutions Architect' at 'CoreScale Systems' inserted with ID: 22
+2026-05-27 16:26:04,580 - INFO - Inserted 3 achievements for job 22
+2026-05-27 16:26:04,581 - INFO - Work history 'DevOps / Cloud Engineer' at 'Stratosphere Solutions' inserted with ID: 23
+2026-05-27 16:26:04,582 - INFO - Inserted 3 achievements for job 23
+2026-05-27 16:26:04,583 - INFO - Work history 'Systems Administrator' at 'Apex Hosting Group' inserted with ID: 24
+2026-05-27 16:26:04,584 - INFO - Inserted 1 achievements for job 24
+2026-05-27 16:26:04,586 - INFO - Inserted 3 work history records for candidate 9
+2026-05-27 16:26:04,590 - INFO - Education 'BS in Computer Engineering' from 'Texas A&M University' inserted for candidate 9
+2026-05-27 16:26:04,593 - INFO - Inserted 3 quantifiable achievements for candidate 9
+2026-05-27 16:26:04,593 - INFO - Successfully stored all data for candidate 9
+2026-05-27 16:26:04,594 - INFO - Database connection closed
+2026-05-27 16:29:06,138 - INFO - Starting database storage process...
+2026-05-27 16:29:06,206 - INFO - Successfully connected to PostgreSQL database
+2026-05-27 16:29:06,210 - INFO - Candidate 'John Doe' inserted with ID: 10
+2026-05-27 16:29:06,212 - INFO - Email 'johndoe.work99@gmail.com' inserted for candidate 10
+2026-05-27 16:29:06,213 - INFO - Phone '+1-305-555-0111' inserted for candidate 10
+2026-05-27 16:29:06,217 - INFO - Inserted 7 skills for candidate 10
+2026-05-27 16:29:06,218 - INFO - Work history 'Office & Support Assistant' at 'Sunshine Marketing Agency' inserted with ID: 25
+2026-05-27 16:29:06,222 - INFO - Inserted 3 achievements for job 25
+2026-05-27 16:29:06,223 - INFO - Inserted 1 work history records for candidate 10
+2026-05-27 16:29:06,227 - INFO - Education 'General Education' from 'Miami Central High School' inserted for candidate 10
+2026-05-27 16:29:06,230 - INFO - Inserted 2 quantifiable achievements for candidate 10
+2026-05-27 16:29:06,230 - INFO - Successfully stored all data for candidate 10
+2026-05-27 16:29:06,231 - INFO - Database connection closed
