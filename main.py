@@ -14,7 +14,7 @@ from src.parser.d_skills_normalization_engine import SkillNormalizationEngine
 from src.parser.e_psql_database_interaction import DatabaseInteraction
 from src.parser.f_jd_text_requirement_extraction import JDParser
 from src.parser.g_jd_requirements_normalizer import JDRequirementsNormalizer
-from src.parser.j_jd_skill_weight import RankingAndScoringSystem
+from src.parser.h_jd_skill_weight import RankingAndScoringSystem
 
 # ============================================================================
 # CONFIGURATION & CONSTANTS

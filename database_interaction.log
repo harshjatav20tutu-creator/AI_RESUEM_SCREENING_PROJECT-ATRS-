@@ -241,3 +241,20 @@
 2026-05-27 16:29:06,230 - INFO - Inserted 2 quantifiable achievements for candidate 10
 2026-05-27 16:29:06,230 - INFO - Successfully stored all data for candidate 10
 2026-05-27 16:29:06,231 - INFO - Database connection closed
+2026-05-27 17:49:04,033 - INFO - Starting database storage process...
+2026-05-27 17:49:04,139 - INFO - Successfully connected to PostgreSQL database
+2026-05-27 17:49:04,169 - INFO - Candidate 'Marcus Vance' inserted with ID: 11
+2026-05-27 17:49:04,178 - INFO - Email 'marcus.vance.ai@outlook.com' inserted for candidate 11
+2026-05-27 17:49:04,179 - INFO - Phone '+12065550198' inserted for candidate 11
+2026-05-27 17:49:04,182 - INFO - Inserted 8 skills for candidate 11
+2026-05-27 17:49:04,185 - INFO - Work history 'Senior MLOps Engineer' at 'anthropic pbc' inserted with ID: 26
+2026-05-27 17:49:04,189 - INFO - Inserted 3 achievements for job 26
+2026-05-27 17:49:04,190 - INFO - Work history 'Machine Learning Engineer' at 'Amazon Web Services' inserted with ID: 27
+2026-05-27 17:49:04,191 - INFO - Inserted 2 work history records for candidate 11
+2026-05-27 17:49:04,193 - INFO - Education 'MS in Computer Science (Artificial Intelligence Specialization)' from 'University of Washington, Seattle, WA' inserted for candidate 11
+2026-05-27 17:49:04,193 - INFO - No quantifiable achievements to insert
+2026-05-27 17:49:04,193 - INFO - Successfully stored all data for candidate 11
+2026-05-27 17:49:04,194 - INFO - Database connection closed
+2026-05-27 18:03:21,571 - INFO - Successfully connected to PostgreSQL database
+2026-05-27 18:03:21,607 - INFO - Retrieved 11 candidates for matching
+2026-05-27 18:03:21,607 - INFO - Database connection closed
